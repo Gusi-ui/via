@@ -1,0 +1,39 @@
+---
+description: Estándares generales del proyecto VIAndalucía - Astro 6 + Cloudflare
+alwaysApply: true
+---
+
+# Estándares del Proyecto VIAndalucía
+
+## Pre-commit obligatorio
+
+Antes de cualquier commit o push, SIEMPRE:
+1. Ejecutar `npm run build` y verificar que compila sin errores
+2. Comprobar que no hay warnings de Tailwind (clases deprecadas, typos)
+3. Revisar que no hay `console.log` en código de producción (solo permitido en `api/contact.ts` temporalmente)
+4. Confirmar 0 errores en el linter del IDE
+
+## Stack y versiones
+
+- Astro 6 con Content Collections (loader `glob`, schemas Zod)
+- TailwindCSS 4 via `@tailwindcss/vite` (NO `@astrojs/tailwind`)
+- @astrojs/cloudflare v13+ (adapter)
+- Vite fijado a v7 via `overrides` en package.json (requerido por compatibilidad CF)
+- TypeScript strict mode
+
+## Idioma
+
+- Todo el contenido visible al usuario en **español**
+- Código, variables, comentarios técnicos en **inglés**
+- Nombres de archivo de contenido (.md) en **español con slugs** (kebab-case sin tildes)
+
+## Paleta de colores (NO modificar)
+
+Los colores de marca están definidos en `src/styles/global.css` bajo `@theme`. Usar SIEMPRE las variables custom (`via-green`, `via-text`, etc.) en lugar de colores Tailwind genéricos.
+
+## Accesibilidad
+
+- Todo elemento interactivo debe tener `tabindex="0"` y `aria-label`
+- Imágenes requieren `alt` descriptivo (nunca vacío salvo decorativas con `aria-hidden`)
+- Estructura semántica: `nav`, `main`, `article`, `aside`, `footer`
+- Skip-to-content link siempre presente en BaseLayout

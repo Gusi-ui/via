@@ -1,0 +1,39 @@
+---
+description: Convenciones TypeScript para endpoints y utilidades
+globs: "**/*.ts"
+alwaysApply: false
+---
+
+# TypeScript
+
+## Tipos
+
+- Definir `type` en vez de `interface` para props y payloads
+- Exportar tipos cuando se usen en más de un archivo
+- Usar `z.infer<typeof schema>` para tipos derivados de Zod
+
+## Funciones
+
+- Usar `const` arrow functions: `const handleClick = () => {}`
+- Prefijo `handle` para event handlers
+- Prefijo `get` para funciones de datos: `getPublishedPosts`, `getAllCategories`
+- Retornos tempranos para reducir anidamiento
+
+## Endpoints API (SSR)
+
+```typescript
+// Siempre marcar como no pre-renderizado
+export const prerender = false;
+
+// Tipar el request body
+type ContactPayload = { name: string; email: string; message: string };
+
+// Validar y sanitizar TODA entrada del usuario
+const sanitize = (input: string): string => input.replace(/[<>]/g, '').trim();
+```
+
+## Manejo de errores
+
+- Nunca `catch` vacío: siempre retornar Response con error
+- Usar HTTP status codes correctos (400 validación, 500 servidor)
+- Respuestas JSON con estructura `{ error: string }` o `{ success: true, message: string }`

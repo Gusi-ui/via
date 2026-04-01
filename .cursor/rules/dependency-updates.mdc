@@ -1,0 +1,40 @@
+---
+description: Mantener dependencias actualizadas a últimas versiones estables
+alwaysApply: true
+---
+
+# Actualización de dependencias
+
+## Regla principal
+
+Antes de iniciar cualquier sesión de trabajo significativa, verificar si hay actualizaciones disponibles ejecutando `npm outdated`. Si las hay, actualizarlas antes de empezar a codificar.
+
+## Proceso de actualización
+
+1. `npm outdated` — ver qué hay desactualizado
+2. `npm update` — actualizar dentro de rangos semver
+3. Para majors: `npm install paquete@latest` uno por uno
+4. `npm run build` — verificar que compila sin errores tras cada actualización
+5. Si el build falla, investigar breaking changes y adaptar el código
+
+## Restricción crítica: Vite
+
+El `package.json` tiene `"overrides": { "vite": "^7.3.1" }` por un bug conocido entre Astro 6 y el plugin de Cloudflare con Vite 8. NO eliminar este override hasta que Astro soporte oficialmente Vite 8. Verificar el estado en: https://github.com/withastro/astro/issues/16029
+
+## Dependencias del proyecto
+
+| Paquete | Rol | Notas |
+|---------|-----|-------|
+| `astro` | Framework | Core, actualizar primero siempre |
+| `@astrojs/cloudflare` | Adapter SSR | Debe ser compatible con la versión de Astro |
+| `@astrojs/sitemap` | Sitemap | Seguir versión de Astro |
+| `@astrojs/rss` | RSS feed | Seguir versión de Astro |
+| `tailwindcss` | Estilos | Revisar breaking changes en majors |
+| `@tailwindcss/vite` | Plugin Vite | Debe coincidir con versión de tailwindcss |
+| `wrangler` | Dev Cloudflare | Solo devDependency, seguro de actualizar |
+
+## Orden de actualización seguro
+
+1. `wrangler` (devDep, sin riesgo)
+2. `tailwindcss` + `@tailwindcss/vite` (juntos)
+3. `astro` + `@astrojs/cloudflare` + `@astrojs/sitemap` + `@astrojs/rss` (juntos)

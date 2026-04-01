@@ -1,0 +1,30 @@
+---
+description: Reglas para estilos CSS y Tailwind CSS v4
+globs: "**/*.css"
+alwaysApply: false
+---
+
+# CSS y Tailwind v4
+
+## global.css
+
+- Única fuente de verdad para variables de color y fuentes del tema
+- Definir colores bajo `@theme { }` como custom properties
+- Estilos de prosa (`.prose h2`, `.prose p`, etc.) van aquí, NO inline
+
+## Clases Tailwind v4 (nombres canónicos)
+
+| Deprecado (v3) | Canónico (v4) |
+|-----------------|---------------|
+| `flex-shrink-0` | `shrink-0` |
+| `flex-grow` | `grow` |
+| `bg-gradient-to-*` | `bg-linear-to-*` |
+| `bg-opacity-*` | `bg-color/opacity` (ej: `bg-via-green/10`) |
+| `text-opacity-*` | `text-color/opacity` |
+
+## Prohibido
+
+- NO usar `@apply`
+- NO usar `<style>` tags en componentes Astro (todo via Tailwind utility classes)
+- NO crear archivos CSS adicionales (solo `global.css`)
+- NO usar colores Tailwind genéricos (`blue-500`, `gray-200`) — usar variables `via-*`

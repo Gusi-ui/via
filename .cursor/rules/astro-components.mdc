@@ -1,0 +1,45 @@
+---
+description: Convenciones para componentes y páginas Astro
+globs: "**/*.astro"
+alwaysApply: false
+---
+
+# Componentes Astro
+
+## Estructura del frontmatter
+
+```astro
+---
+// 1. Imports (layouts, componentes, lib)
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getPublishedPosts } from '@/lib/collections';
+
+// 2. Types
+type Props = { title: string; date: Date };
+
+// 3. Props destructuring
+const { title, date } = Astro.props;
+
+// 4. Data fetching / lógica
+const posts = await getPublishedPosts();
+---
+```
+
+## Tailwind CSS v4
+
+- Usar nombres canónicos: `shrink-0` (no `flex-shrink-0`), `bg-linear-to-br` (no `bg-gradient-to-br`), `grow` (no `flex-grow`)
+- Usar variables custom del tema: `text-via-green`, `bg-via-bg-content`, etc.
+- NO usar `@apply` nunca
+- Clases responsive: mobile-first (`md:`, `lg:`)
+
+## Enlaces
+
+- Links internos: rutas relativas (`/nosotros/`, `/posts/slug/`)
+- Links externos: siempre `target="_blank" rel="noopener noreferrer"`
+- Aplicar `no-underline` en nav/botones, `underline` en prosa
+
+## Imports con alias
+
+- `@/` → `src/`
+- `@components/` → `src/components/`
+- `@layouts/` → `src/layouts/`

@@ -1,0 +1,50 @@
+---
+description: Reglas para Content Collections y archivos Markdown
+globs: "src/content/**/*.md"
+alwaysApply: false
+---
+
+# Content Collections
+
+## Frontmatter obligatorio para posts
+
+```yaml
+---
+title: "Título del post"
+date: 2024-01-15
+categories:
+  - "nombre-categoria"
+tags:
+  - "nombre-tag"
+draft: false
+description: "Descripción breve para SEO (max 160 chars)"
+---
+```
+
+## Frontmatter obligatorio para pages
+
+```yaml
+---
+title: "Título de la página"
+date: 2024-01-15
+draft: false
+description: "Descripción para SEO"
+section: "convencion"  # solo para artículos de la Convención ONU
+---
+```
+
+## Imágenes en Markdown
+
+- Ruta absoluta desde public: `![Alt descriptivo](/images/posts/foto.jpg)`
+- NUNCA rutas relativas `images/...` (Astro intentaría procesarlas como assets)
+- Las imágenes viven en `public/images/posts/` y `public/images/pages/`
+
+## Enlaces internos
+
+- Usar rutas relativas al sitio: `[texto](/slug/)`
+- NUNCA `https://viandalucia.org/...` (dominio hardcodeado)
+
+## YAML
+
+- Valores con caracteres especiales siempre entre comillas dobles
+- No usar escapes como `\-`, `\#` dentro de valores YAML
