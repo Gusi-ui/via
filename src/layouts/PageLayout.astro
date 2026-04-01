@@ -1,0 +1,37 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+
+type Props = {
+  title: string;
+  description?: string;
+  breadcrumbs?: Array<{ label: string; href?: string }>;
+};
+
+const {
+  title,
+  description,
+  breadcrumbs = [
+    { label: 'Inicio', href: '/' },
+    { label: title },
+  ],
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <Breadcrumb items={breadcrumbs} />
+
+    <article class="bg-via-bg-content rounded-xl shadow-sm p-6 md:p-10 mt-6">
+      <header class="mb-8">
+        <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green">
+          {title}
+        </h1>
+      </header>
+
+      <div class="prose max-w-none">
+        <slot />
+      </div>
+    </article>
+  </div>
+</BaseLayout>

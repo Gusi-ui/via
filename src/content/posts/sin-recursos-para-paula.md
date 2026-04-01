@@ -1,0 +1,24 @@
+---
+title: "Sin recursos para Paula"
+date: 2011-11-18
+categories:
+  - "articulos"
+draft: false
+description: "!paula.jpgimages/paula.jpgUna niña de 5 años con espectro autista tiene que dejar el colegio concertado en el que estudia su hermano. El centro aseguraba que no"
+---
+
+![paula.jpg](/images/posts/paula.jpg)Una niña de 5 años con espectro autista tiene que dejar el colegio concertado en el que estudia su hermano. El centro aseguraba que no tenía recursos, inexistentes también en el público al que trasladaron a la pequeña. Los padres de Paula ya no pueden más. No saben qué hacer para que su hija, a la que han diagnosticado un espectro autista, cuente con los recursos oportunos en su escolarización. La historia comenzó en el colegio concertado donde estudia su hijo mayor, en el distrito de Teatinos. Una vez matriculada, la dirección del centro les explicó que no podían atender las necesidades especiales de la pequeña y le recomendaron un cambio. Sin embargo, el colegio público al que la derivaron desde la propia Junta tampoco disponía de los recursos necesarios. Todo se complica aún más cuando el nuevo destino ha vuelto a pedir a la familia otro traslado, esta vez, a kilómetros de su domicilio.
+
+Susana Belén Martín lleva dos cursos reclamando atención para su hija de 5 años. “Sabíamos que no hablaba, que tenía problemas de comunicación, pero confiábamos en que se pudiera integrar por sus propios medios, por eso la llevamos al colegio de su hermano”, relata Susana. Pero cuando comenzaron las clases, la psicóloga del centro les dijo que se percibía que Paula iba a necesitar unos recursos que allí no tenían. “El director nos dijo que antes de escolarizarla teníamos que haber acudido al equipo de atención educativa de la Junta”, comenta la madre de la menor. El objetivo, valorar la modalidad de escolarización que necesitaba su hija, apoyo en una clase ordinaria o un aula específica.
+
+Susana Belén Martín lleva dos cursos reclamando atención para su hija de 5 años. “Sabíamos que no hablaba, que tenía problemas de comunicación, pero confiábamos en que se pudiera integrar por sus propios medios, por eso la llevamos al colegio de su hermano”, relata Susana. Pero cuando comenzaron las clases, la psicóloga del centro les dijo que se percibía que Paula iba a necesitar unos recursos que allí no tenían. “El director nos dijo que antes de escolarizarla teníamos que haber acudido al equipo de atención educativa de la Junta”, comenta la madre de la menor. El objetivo, valorar la modalidad de escolarización que necesitaba su hija, apoyo en una clase ordinaria o un aula específica.
+
+Desde la Junta de Andalucía le dieron la solución. Aunque los hermanos tuvieran que estudiar en distintos centros, lo mejor es que “esté bien atendida en otro colegio”, asegura Susana que le recomendaron desde la coordinación de recursos para necesidades educativas de la Delegación de Educación. “Nos dieron para elegir los CEIP Carmen de Burgos y Pintor Denis Belgrano y nos decidimos por el segundo, en el que nos aseguraron que había una plaza”, comenta. A cinco minutos de su domicilio, el colegio Denis Belgrano era la mejor opción que barajaba esta familia.
+
+“Nos parecía muy bien, estábamos encantados y el cambio de colegio se hizo en enero de este año”, recuerda Susana. Pero su sorpresa fue mayúscula cuando la directora del citado centro les dijo que tampoco disponían de un profesor de pedagogía terapéutica. La especialista que atiende a este colegio público tiene horario compartido con otro centro y a Paula tan sólo le daba dos sesiones de 45 minutos a la semana, además de otra clase con un logopeda. “Nos dijeron que no tenía en plantilla a esta profesora y que no iban a poder atender a la niña”, repite esta madre.
+
+Sin embargo, hubo algo de esperanza cuando la directora del Denis Belgrano les aseguró que para este nuevo curso la Consejería les dotaría ya de una profesora permanente. Pero finalmente tampoco llegó el presupuesto para Paula. Desde septiembre están igual que el año pasado, o peor, porque han reducido de 45 minutos a media hora la clase con la profesora de pedagogía terapéutica. “Me quedé helada cuando me volvieron a decir que tenía que cambiar a mi hija y esta vez decían de llevarla a un aula específica en colegios de Portada Alta o Cruz de Humilladero”, cuenta Susana cansada de que, además, no tenga respuesta alguna por parte de la administración.
+
+No quieren más cambios en la vida de Paula. El 3 de noviembre presentaron una reclamación en la Consejería y en la Delegación de Educación. Aún continúan esperando que le faciliten una atención que ya le garantizaron que su hija tendría.
+
+AUTORA: Cristina Fernández. Publicado en (http://www.malagahoy.es/article/malaga/1116770/sin/recursos/para/paula.html "Ir a la web de Málagahoyl ")(nov. 2011)

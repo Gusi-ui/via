@@ -1,0 +1,30 @@
+---
+import { render } from 'astro:content';
+import ConventionLayout from '@layouts/ConventionLayout.astro';
+import { getConventionPages } from '@/lib/collections';
+
+export const getStaticPaths = async () => {
+  const articles = await getConventionPages();
+
+  return articles.map((article, index) => ({
+    params: { slug: article.id },
+    props: {
+      article,
+      prevArticle: index > 0 ? { title: articles[index - 1].data.title, slug: articles[index - 1].id } : null,
+      nextArticle: index < articles.length - 1 ? { title: articles[index + 1].data.title, slug: articles[index + 1].id } : null,
+    },
+  }));
+};
+
+const { article, prevArticle, nextArticle } = Astro.props;
+const { Content } = await render(article);
+---
+
+<ConventionLayout
+  title={article.data.title}
+  description={article.data.description}
+  prevArticle={prevArticle}
+  nextArticle={nextArticle}
+>
+  <Content />
+</ConventionLayout>

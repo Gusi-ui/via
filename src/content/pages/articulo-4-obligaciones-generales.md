@@ -1,0 +1,22 @@
+---
+title: "Artículo 4 - Obligaciones generales"
+date: 2019-05-26
+draft: false
+description: "1. Los Estados Partes se comprometen a asegurar y promover el pleno ejercicio de todos los derechos humanos y las libertades fundamentales de las personas con d"
+section: "convencion"
+---
+
+1. Los Estados Partes se comprometen a asegurar y promover el pleno ejercicio de todos los derechos humanos y las libertades fundamentales de las personas con discapacidad sin discriminación alguna por motivos de discapacidad. A tal fin, los Estados Partes se comprometen a:
+    - Adoptar todas las medidas legislativas, administrativas y de otra índole que sean pertinentes para hacer efectivos los derechos reconocidos en la presente Convención; Tomar todas las medidas pertinentes, incluidas medidas legislativas, para modificar o derogar leyes, reglamentos, costumbres y prácticas existentes que constituyan discriminación contra las personas con discapacidad
+    - Tener en cuenta, en todas las políticas y todos los programas, la protección y promoción de los derechos humanos de las personas con discapacidad
+    - Abstenerse de actos o prácticas que sean incompatibles con la presente Convención y velar por que las autoridades e instituciones públicas actúen conforme a lo dispuesto en ella
+    - Tomar todas las medidas pertinentes para que ninguna persona, organización o empresa privada discriminen por motivos de discapacidad
+    - Emprender o promover la investigación y el desarrollo de bienes, servicios, equipo e instalaciones de diseño universal, con arreglo a la definición del artículo 2 de la presente Convención, que requieran la menor adaptación posible y el menor costo para satisfacer las necesidades específicas de las personas con discapacidad, promover su disponibilidad y uso, y promover el diseño universal en la elaboración de normas y directrices
+    - Emprender o promover la investigación y el desarrollo, y promover la disponibilidad y el uso de nuevas tecnologías, incluidas las tecnologías de la información y las comunicaciones, ayudas para la movilidad, dispositivos técnicos y tecnologías de apoyo adecuadas para las personas con discapacidad, dando prioridad a las de precio asequible
+    - Proporcionar información que sea accesible para las personas con discapacidad sobre ayudas a la movilidad, dispositivos técnicos y tecnologías de apoyo, incluidas nuevas tecnologías, así como otras formas de asistencia y servicios e instalaciones de apoyo; Promover la formación de los profesionales y el personal que trabajan con personas con discapacidad respecto de los derechos reconocidos en la presente Convención, a fin de prestar mejor la asistencia y los servicios garantizados por esos derechos
+2. Con respecto a los derechos económicos, sociales y culturales, los Estados Partes se comprometen a adoptar medidas hasta el máximo de sus recursos disponibles y, cuando sea necesario, en el marco de la cooperación internacional, para lograr, de manera progresiva, el pleno ejercicio de estos derechos, sin perjuicio de las obligaciones previstas en la presente Convención que sean aplicables de inmediato en virtud del derecho internacional
+3. En la elaboración y aplicación de legislación y políticas para hacer efectiva la presente Convención, y en otros procesos de adopción de decisiones sobre cuestiones relacionadas con las personas con discapacidad, los Estados Partes celebrarán consultas estrechas y colaborarán activamente con las personas con discapacidad, incluidos los niños y las niñas con discapacidad, a través de las organizaciones que las representan
+4. Nada de lo dispuesto en la presente Convención afectará a las disposiciones que puedan facilitar, en mayor medida, el ejercicio de los derechos de las personas con discapacidad y que puedan figurar en la legislación de un Estado Parte o en el derecho internacional en vigor en dicho Estado. No se restringirán ni derogarán ninguno de los derechos humanos y las libertades fundamentales reconocidos o existentes en los Estados Partes en la presente Convención de conformidad con la ley, las convenciones y los convenios, los reglamentos o la costumbre con el pretexto de que en la presente Convención no se reconocen esos derechos o libertades o se reconocen en menor medida
+5. Las disposiciones de la presente Convención se aplicarán a todas las partes de los Estados federales sin limitaciones ni excepciones
+
+[Artículo 3. Principios generales](/articulo-3-principios-generales/) [Artículo 5. Igualdad y no discriminación](/articulo-5-igualdad-y-no-discriminacion/)

@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content';
+import PageLayout from '@layouts/PageLayout.astro';
+
+export const getStaticPaths = async () => {
+  const staticPages = ['contacto'];
+  const conventionPrefixes = ['articulo-', 'preambulo', 'convencion-naciones-unidas'];
+
+  const pages = await getCollection('pages', ({ data }) => !data.draft);
+
+  return pages
+    .filter((page) => {
+      if (staticPages.includes(page.id)) return false;
+      if (conventionPrefixes.some((prefix) => page.id.startsWith(prefix))) return false;
+      return true;
+    })
+    .map((page) => ({
+      params: { slug: page.id },
+      props: { page },
+    }));
+};
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+
+<PageLayout title={page.data.title} description={page.data.description}>
+  <Content />
+</PageLayout>

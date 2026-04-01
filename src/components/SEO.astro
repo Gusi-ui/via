@@ -1,0 +1,44 @@
+---
+type Props = {
+  title: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: 'website' | 'article';
+  publishedDate?: Date;
+};
+
+const {
+  title,
+  description = 'Oficina de Vida Independiente Andalucía - Promoviendo la vida independiente y los derechos de las personas con diversidad funcional desde 2011',
+  image = '/og-default.png',
+  canonicalURL = Astro.url.href,
+  type = 'website',
+  publishedDate,
+} = Astro.props;
+
+const siteName = 'OVIAndalucía';
+const fullTitle = title === 'Inicio' ? `${siteName} | Oficina de Vida Independiente Andalucía` : `${title} | ${siteName}`;
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:type" content={type} />
+<meta property="og:image" content={new URL(image, Astro.site)} />
+<meta property="og:locale" content="es_ES" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@vi_andalucia" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.site)} />
+
+{publishedDate && (
+  <meta property="article:published_time" content={publishedDate.toISOString()} />
+)}

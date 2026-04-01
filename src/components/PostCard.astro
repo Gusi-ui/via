@@ -1,0 +1,62 @@
+---
+import { formatDate } from '@/lib/collections';
+
+type Props = {
+  title: string;
+  slug: string;
+  date: Date;
+  description?: string;
+  categories?: string[];
+  coverImage?: string;
+};
+
+const { title, slug, date, description, categories = [], coverImage } = Astro.props;
+---
+
+<article class="bg-via-bg-content rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+  {coverImage && (
+    <a href={`/posts/${slug}/`} class="block overflow-hidden" tabindex="-1" aria-hidden="true">
+      <img
+        src={`/images/posts/${coverImage}`}
+        alt=""
+        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+      />
+    </a>
+  )}
+
+  <div class="p-5">
+    {categories.length > 0 && (
+      <div class="flex flex-wrap gap-1.5 mb-2">
+        {categories.slice(0, 2).map((cat) => (
+          <a
+            href={`/category/${cat}/1/`}
+            class="text-xs font-medium text-via-green bg-via-green/10 px-2 py-0.5 rounded-full hover:bg-via-green hover:text-white transition-colors no-underline"
+          >
+            {cat}
+          </a>
+        ))}
+      </div>
+    )}
+
+    <h2 class="text-lg font-semibold font-serif leading-snug mb-2">
+      <a
+        href={`/posts/${slug}/`}
+        class="text-via-text hover:text-via-green transition-colors no-underline"
+        tabindex="0"
+      >
+        {title}
+      </a>
+    </h2>
+
+    {description && (
+      <p class="text-sm text-via-text-meta line-clamp-3 mb-3">
+        {description}
+      </p>
+    )}
+
+    <time datetime={date.toISOString()} class="text-xs text-via-text-secondary">
+      {formatDate(date)}
+    </time>
+  </div>
+</article>

@@ -1,0 +1,48 @@
+---
+import { getAllCategories } from '@/lib/collections';
+
+const categories = await getAllCategories();
+---
+
+<div class="space-y-6">
+  <div class="bg-via-bg-content rounded-xl shadow-sm p-5">
+    <h3 class="text-lg font-bold font-serif text-via-green mb-4 pb-2 border-b-2 border-via-divider">
+      Categorías
+    </h3>
+    <ul class="space-y-1.5" role="list">
+      {categories.map((cat) => (
+        <li>
+          <a
+            href={`/category/${cat.name}/1/`}
+            class="flex justify-between items-center py-1.5 px-2 rounded-md text-sm text-via-text hover:bg-via-green/10 hover:text-via-green transition-colors no-underline"
+            tabindex="0"
+          >
+            <span class="capitalize">{cat.name.replace(/-/g, ' ')}</span>
+            <span class="text-xs text-via-text-secondary bg-via-bg-alt px-2 py-0.5 rounded-full">
+              {cat.count}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="bg-via-bg-content rounded-xl shadow-sm p-5">
+    <h3 class="text-lg font-bold font-serif text-via-green mb-4 pb-2 border-b-2 border-via-divider">
+      Convención ONU
+    </h3>
+    <p class="text-sm text-via-text-meta mb-3">
+      Convención sobre los derechos de las personas con discapacidad
+    </p>
+    <a
+      href="/convencion/"
+      class="inline-flex items-center gap-1 text-sm font-medium text-via-link hover:text-via-link-hover transition-colors no-underline"
+      tabindex="0"
+    >
+      Ver todos los artículos
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</div>

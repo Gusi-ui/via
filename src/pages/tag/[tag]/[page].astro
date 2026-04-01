@@ -1,0 +1,87 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PostCard from '@components/PostCard.astro';
+import Pagination from '@components/Pagination.astro';
+import Sidebar from '@components/Sidebar.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { getPublishedPosts, POSTS_PER_PAGE } from '@/lib/collections';
+
+export const getStaticPaths = async () => {
+  const posts = await getPublishedPosts();
+
+  const tagMap = new Map<string, typeof posts>();
+  for (const post of posts) {
+    for (const tag of post.data.tags) {
+      if (!tagMap.has(tag)) tagMap.set(tag, []);
+      tagMap.get(tag)!.push(post);
+    }
+  }
+
+  const paths = [];
+  for (const [tag, tagPosts] of tagMap) {
+    const totalPages = Math.ceil(tagPosts.length / POSTS_PER_PAGE);
+    for (let i = 0; i < totalPages; i++) {
+      paths.push({
+        params: { tag, page: String(i + 1) },
+        props: {
+          tag,
+          posts: tagPosts.slice(i * POSTS_PER_PAGE, (i + 1) * POSTS_PER_PAGE),
+          currentPage: i + 1,
+          totalPages,
+          totalPosts: tagPosts.length,
+        },
+      });
+    }
+  }
+
+  return paths;
+};
+
+const { tag, posts, currentPage, totalPages, totalPosts } = Astro.props;
+---
+
+<BaseLayout title={`#${tag} - Página ${currentPage}`}>
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <Breadcrumb
+      items={[
+        { label: 'Inicio', href: '/' },
+        { label: 'Etiquetas' },
+        { label: `#${tag}` },
+      ]}
+    />
+
+    <div class="flex items-baseline gap-3 mt-6 mb-8">
+      <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green">
+        #{tag}
+      </h1>
+      <span class="text-sm text-via-text-secondary">
+        ({totalPosts} {totalPosts === 1 ? 'entrada' : 'entradas'})
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
+      <div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {posts.map((post: any) => (
+            <PostCard
+              title={post.data.title}
+              slug={post.id}
+              date={post.data.date}
+              description={post.data.description}
+              categories={post.data.categories}
+              coverImage={post.data.coverImage}
+            />
+          ))}
+        </div>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          baseUrl={`/tag/${tag}/`}
+        />
+      </div>
+      <aside>
+        <Sidebar />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

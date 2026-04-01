@@ -1,0 +1,121 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import PostCard from '@components/PostCard.astro';
+import { getPublishedPosts } from '@/lib/collections';
+
+const recentPosts = (await getPublishedPosts()).slice(0, 6);
+---
+
+<BaseLayout title="Inicio">
+  <Hero />
+
+  <!-- Plataforma por una Asistencia Personal Real -->
+  <section class="bg-via-bg-alt py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold font-serif text-via-green mb-4">
+        Plataforma por una Asistencia Personal Real
+      </h2>
+      <p class="text-via-text-meta text-lg mb-6 max-w-2xl mx-auto">
+        Vida Independiente Andalucía, junto con Asense-A y Trapecistas en la Ciudad,
+        nos hemos unido para constituir la Plataforma por una Asistencia Personal Real.
+      </p>
+      <a
+        href="https://youtu.be/DqvhK780MHc"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-via-green text-white font-semibold rounded-lg hover:bg-via-green-dark transition-colors no-underline shadow-md"
+        tabindex="0"
+        aria-label="Ver el vídeo de la Plataforma en YouTube (se abre en nueva ventana)"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+        Ver el vídeo
+      </a>
+    </div>
+  </section>
+
+  <!-- Recorrido histórico -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-via-bg-content rounded-xl shadow-sm p-6 md:p-10">
+        <h2 class="text-2xl md:text-3xl font-bold font-serif text-via-green mb-4">
+          Recorrido histórico
+        </h2>
+        <p class="text-via-text mb-4 leading-relaxed">
+          El día 16 de Abril de 2011 nació la asociación con intención de convertirse en la primera
+          Oficina de Vida Independiente de Andalucía, VIAndalucía. La entidad es cofundadora de la
+          Federación de Vida Independiente (FEVI) desde 2012.
+        </p>
+        <p class="text-via-text mb-6 leading-relaxed">
+          El día 2 de octubre de 2013 es aprobada por unanimidad en sede parlamentaria la Proposición
+          No de Ley sobre Asistencia Personal, que instaba al gobierno a poner en marcha un proyecto
+          piloto que muestre los beneficios de la Asistencia Personal.
+        </p>
+        <a
+          href="/recorrido-historico/"
+          class="inline-flex items-center gap-2 text-via-link font-medium hover:text-via-link-hover transition-colors no-underline"
+          tabindex="0"
+        >
+          Sigue leyendo
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestra filosofía -->
+  <section class="bg-via-bg-alt py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold font-serif text-via-green mb-4">
+        Nuestra filosofía
+      </h2>
+      <p class="text-via-text text-lg max-w-2xl mx-auto mb-6 leading-relaxed">
+        En última instancia persigue promover la vida independiente, romper con modelos
+        discriminantes y lograr que los ciudadanos andaluces con diversidad funcional tomen
+        el control sobre sus propias vidas. Su misión, principios y valores se recogen en
+        el Artículo 3 de sus estatutos.
+      </p>
+      <a
+        href="/nosotros/"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-via-green text-white font-semibold rounded-lg hover:bg-via-green-dark transition-colors no-underline shadow-md"
+        tabindex="0"
+      >
+        Conoce nuestra filosofía
+      </a>
+    </div>
+  </section>
+
+  <!-- Últimas entradas -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold font-serif text-via-green">
+          Últimas entradas
+        </h2>
+        <a
+          href="/posts/1/"
+          class="text-sm font-medium text-via-link hover:text-via-link-hover transition-colors no-underline"
+          tabindex="0"
+        >
+          Ver todas →
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {recentPosts.map((post) => (
+          <PostCard
+            title={post.data.title}
+            slug={post.id}
+            date={post.data.date}
+            description={post.data.description}
+            categories={post.data.categories}
+            coverImage={post.data.coverImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

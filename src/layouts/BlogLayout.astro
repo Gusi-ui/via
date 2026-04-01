@@ -1,0 +1,89 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Sidebar from '@components/Sidebar.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { formatDate } from '@/lib/collections';
+
+type Props = {
+  title: string;
+  date: Date;
+  categories?: string[];
+  tags?: string[];
+  coverImage?: string;
+  description?: string;
+};
+
+const { title, date, categories = [], tags = [], coverImage, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} type="article" publishedDate={date}>
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <Breadcrumb
+      items={[
+        { label: 'Inicio', href: '/' },
+        { label: 'Entradas', href: '/posts/1/' },
+        { label: title },
+      ]}
+    />
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 mt-6">
+      <article class="bg-via-bg-content rounded-xl shadow-sm p-6 md:p-8">
+        <header class="mb-6">
+          <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green leading-tight">
+            {title}
+          </h1>
+          <div class="flex flex-wrap items-center gap-3 mt-3 text-sm text-via-text-meta">
+            <time datetime={date.toISOString()}>
+              {formatDate(date)}
+            </time>
+            {categories.length > 0 && (
+              <span class="flex flex-wrap gap-1.5">
+                {categories.map((cat) => (
+                  <a
+                    href={`/category/${cat}/1/`}
+                    class="inline-block bg-via-green/10 text-via-green px-2 py-0.5 rounded-full text-xs font-medium hover:bg-via-green hover:text-white transition-colors no-underline"
+                  >
+                    {cat}
+                  </a>
+                ))}
+              </span>
+            )}
+          </div>
+        </header>
+
+        {coverImage && (
+          <img
+            src={`/images/posts/${coverImage}`}
+            alt={title}
+            class="w-full rounded-lg mb-6 object-cover max-h-96"
+            loading="lazy"
+          />
+        )}
+
+        <div class="prose max-w-none">
+          <slot />
+        </div>
+
+        {tags.length > 0 && (
+          <footer class="mt-8 pt-6 border-t border-via-divider">
+            <div class="flex flex-wrap gap-2">
+              <span class="text-sm text-via-text-meta font-medium">Etiquetas:</span>
+              {tags.map((tag) => (
+                <a
+                  href={`/tag/${tag}/1/`}
+                  class="text-xs bg-via-bg-alt text-via-text-meta px-2.5 py-1 rounded-full hover:bg-via-green/10 hover:text-via-green transition-colors no-underline"
+                >
+                  #{tag}
+                </a>
+              ))}
+            </div>
+          </footer>
+        )}
+      </article>
+
+      <aside>
+        <Sidebar />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
