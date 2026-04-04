@@ -13,33 +13,35 @@ type Props = {
 const { title, slug, date, description, categories = [], coverImage } = Astro.props;
 ---
 
-<article class="bg-via-bg-content rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+<article class="bg-via-bg-content rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group border border-via-divider/30 hover:border-via-green/20 hover:-translate-y-1">
   {coverImage && (
-    <a href={`/posts/${slug}/`} class="block overflow-hidden" tabindex="-1" aria-hidden="true">
+    <a href={`/posts/${slug}/`} class="block overflow-hidden relative" tabindex="-1" aria-hidden="true">
+      <div class="absolute inset-0 bg-linear-to-t from-black/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       <img
         src={`/images/posts/${coverImage}`}
         alt=""
-        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+        class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
         loading="lazy"
       />
     </a>
   )}
 
-  <div class="p-5">
+  <div class="p-6">
     {categories.length > 0 && (
-      <div class="flex flex-wrap gap-1.5 mb-2">
+      <div class="flex flex-wrap gap-2 mb-3">
         {categories.slice(0, 2).map((cat) => (
           <a
             href={`/category/${cat}/1/`}
-            class="text-xs font-medium text-via-green bg-via-green/10 px-2 py-0.5 rounded-full hover:bg-via-green hover:text-white transition-colors no-underline"
+            class="text-xs font-semibold text-via-green bg-via-green/8 px-2.5 py-1 rounded-lg hover:bg-via-green hover:text-white transition-colors no-underline"
+            tabindex="0"
           >
-            {cat}
+            {cat.replace(/-/g, ' ')}
           </a>
         ))}
       </div>
     )}
 
-    <h2 class="text-lg font-semibold font-serif leading-snug mb-2">
+    <h2 class="text-lg font-bold font-serif leading-snug mb-2">
       <a
         href={`/posts/${slug}/`}
         class="text-via-text hover:text-via-green transition-colors no-underline"
@@ -50,13 +52,29 @@ const { title, slug, date, description, categories = [], coverImage } = Astro.pr
     </h2>
 
     {description && (
-      <p class="text-sm text-via-text-meta line-clamp-3 mb-3">
+      <p class="text-sm text-via-text-meta line-clamp-3 mb-4 leading-relaxed">
         {description}
       </p>
     )}
 
-    <time datetime={date.toISOString()} class="text-xs text-via-text-secondary">
-      {formatDate(date)}
-    </time>
+    <div class="flex items-center justify-between pt-3 border-t border-via-divider/30">
+      <time datetime={date.toISOString()} class="text-xs text-via-text-secondary flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        {formatDate(date)}
+      </time>
+      <a
+        href={`/posts/${slug}/`}
+        class="text-xs font-medium text-via-link hover:text-via-link-hover transition-colors no-underline flex items-center gap-1"
+        tabindex="0"
+        aria-label={`Leer más sobre ${title}`}
+      >
+        Leer
+        <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
   </div>
 </article>

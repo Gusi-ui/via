@@ -1,0 +1,95 @@
+---
+type Area = {
+  icon: string;
+  title: string;
+  description: string;
+  href: string;
+  color: string;
+};
+
+const areas: Area[] = [
+  {
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />',
+    title: 'Vida Independiente',
+    description: 'Promovemos el derecho de las personas con diversidad funcional a vivir de manera activa e independiente, incluidas en la comunidad.',
+    href: '/vida-independiente/',
+    color: 'bg-via-green',
+  },
+  {
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />',
+    title: 'Asistencia Personal',
+    description: 'La asistencia personal es el apoyo humano que permite a cada persona decidir sobre su propia existencia y participar activamente en la comunidad.',
+    href: '/category/asistencia-personal/1/',
+    color: 'bg-via-accent',
+  },
+  {
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />',
+    title: 'Educación Inclusiva',
+    description: 'Promovemos la educación inclusiva en centros ordinarios para niños y niñas con diversidad funcional, sin segregación.',
+    href: '/category/educacion-inclusiva/1/',
+    color: 'bg-via-green-light',
+  },
+  {
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />',
+    title: 'Accesibilidad Universal',
+    description: 'Trabajamos por el acceso de las personas con diversidad funcional a todos los ámbitos y servicios en igualdad de condiciones.',
+    href: '/category/denuncias/1/',
+    color: 'bg-via-green-dark',
+  },
+  {
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />',
+    title: 'Convención ONU',
+    description: 'Impulsamos el cumplimiento efectivo de la Convención sobre los derechos de las personas con discapacidad.',
+    href: '/convencion/',
+    color: 'bg-via-green',
+  },
+];
+---
+
+<section class="py-16 md:py-20 bg-via-bg-alt" aria-labelledby="areas-heading">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <span class="inline-block text-sm font-semibold text-via-green tracking-widest uppercase mb-3">
+        Nuestras líneas de acción
+      </span>
+      <h2 id="areas-heading" class="text-3xl md:text-4xl font-bold font-serif text-via-green mb-4">
+        Por qué luchamos
+      </h2>
+      <p class="text-via-text-meta text-lg max-w-2xl mx-auto leading-relaxed">
+        Trabajamos en varios frentes para garantizar los derechos y la inclusión plena
+        de las personas con diversidad funcional en la sociedad.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {areas.map((area) => (
+        <a
+          href={area.href}
+          class="group block p-6 bg-via-bg-content rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-via-divider/30 hover:border-via-green/30 no-underline hover:-translate-y-1"
+          tabindex="0"
+        >
+          <div class:list={[
+            "w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110",
+            area.color,
+          ]}>
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <g set:html={area.icon} />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold font-serif text-via-green mb-2 group-hover:text-via-green-dark transition-colors">
+            {area.title}
+          </h3>
+          <p class="text-sm text-via-text-meta leading-relaxed mb-4">
+            {area.description}
+          </p>
+          <span class="inline-flex items-center gap-1 text-sm font-medium text-via-link group-hover:text-via-link-hover transition-colors">
+            Saber más
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

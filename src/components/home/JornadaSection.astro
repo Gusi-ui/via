@@ -1,0 +1,359 @@
+---
+type ProgramDay = {
+  dateLabel: string;
+  parts: ProgramPart[];
+};
+
+type ProgramPart = {
+  label: string;
+  items: ProgramItem[];
+};
+
+type ProgramItem = {
+  time?: string;
+  title: string;
+  href?: string;
+  speaker?: string;
+};
+
+const days: ProgramDay[] = [
+  {
+    dateLabel: '17 de octubre de 2019',
+    parts: [
+      {
+        label: 'Mañana',
+        items: [
+          {
+            time: '10:15',
+            title: 'Bienvenida y contextualización de las jornadas',
+            speaker: 'Coral Hortal Japón. Presidenta VIA. FVID.',
+          },
+          {
+            time: '10:30',
+            title: 'Mesa Redonda “Cambio de Paradigma y su reflejo en la Legislación”',
+            href: '/mesa-redonda-cambio-de-paradigma-y-su-reflejo-en-la-legislacion/',
+            speaker: 'Modera – Gloria Lucena.',
+          },
+          {
+            title: 'Vídeo: “Modelos de la discapacidad un repaso histórico”',
+            href: 'https://www.youtube.com/watch?v=7KStCAB2r2A&t=23s',
+            speaker: 'Miro Griffiths. ENIL.',
+          },
+          {
+            title: 'Cooperación Internacional Inclusiva, ODS y Vida Independiente: Buenas Prácticas y Desafíos actuales para Europa',
+            speaker: 'Giulia Foschiani. SOLCOM.',
+          },
+          {
+            title: 'Legislación Vida Independiente',
+            speaker: 'César Giménez Sánchez. Vicepresidente FEVI. VIA/FVID/ENIL.',
+          },
+          {
+            time: '11:45',
+            title: 'Descanso',
+          },
+          {
+            time: '12:15',
+            title: 'Mesa Redonda “Asistencia Personal”',
+            href: '/mesa-redonda-de-asistencia-personal/',
+            speaker: 'Modera – Estela Martín.',
+          },
+          {
+            title: 'Experiencia de un usuario de Asistencia Personal',
+            speaker: 'Alejandro Morales Álvarez. Proyecto “Vida Independiente” - VIA.',
+          },
+          {
+            title: 'La Asistencia Personal para la Vida Independiente. Resistencias a su implementación efectiva',
+            speaker: 'Coral Hortal Japón. Presidenta VIA. FVID.',
+          },
+          {
+            title: 'Impacto económico y social de la Asistencia Personal',
+            speaker: 'Antonio Iáñez (UPO Sevilla) y José Luís Aranda (ASENSE-A y VIAndalucía).',
+          },
+          {
+            title: 'La Asistencia Personal en Portugal - Una lucha que no ha terminado',
+            speaker: 'Jorge Falcato Simões.',
+          },
+        ],
+      },
+      {
+        label: 'Tarde',
+        items: [
+          {
+            time: '16:15 - 18:00',
+            title: 'Mesa Redonda “Accesibilidad Universal”',
+            href: '/mesa-redonda-accesibilidad-universal/',
+            speaker: 'Modera – Carmen Morales.',
+          },
+          {
+            title: 'Accesibilidad; mucho más que rampas',
+            speaker: 'Aurora Ortega. Eliminando Barreras.',
+          },
+          {
+            title: 'Accesibilidad para personas con baja visión y ceguera total: una aventura diaria',
+            speaker: 'Susana Falcón Tornu. AUPGA.',
+          },
+          {
+            title: 'Necesidad y placer de ser independiente',
+            speaker: 'Carmen Quijada Luque. Eliminando Barreras.',
+          },
+          {
+            title: 'De la Teoría a la Práctica en Accesibilidad: Alianzas, Estrategias y Retos',
+            speaker: 'Montserrat García. FVID, ECOM y Liga Reumatológica Catalana.',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    dateLabel: '18 de octubre de 2019',
+    parts: [
+      {
+        label: 'Mañana',
+        items: [
+          {
+            time: '10:30',
+            title: 'Mesa Redonda “Perspectiva de Género”',
+            href: '/mesa-redonda-perspectiva-de-genero/',
+            speaker: 'Vida Independiente: El poder de dirigir nuestras vidas. Modera – María Limón Navarro.',
+          },
+          {
+            title: 'Interseccionalidad de discriminaciones en mujeres y niñas con diversidad funcional',
+            speaker: 'Katja Villatoro Bongiorno. FVID.',
+          },
+          {
+            title: 'Ecofeminismo y Movimiento de Vida Independiente: Aportaciones para un derecho a vivir sin barreras',
+            speaker: 'Giulia Constanzo Talarico. Socióloga. Activista ecofeminista.',
+          },
+          {
+            title: 'No estamos locas, sabemos lo que queremos. Procesos participativos de mujeres con diversidad funcional física',
+            speaker: 'Antonia Corona Aguilar. UPO de Sevilla.',
+          },
+          {
+            title: 'Violencia sexual y reproductiva: De la Macroeugenesia a la esterilización forzada',
+            speaker: 'Mercedes Serrato Calero. UPO Sevilla.',
+          },
+          {
+            time: '12:00',
+            title: 'Descanso',
+          },
+          {
+            time: '12:30',
+            title: 'Mesa Redonda “Empleo”',
+            href: '/mesa-redonda-de-empleo/',
+            speaker: 'Modera – Katja Villatoro.',
+          },
+          {
+            title: 'Una narrativa sobre el empleo: entre los discursos y los datos que nos persuaden',
+            speaker: 'Gloria Lucena Fernández. VIA.',
+          },
+          {
+            title: 'Empleo joven: Sueño, realidad y exclusión del mercado laboral',
+            speaker: 'Carmen Morales Álvarez. SOLCOM. VIA y FVID.',
+          },
+        ],
+      },
+      {
+        label: 'Tarde',
+        items: [
+          {
+            time: '16:00',
+            title: 'Mesa Redonda “Educación Inclusiva”',
+            href: '/mesa-redonda-de-educacion/',
+            speaker: 'Modera – César Giménez.',
+          },
+          {
+            title: 'Educar en la toma de decisiones para la Vida Independiente',
+            speaker: 'Estela Martín Martín. VIA. FVID.',
+          },
+          {
+            title: 'La escuela por la mirilla: Legislación educativa, realidad y potencial transformador',
+            speaker: 'María del Mar Oliver Mogaburo. Maestra y Activista.',
+          },
+          {
+            title: 'Opresión, resistencia y acción educativa',
+            speaker: 'Ignacio Calderón Almendros. UMA. FVID.',
+          },
+          {
+            time: '18:00',
+            title: 'Despedida y cierre de las Jornadas',
+            speaker: 'Coral Hortal Japón. Presidenta de VIAndalucía. Miembro del FVID.',
+          },
+        ],
+      },
+    ],
+  },
+];
+
+const pdfUrl = 'https://viandalucia.org/documentos/jornadas/jornadasVIA.pdf';
+
+const openLabelBase = 'Programa de las Jornadas de Vida Independiente';
+---
+
+<section class="py-16 md:py-20 bg-via-bg-alt" aria-labelledby="jornadas-heading">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-10">
+      <span class="inline-block text-sm font-semibold text-via-green tracking-widest uppercase mb-3">
+        Jornada temática
+      </span>
+      <h2 id="jornadas-heading" class="text-3xl md:text-4xl font-bold font-serif text-via-green mb-4">
+        Jornadas de Vida Independiente (2019)
+      </h2>
+      <p class="text-via-text-meta text-lg max-w-3xl mx-auto leading-relaxed">
+        Dos días de mesas redondas y ponencias para avanzar hacia una vida independiente con dignidad,
+        igualdad y autodeterminación.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+      <!-- Columna izquierda: resumen + acciones -->
+      <div class="lg:sticky top-24">
+        <div class="bg-via-bg-content rounded-3xl shadow-sm border border-via-divider/40 p-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-via-green/10 flex items-center justify-center">
+              <svg class="w-6 h-6 text-via-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M4 11h16M6 21h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold font-serif text-via-green mb-1">17 y 18 de octubre</h3>
+              <p class="text-sm text-via-text-meta leading-relaxed">
+                Centro Cívico “Las Sirenas” en la Alameda de Hércules, Sevilla.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 space-y-3">
+            <a
+              href="/programa-de-las-jornadas/"
+              class="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-via-green text-white font-semibold rounded-xl hover:bg-via-green-dark transition-colors no-underline"
+              tabindex="0"
+              aria-label="Ver el programa completo de las Jornadas"
+            >
+              Ver programa completo
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a
+              href="/inscripcion-en-las-jornadas/"
+              class="inline-flex items-center justify-center gap-2 w-full px-4 py-3 border-2 border-via-green/30 text-via-green font-semibold rounded-xl hover:bg-via-green/5 hover:border-via-green/50 transition-colors no-underline"
+              tabindex="0"
+              aria-label="Ir a la página de inscripción de las Jornadas"
+            >
+              Inscripción
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5" />
+              </svg>
+            </a>
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-via-bg-alt border border-via-divider/50 text-via-green font-semibold rounded-xl hover:bg-via-bg-content transition-colors no-underline"
+              tabindex="0"
+              aria-label="Descargar o visualizar el programa de las Jornadas en PDF"
+            >
+              Programa en PDF
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="mt-6 p-4 bg-via-bg-alt rounded-2xl border border-via-divider/40">
+            <p class="text-xs text-via-text-secondary leading-relaxed">
+              Recomendación de accesibilidad: si lo prefieres, consulta el programa completo en la página o descarga el PDF.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha: programa interactivo -->
+      <div class="lg:col-span-2">
+        <div class="space-y-5">
+          {days.map((day) => (
+            <div class="bg-via-bg-content rounded-3xl shadow-sm border border-via-divider/40 p-6" aria-label={`${openLabelBase}: ${day.dateLabel}`}>
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div>
+                  <h3 class="text-xl font-bold font-serif text-via-green">{day.dateLabel}</h3>
+                  <p class="text-sm text-via-text-meta">Selecciona una franja para ver las sesiones.</p>
+                </div>
+                <div class="w-10 h-10 rounded-2xl bg-via-green/10 flex items-center justify-center" aria-hidden="true">
+                  <svg class="w-5 h-5 text-via-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                {day.parts.map((part, indexPart) => (
+                  <details
+                    class="group rounded-2xl border border-via-divider/40 bg-via-bg-alt/40 overflow-hidden"
+                    open={indexPart === 0}
+                  >
+                    <summary
+                      tabindex="0"
+                      class="cursor-pointer list-none px-4 py-4 flex items-center justify-between gap-4 select-none focus:outline-none"
+                      aria-label={`Abrir ${day.dateLabel} - ${part.label}`}
+                    >
+                      <span class="inline-flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-2xl bg-via-green/10 flex items-center justify-center">
+                          <svg class="w-5 h-5 text-via-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
+                          </svg>
+                        </span>
+                        <span>
+                          <span class="block text-sm font-semibold text-via-green">{part.label}</span>
+                          <span class="block text-xs text-via-text-meta">Sesiones del programa</span>
+                        </span>
+                      </span>
+                      <svg class="w-5 h-5 text-via-green transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+
+                    <div class="px-4 pb-5 pt-1">
+                      <ul class="space-y-3" role="list">
+                        {part.items.map((item) => (
+                          <li class="flex gap-4 items-start">
+                            {item.time ? (
+                              <span class="shrink-0 w-20 text-sm font-semibold font-display text-via-green/70">
+                                {item.time}
+                              </span>
+                            ) : (
+                              <span class="shrink-0 w-20" aria-hidden="true" />
+                            )}
+                            <div class="min-w-0">
+                              <p class="text-sm font-bold text-via-text mb-1 leading-relaxed">
+                                {item.href ? (
+                                  <a
+                                    href={item.href}
+                                    class="text-via-link hover:text-via-link-hover underline underline-offset-4"
+                                    tabindex="0"
+                                    aria-label={`Abrir: ${item.title}`}
+                                    target={item.href.startsWith('http') ? '_blank' : undefined}
+                                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                  >
+                                    {item.title}
+                                  </a>
+                                ) : (
+                                  item.title
+                                )}
+                              </p>
+                              {item.speaker ? <p class="text-sm text-via-text-meta leading-relaxed">{item.speaker}</p> : null}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
