@@ -1,0 +1,102 @@
+---
+type TimelineEvent = {
+  year: string;
+  title: string;
+  description: string;
+};
+
+const events: TimelineEvent[] = [
+  {
+    year: '2011',
+    title: 'Nace VIAndalucía',
+    description: 'El 16 de abril se funda la asociación con intención de convertirse en la primera Oficina de Vida Independiente de Andalucía.',
+  },
+  {
+    year: '2012',
+    title: 'Cofundadora de FEVI',
+    description: 'La entidad se convierte en cofundadora de la Federación de Vida Independiente (FEVI).',
+  },
+  {
+    year: '2013',
+    title: 'Proposición en el Parlamento',
+    description: 'Es aprobada por unanimidad la Proposición No de Ley sobre Asistencia Personal, instando a un proyecto piloto.',
+  },
+  {
+    year: '2015',
+    title: 'Proyecto piloto de AP',
+    description: 'Se pone en marcha un proyecto piloto demostrando los beneficios de la Asistencia Personal en Andalucía.',
+  },
+  {
+    year: 'Hoy',
+    title: 'Seguimos luchando',
+    description: 'Continuamos trabajando por los derechos de las personas con diversidad funcional en todos los ámbitos.',
+  },
+];
+---
+
+<section class="py-16 md:py-20 bg-via-bg-alt" aria-labelledby="timeline-heading">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <span class="inline-block text-sm font-semibold text-via-green tracking-widest uppercase mb-3">
+        Nuestra trayectoria
+      </span>
+      <h2 id="timeline-heading" class="text-3xl md:text-4xl font-bold font-serif text-via-green mb-4">
+        Recorrido histórico
+      </h2>
+      <p class="text-via-text-meta text-lg max-w-xl mx-auto">
+        Un camino de más de una década en defensa de la vida independiente
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Línea vertical central -->
+      <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-via-green/20 md:-translate-x-px" aria-hidden="true"></div>
+
+      <div class="space-y-8 md:space-y-12">
+        {events.map((event, index) => (
+          <div class:list={[
+            "relative flex items-start gap-6 md:gap-0",
+            index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse",
+          ]}>
+            <!-- Punto en la timeline -->
+            <div class="absolute left-6 md:left-1/2 w-4 h-4 rounded-full bg-via-green border-4 border-via-bg-alt -translate-x-1/2 z-10 mt-1.5" aria-hidden="true"></div>
+
+            <!-- Año (mobile: inline, desktop: lado) -->
+            <div class:list={[
+              "hidden md:flex md:w-1/2 items-start",
+              index % 2 === 0 ? "justify-end pr-10" : "justify-start pl-10",
+            ]}>
+              <span class="text-2xl font-bold font-display text-via-green/60">{event.year}</span>
+            </div>
+
+            <!-- Contenido -->
+            <div class:list={[
+              "ml-12 md:ml-0 md:w-1/2",
+              index % 2 === 0 ? "md:pl-10" : "md:pr-10",
+            ]}>
+              <div class="bg-via-bg-content rounded-xl shadow-sm border border-via-divider/30 p-5 hover:shadow-md transition-shadow duration-300">
+                <span class="md:hidden text-sm font-bold font-display text-via-green/60 block mb-1">{event.year}</span>
+                <h3 class="text-lg font-bold font-serif text-via-green mb-2">{event.title}</h3>
+                <p class="text-sm text-via-text-meta leading-relaxed">{event.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Enlace para seguir leyendo -->
+      <div class="text-center mt-10">
+        <a
+          href="/recorrido-historico/"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-via-bg-content border border-via-divider/50 text-via-green font-semibold rounded-xl hover:border-via-green/30 hover:shadow-md transition-all duration-300 no-underline"
+          tabindex="0"
+        >
+          Ver recorrido completo
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

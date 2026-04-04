@@ -2,36 +2,83 @@
 
 ---
 
-<section class="relative bg-via-green overflow-hidden">
-  <div class="absolute inset-0 bg-linear-to-br from-via-green-dark/30 to-transparent" aria-hidden="true"></div>
+<section class="bg-via-bg-content" aria-labelledby="hero-heading">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-12">
+    <div class="flex flex-col items-center gap-8">
+      <div class="text-center max-w-4xl">
+        <h2 class="font-ui text-[1.2rem] leading-[1.9em] tracking-[3.9px] text-via-green">
+          - Desde 2011 -
+        </h2>
 
-  <div class="relative max-w-6xl mx-auto px-4 py-16 md:py-24 text-center text-white">
-    <p class="text-via-green-hover text-sm font-medium tracking-widest uppercase mb-3">
-      — Desde 2011 —
-    </p>
-    <h1 class="text-3xl md:text-5xl font-bold font-display leading-tight mb-4">
-      Asociación de Vida Independiente<br />Andalucía
-    </h1>
-    <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light">
-      Promoviendo la vida independiente y los derechos de las personas con diversidad funcional
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a
-        href="/nosotros/"
-        class="inline-flex items-center justify-center px-6 py-3 bg-white text-via-green font-semibold rounded-lg hover:bg-via-bg-alt transition-colors no-underline shadow-lg"
-        tabindex="0"
-        aria-label="Conocer nuestra filosofía"
-      >
-        Conoce nuestra filosofía
-      </a>
-      <a
-        href="/contacto/"
-        class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors no-underline"
-        tabindex="0"
-        aria-label="Contactar con nosotros"
-      >
-        Contacto
-      </a>
+        <h1
+          id="hero-heading"
+          class="mt-3 font-display italic font-bold text-via-green text-[2.8rem] sm:text-[4rem] lg:text-[6.4rem] leading-none tracking-[0.4px]"
+        >
+          Asociación de Vida Independiente Andalucía
+        </h1>
+
+        <p class="mt-4 font-sans text-[1.4rem] sm:text-[1.6rem] lg:text-[1.7rem] font-medium text-via-green">
+          Ante la situación de atropello al Derecho a la Asistencia Personal en nuestra Comunidad. Vida Independiente Andalucía
+          <em>VIAndalucía junto con Asense-A – Asociación de Enfermedades</em>
+          <em>Neuromusculares de Andalucía y Trapecistas en la Ciudad</em> nos hemos unido para constituir la
+          <br />
+          PLATAFORMA POR UNA ASISTENCIA PERSONAL REAL
+        </p>
+
+        <div class="mt-6 flex justify-center">
+          <a
+            href="https://youtu.be/DqvhK780MHc"
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex flex-row-reverse items-center gap-[9px] bg-via-green text-white font-accent font-bold text-[1.4rem] capitalize border-2 border-double border-via-green rounded-[16px] px-7 py-3 no-underline hover:bg-white hover:text-via-green transition-colors"
+            aria-label="Ver el vídeo"
+            tabindex="0"
+          >
+            <svg aria-hidden="true" class="w-6 h-6" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+            </svg>
+            <span>Ver el vídeo</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-carousel w-full max-w-[1140px] mx-auto" role="region" aria-roledescription="carousel" aria-label="Carrusel de imágenes">
+        <div class="hero-carousel-frame relative overflow-hidden rounded-[18px] border border-via-divider/60 bg-via-bg-content">
+          <img class="hero-carousel-slide" src="/images/pages/recorrido.webp" alt="recorrido" loading="eager" decoding="async" />
+          <img class="hero-carousel-slide" src="/images/pages/logos.webp" alt="logos" loading="lazy" decoding="async" />
+          <img class="hero-carousel-slide" src="/images/pages/plataforma.webp" alt="plataforma" loading="lazy" decoding="async" />
+          <img class="hero-carousel-slide" src="/images/pages/pancartas.webp" alt="pancartas" loading="lazy" decoding="async" />
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .hero-carousel-frame {
+    aspect-ratio: 1200 / 550;
+  }
+
+  .hero-carousel-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: hero-carousel-fade 20s infinite;
+  }
+
+  .hero-carousel-slide:nth-child(1) { animation-delay: 0s; }
+  .hero-carousel-slide:nth-child(2) { animation-delay: 5s; }
+  .hero-carousel-slide:nth-child(3) { animation-delay: 10s; }
+  .hero-carousel-slide:nth-child(4) { animation-delay: 15s; }
+
+  @keyframes hero-carousel-fade {
+    0% { opacity: 0; }
+    6% { opacity: 1; }
+    25% { opacity: 1; }
+    31% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+</style>
