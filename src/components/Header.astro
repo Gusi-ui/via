@@ -8,15 +8,46 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { label: 'Nosotros', href: '/nosotros/' },
-  { label: 'Recorrido Histórico', href: '/recorrido-historico/' },
-  { label: 'Convención ONU', href: '/convencion/' },
-  { label: 'Blog', href: '/posts/1/' },
+  {
+    label: 'Inicio',
+    href: '/',
+    children: [
+      { label: 'Nosotros', href: '/nosotros/' },
+      { label: 'Recorrido histórico', href: '/recorrido-historico/' },
+      { label: 'Transparencia', href: '/transparencia/' },
+    ],
+  },
+  {
+    label: 'Bitácora',
+    href: '/posts/1/',
+    children: [
+      { label: 'Notas de prensa', href: '/category/notas-de-prensa-2/1/' },
+      { label: 'Relatos AP', href: '/category/relatos-ap/1/' },
+    ],
+  },
+  { label: 'OVIs', href: '/oficinas-vi/' },
+  { label: 'Documentación', href: '/documentacion/' },
+  {
+    label: 'Convención ONU',
+    href: '/convencion/',
+    children: [
+      { label: 'Difusión Convención', href: '/difusion-convencion/' },
+      { label: 'Bitácora Convención', href: '/category/articulos-convencion/1/' },
+      { label: 'Jornadas de VI', href: '/programa-de-las-jornadas/' },
+    ],
+  },
   { label: 'Contacto', href: '/contacto/' },
 ];
 
 const isActive = (href: string) => {
   if (href === '/') return currentPath === '/';
+  if (href === '/posts/1/') {
+    return (
+      currentPath.startsWith('/posts/') ||
+      currentPath.startsWith('/category/') ||
+      currentPath.startsWith('/tag/')
+    );
+  }
   return currentPath.startsWith(href);
 };
 ---
