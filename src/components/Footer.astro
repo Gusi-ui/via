@@ -23,12 +23,12 @@ const socialLinks = [
 ];
 ---
 
-<footer class="bg-via-footer text-white mt-12">
-  <div class="max-w-6xl mx-auto px-4 py-10">
+<footer class="bg-via-green text-white mt-12">
+  <div class="max-w-6xl mx-auto px-4 py-8 sm:py-10 md:py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <h3 class="text-lg font-bold text-white mb-3 font-display">OVIAndalucía</h3>
-        <p class="text-white/70 text-sm leading-relaxed">
+        <p class="text-white/85 text-sm leading-relaxed">
           Oficina de Vida Independiente Andalucía.<br />
           Promoviendo la vida independiente y los derechos de las personas con diversidad funcional desde 2011.
         </p>
@@ -36,15 +36,45 @@ const socialLinks = [
 
       <div>
         <h3 class="text-lg font-bold text-white mb-3 font-display">Contacto</h3>
-        <address class="not-italic text-white/70 text-sm leading-relaxed">
-          <p>Calle Faustino Álvarez, 41, 1&ordm;</p>
-          <p>41002 Sevilla</p>
+        <div class="text-white/85 text-sm leading-relaxed">
           <p class="mt-2">
-            <a href="mailto:viandalucia@viandalucia.org" class="text-via-green-hover hover:text-white transition-colors no-underline">
+            <a
+              href="mailto:viandalucia@viandalucia.org"
+              class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline"
+            >
               viandalucia@viandalucia.org
             </a>
           </p>
-        </address>
+          <div class="mt-4">
+            <p class="text-white/90 text-xs font-semibold tracking-[0.2px]">Enlaces rápidos</p>
+            <div class="mt-2 flex flex-wrap gap-2">
+              <a
+                href="/nosotros/"
+                class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline text-xs font-semibold"
+              >
+                Nosotros
+              </a>
+              <a
+                href="/recorrido-historico/"
+                class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline text-xs font-semibold"
+              >
+                Recorrido
+              </a>
+              <a
+                href="/convencion/"
+                class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline text-xs font-semibold"
+              >
+                Convención ONU
+              </a>
+              <a
+                href="/contacto/"
+                class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline text-xs font-semibold"
+              >
+                Contacto
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div>
@@ -55,11 +85,11 @@ const socialLinks = [
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-via-green transition-colors no-underline"
+              class="group w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white transition-colors no-underline"
               aria-label={`Visitar ${link.name}`}
               tabindex="0"
             >
-              <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 24 24" aria-hidden="true">
+              <svg class="w-5 h-5 fill-current text-white group-hover:text-via-green" viewBox="0 0 24 24" aria-hidden="true">
                 <path d={link.icon} />
               </svg>
             </a>
@@ -68,13 +98,23 @@ const socialLinks = [
       </div>
     </div>
 
-    <div class="border-t border-white/10 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-      <p class="text-white/50 text-xs">
+    <div class="border-t border-white/20 mt-6 pt-4 sm:mt-8 sm:pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
+      <p class="text-white/80 text-xs">
         &copy; {new Date().getFullYear()} Asociación de Vida Independiente Andalucía. CIF: G91963124
       </p>
       <div class="flex gap-4 text-xs">
-        <a href="/aviso-legal/" class="text-white/50 hover:text-white transition-colors no-underline">Aviso Legal</a>
-        <a href="/politica-privacidad/" class="text-white/50 hover:text-white transition-colors no-underline">Política de Privacidad</a>
+        <a
+          href="/aviso-legal/"
+          class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline"
+        >
+          Aviso Legal
+        </a>
+        <a
+          href="/politica-privacidad/"
+          class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline"
+        >
+          Política de Privacidad
+        </a>
       </div>
     </div>
   </div>

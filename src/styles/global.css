@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  --color-white: #ffffff;
+  --color-black: #000000;
+
   /* Verde principal (marca) */
   --color-via-green: #2B843C;
   --color-via-green-light: #61CE70;
@@ -68,13 +71,13 @@ body {
   line-height: 1.7;
 }
 
-a {
+a[href]:not([class]) {
   color: var(--color-via-link);
   transition: color 0.2s ease;
 }
 
-a:hover,
-a:focus {
+a[href]:not([class]):hover,
+a[href]:not([class]):focus {
   color: var(--color-via-link-hover);
 }
 

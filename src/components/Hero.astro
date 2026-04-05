@@ -2,9 +2,23 @@
 
 ---
 
-<section class="bg-via-bg-content" aria-labelledby="hero-heading">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-12">
-    <div class="flex flex-col items-center gap-8">
+<section class="bg-via-bg-content min-h-screen" aria-labelledby="hero-heading">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10 md:pt-12 relative">
+    <a
+      href="/"
+      class="absolute top-4 left-1/2 -translate-x-1/2 sm:left-6 sm:top-6 sm:translate-x-0 z-10"
+      aria-label="Ir al inicio - OVIAndalucía"
+      tabindex="0"
+    >
+      <img
+        src="/logo.avif"
+        alt="Oficina de Vida Independiente Andalucía"
+        class="w-[min(220px,70vw)] h-auto object-contain block"
+        loading="eager"
+      />
+    </a>
+
+    <div class="flex flex-col items-center gap-8 pt-28 sm:pt-20 md:pt-18 pb-8 sm:pb-10 md:pb-12">
       <div class="text-center max-w-4xl">
         <h2 class="font-ui text-[1.2rem] leading-[1.9em] tracking-[3.9px] text-via-green">
           - Desde 2011 -
@@ -12,7 +26,7 @@
 
         <h1
           id="hero-heading"
-          class="mt-3 font-display italic font-bold text-via-green text-[2.8rem] sm:text-[4rem] lg:text-[6.4rem] leading-none tracking-[0.4px]"
+          class="mt-3 font-display italic font-bold text-via-green text-[2.8rem] sm:text-[4rem] lg:text-[6.4rem] leading-[1em] tracking-[0.4px]"
         >
           Asociación de Vida Independiente Andalucía
         </h1>
@@ -42,20 +56,26 @@
         </div>
       </div>
 
-      <div class="hero-carousel w-full max-w-[1140px] mx-auto" role="region" aria-roledescription="carousel" aria-label="Carrusel de imágenes">
-        <div class="hero-carousel-frame relative overflow-hidden rounded-[18px] border border-via-divider/60 bg-via-bg-content">
-          <img class="hero-carousel-slide" src="/images/pages/recorrido.webp" alt="recorrido" loading="eager" decoding="async" />
-          <img class="hero-carousel-slide" src="/images/pages/logos.webp" alt="logos" loading="lazy" decoding="async" />
-          <img class="hero-carousel-slide" src="/images/pages/plataforma.webp" alt="plataforma" loading="lazy" decoding="async" />
-          <img class="hero-carousel-slide" src="/images/pages/pancartas.webp" alt="pancartas" loading="lazy" decoding="async" />
-        </div>
-      </div>
+    </div>
+  </div>
+
+  <div class="hero-carousel w-full overflow-hidden px-3 sm:px-4" role="region" aria-roledescription="carousel" aria-label="Carrusel de imágenes">
+    <div class="hero-carousel-frame relative overflow-hidden bg-white">
+      <img class="hero-carousel-slide" src="/images/pages/recorrido.webp" alt="recorrido" loading="eager" decoding="async" />
+      <img class="hero-carousel-slide" src="/images/pages/logos.webp" alt="logos" loading="lazy" decoding="async" />
+      <img class="hero-carousel-slide" src="/images/pages/plataforma.webp" alt="plataforma" loading="lazy" decoding="async" />
+      <img class="hero-carousel-slide" src="/images/pages/pancartas.webp" alt="pancartas" loading="lazy" decoding="async" />
     </div>
   </div>
 </section>
 
 <style>
+  .hero-carousel {
+    width: 100%;
+  }
+
   .hero-carousel-frame {
+    width: 100%;
     aspect-ratio: 1200 / 550;
   }
 
@@ -65,6 +85,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     opacity: 0;
     animation: hero-carousel-fade 20s infinite;
   }
