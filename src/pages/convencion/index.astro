@@ -4,7 +4,6 @@ import Breadcrumb from '@components/Breadcrumb.astro';
 import { getConventionPages } from '@/lib/collections';
 
 const articles = await getConventionPages();
-const indexPage = articles.find((a) => a.id.includes('convencion-naciones-unidas'));
 const preambulo = articles.find((a) => a.id.includes('preambulo'));
 const numbered = articles.filter(
   (a) => !a.id.includes('convencion-naciones-unidas') && !a.id.includes('preambulo')
@@ -12,7 +11,7 @@ const numbered = articles.filter(
 ---
 
 <BaseLayout title="Convención de Naciones Unidas">
-  <div class="max-w-4xl mx-auto px-4 py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
     <Breadcrumb
       items={[
         { label: 'Inicio', href: '/' },
@@ -39,7 +38,7 @@ const numbered = articles.filter(
           href="https://viandalucia.org/wp-content/uploads/2019/05/Convencion-Lectura-Facil.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-4 py-2 bg-via-green text-white text-sm font-medium rounded-lg hover:bg-via-green-dark transition-colors no-underline"
+          class="inline-flex items-center gap-2 px-4 py-2 bg-via-green text-white text-sm font-semibold rounded-xl border border-via-green hover:bg-white hover:text-via-green transition-colors no-underline focus:outline-none focus:ring-2 focus:ring-via-green/40"
           tabindex="0"
         >
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

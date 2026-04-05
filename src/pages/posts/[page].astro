@@ -24,7 +24,7 @@ const { posts, currentPage, totalPages } = Astro.props;
 ---
 
 <BaseLayout title={`Entradas - Página ${currentPage}`}>
-  <div class="max-w-6xl mx-auto px-4 py-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
     <Breadcrumb
       items={[
         { label: 'Inicio', href: '/' },
