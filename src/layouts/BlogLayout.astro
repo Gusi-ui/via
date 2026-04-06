@@ -2,18 +2,39 @@
 import BaseLayout from './BaseLayout.astro';
 import Sidebar from '@components/Sidebar.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
-import { formatDate } from '@/lib/collections';
+import { formatDate, getPublishedPosts } from '@/lib/collections';
 
 type Props = {
   title: string;
   date: Date;
+  slug: string;
   categories?: string[];
   tags?: string[];
   coverImage?: string;
   description?: string;
 };
 
-const { title, date, categories = [], tags = [], coverImage, description } = Astro.props;
+const { title, date, slug, categories = [], tags = [], coverImage, description } = Astro.props;
+const coverSrc = coverImage ? `/images/posts/${coverImage}` : '/images/posts/logovia.png';
+const allPosts = await getPublishedPosts();
+const currentIndex = allPosts.findIndex((p) => p.id === slug);
+const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
+const prevPost = currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+const relatedPosts = allPosts
+  .filter((p) => p.id !== slug)
+  .map((p) => {
+    const sharedCategories = categories.filter((c) => p.data.categories?.includes(c)).length;
+    const sharedTags = tags.filter((t) => p.data.tags?.includes(t)).length;
+    const score = sharedCategories * 3 + sharedTags;
+    return { post: p, score };
+  })
+  .filter((x) => x.score > 0)
+  .sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return new Date(b.post.data.date).getTime() - new Date(a.post.data.date).getTime();
+  })
+  .slice(0, 4)
+  .map((x) => x.post);
 ---
 
 <BaseLayout title={title} description={description} type="article" publishedDate={date}>
@@ -21,7 +42,7 @@ const { title, date, categories = [], tags = [], coverImage, description } = Ast
     <Breadcrumb
       items={[
         { label: 'Inicio', href: '/' },
-        { label: 'Entradas', href: '/posts/1/' },
+        { label: 'Bitácora', href: '/posts/1/' },
         { label: title },
       ]}
     />
@@ -51,21 +72,20 @@ const { title, date, categories = [], tags = [], coverImage, description } = Ast
           </div>
         </header>
 
-        {coverImage && (
-          <img
-            src={`/images/posts/${coverImage}`}
-            alt={title}
-            class="w-full rounded-lg mb-6 object-cover max-h-96"
-            loading="lazy"
-          />
-        )}
+        <img
+          src={coverSrc}
+          alt={title}
+          onerror="this.onerror=null;this.src='/images/posts/logovia.png';"
+          class="w-full rounded-lg mb-6 object-cover max-h-96"
+          loading="lazy"
+        />
 
         <div class="prose max-w-none">
           <slot />
         </div>
 
-        {tags.length > 0 && (
-          <footer class="mt-8 pt-6 border-t border-via-divider">
+        <footer class="mt-8 pt-6 border-t border-via-divider space-y-6">
+          {tags.length > 0 && (
             <div class="flex flex-wrap gap-2">
               <span class="text-sm text-via-text-meta font-medium">Etiquetas:</span>
               {tags.map((tag) => (
@@ -77,8 +97,54 @@ const { title, date, categories = [], tags = [], coverImage, description } = Ast
                 </a>
               ))}
             </div>
-          </footer>
-        )}
+          )}
+
+          {(prevPost || nextPost) && (
+            <nav class="grid grid-cols-1 sm:grid-cols-2 gap-3" aria-label="Navegación entre entradas">
+              <a
+                href={prevPost ? `/posts/${prevPost.id}/` : undefined}
+                class={`rounded-lg border border-via-divider px-4 py-3 no-underline transition-colors ${
+                  prevPost ? 'hover:bg-via-green/10' : 'opacity-50 pointer-events-none'
+                }`}
+              >
+                <div class="text-xs text-via-text-secondary">Anterior</div>
+                <div class="text-sm font-medium text-via-text leading-snug mt-1">
+                  {prevPost ? prevPost.data.title : '—'}
+                </div>
+              </a>
+              <a
+                href={nextPost ? `/posts/${nextPost.id}/` : undefined}
+                class={`rounded-lg border border-via-divider px-4 py-3 no-underline transition-colors ${
+                  nextPost ? 'hover:bg-via-green/10' : 'opacity-50 pointer-events-none'
+                }`}
+              >
+                <div class="text-xs text-via-text-secondary">Siguiente</div>
+                <div class="text-sm font-medium text-via-text leading-snug mt-1">
+                  {nextPost ? nextPost.data.title : '—'}
+                </div>
+              </a>
+            </nav>
+          )}
+
+          {relatedPosts.length > 0 && (
+            <section aria-label="Entradas relacionadas">
+              <h2 class="text-lg font-bold font-serif text-via-green mb-3">Entradas relacionadas</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {relatedPosts.map((p) => (
+                  <a
+                    href={`/posts/${p.id}/`}
+                    class="block rounded-lg border border-via-divider px-4 py-3 no-underline hover:bg-via-green/10 transition-colors"
+                  >
+                    <div class="text-sm font-medium text-via-text leading-snug">{p.data.title}</div>
+                    <div class="text-xs text-via-text-secondary mt-1">
+                      {formatDate(p.data.date)}
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
+        </footer>
       </article>
 
       <aside>

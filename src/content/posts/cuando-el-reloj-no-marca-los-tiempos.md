@@ -6,21 +6,15 @@ categories:
 tags:
   - "asistencia-personal"
   - "ocio"
+coverImage: "Víctor-1.jpg"
 draft: false
-description: ""
+description: "Mesa con ajuares típicos de Halloween"
 ---
-
-<figure>
-
-![Víctor-1.jpg](/images/posts/Víctor-1.jpg)
-
-<figcaption>
+![Mesa con ajuares típicos de Halloween](/images/posts/Víctor-1.jpg)
 
 _Mesa con ajuares típicos de Halloween_
 
-</figcaption>
 
-</figure>
 
 Se acerca Halloween y con él los adornos y decoraciones de calabazas, fantasmas,  brujas y disfraces, y eso a Víctor le encanta. En el parque de perros al que Víctor va con su asistente personal todos los días, les comentaron que en el vivero del pueblo estaba montada la casa del terror.
 

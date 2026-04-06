@@ -5,21 +5,15 @@ categories:
   - "viandalucia"
 tags:
   - "accesibilidad"
+coverImage: "disabled-397192_1920-1024x683.jpg"
 draft: false
-description: ""
+description: "Circulando por el campo de modo incómodo, haciendo malabarismos con el cuerpo"
 ---
+![Circulando por el campo de modo incómodo, haciendo malabarismos con el cuerpo](/images/posts/disabled-397192_1920-1024x683.jpg)
 
-<figure>
+_Circulando por el campo de modo incómodo, haciendo malabarismos con el cuerpo_
 
-![disabled-397192_1920-1024x683.jpg](/images/posts/disabled-397192_1920-1024x683.jpg)
 
-<figcaption>
-
-Circulando por el campo de modo incómodo, haciendo malabarismos con el cuerpo
-
-</figcaption>
-
-</figure>
 
 Sabemos que el día 4 de diciembre de 2019 se convocó una marcha reivindicativa por parte de Eliminando Barreras y VI Andalucía, secundados por la asociación AZAAR para denunciar la desidia de nuestras autoridades a la hora de cumplir con su obligación de hacer accesible para todas las personas nuestro entorno.
 

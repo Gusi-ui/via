@@ -6,22 +6,15 @@ categories:
 tags:
   - "convencion"
   - "maltrato"
+
+coverImage: "maltrato.avif"
+coverImageAlt: "Puente accesible con barandilla en dirección a una fortaleza. Cortesía de Paula Verde"
+coverPosition: "center"
+coverSize: "cover"
+coverBlur: "10"
 draft: false
-description: ""
+description: "ARTÍCULO 16 - PROTECCIÓN CONTRA LA EXPLOTACIÓN, LA VIOLENCIA Y EL MALTRATO"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-06-11-01-21-1.png](/images/posts/Captura-de-pantalla-2020-12-06-11-01-21-1.png)
-
-<figcaption>
-
-_Puente accesible con barandilla en dirección a una fortaleza. Cortesía de Paula Verde_
-
-</figcaption>
-
-</figure>
-
 **ARTÍCULO 16 - PROTECCIÓN CONTRA LA EXPLOTACIÓN, LA VIOLENCIA Y EL MALTRATO**
 
 Los Estados Partes **adoptarán medidas** de toda índole que sean pertinentes para proteger a las personas con discapacidad, tanto en el seno del hogar como fuera de él, **contra todas las formas de explotación, violencia y abuso, incluidos los aspectos relacionados con el género.**

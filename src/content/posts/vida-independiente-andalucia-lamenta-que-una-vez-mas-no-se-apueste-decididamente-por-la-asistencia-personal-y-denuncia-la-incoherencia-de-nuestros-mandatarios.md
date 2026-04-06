@@ -8,21 +8,15 @@ tags:
   - "cdpd"
   - "ddhh"
   - "grupos-politicos"
+coverImage: "discordance-798855_1920-1024x765.jpg"
 draft: false
-description: ""
+description: "Dos caras enfrentadas mirando a otro lado"
 ---
+![Dos caras enfrentadas mirando a otro lado](/images/posts/discordance-798855_1920-1024x765.jpg)
 
-<figure>
+_Dos caras enfrentadas mirando a otro lado_
 
-![discordance-798855_1920-1024x765.jpg](/images/posts/discordance-798855_1920-1024x765.jpg)
 
-<figcaption>
-
-Dos caras enfrentadas mirando a otro lado
-
-</figcaption>
-
-</figure>
 
 Desde la Asociación y Oficina de Vida Independiente VIAndalucía hemos observado con auténtica perplejidad como los grupos parlamentarios que habían apoyado la Asistencia Personal y la Vida independiente en anteriores legislaturas, ahora se han desdicho votando NO a unas enmiendas que brindaban la oportunidad de desarrollar la _regulación normativa de dicha prestación en nuestra comunidad_; cuestión que llevamos reivindicando desde el año 2011, y que supone un compromiso adquirido por el Parlamento andaluz, cuando en 2013  aprobó una PNL sobre Asistencia Personal por unanimidad.
 

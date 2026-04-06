@@ -6,21 +6,15 @@ categories:
 tags:
   - "asistencia-personal"
   - "institucionalizacion"
+coverImage: "Emma.jpg"
 draft: false
-description: ""
+description: "Escaleras bajando a un lugar lúgubre"
 ---
-
-<figure>
-
-![Emma.jpg](/images/posts/Emma.jpg)
-
-<figcaption>
+![Escaleras bajando a un lugar lúgubre](/images/posts/Emma.jpg)
 
 _Escaleras bajando a un lugar lúgubre_
 
-</figcaption>
 
-</figure>
 
 Cuando Emma nació, durante el parto contrajo una parálisis cerebral que afectó gravemente a su movilidad, así como a su forma de hablar. Ella siempre quiso vivir como sus iguales, hermanas, amigos, quiso tener una vida digna, estudiar, trabajar,  salir a divertirse, amar y ser amada, disfrutar  del placer en su cuerpo. Así, empezó a estudiar secundaria en el instituto que estaba próximo a su casa, pero el ritmo de las clases, la falta de una persona de apoyo para coger apuntes, ayudarla a otras tareas personales y relacionadas con los estudios, la hicieron dejar los libros y los estudios.
 

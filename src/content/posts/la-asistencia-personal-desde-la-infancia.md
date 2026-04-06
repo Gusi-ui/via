@@ -6,21 +6,15 @@ categories:
 tags:
   - "asistencia-personal"
   - "juventud"
+coverImage: "SAVE_20201015_154529-1024x576.jpg"
 draft: false
-description: ""
+description: "Dani observando un detalle en la Alcazaba"
 ---
-
-<figure>
-
-![SAVE_20201015_154529-1024x576.jpg](/images/posts/SAVE_20201015_154529-1024x576.jpg)
-
-<figcaption>
+![Dani observando un detalle en la Alcazaba](/images/posts/SAVE_20201015_154529-1024x576.jpg)
 
 _Dani observando un detalle en la Alcazaba_
 
-</figcaption>
 
-</figure>
 
 Soy Dani, un chico de 21 años con autismo. Aunque no sé leer ni escribir, quiero contar mi historia con la asistencia personal.
 

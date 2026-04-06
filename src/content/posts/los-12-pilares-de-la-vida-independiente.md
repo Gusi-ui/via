@@ -3,21 +3,15 @@ title: "Los 12 pilares de la vida independiente"
 date: 2020-01-16
 categories:
   - "denuncias"
+coverImage: "columns-3254442_1920-1024x738.png"
 draft: false
-description: ""
+description: "Columnas en medio del campo"
 ---
+![Columnas en medio del campo](/images/posts/columns-3254442_1920-1024x738.png)
 
-<figure>
+_Columnas en medio del campo_
 
-![columns-3254442_1920-1024x738.png](/images/posts/columns-3254442_1920-1024x738.png)
 
-<figcaption>
-
-Columnas en medio del campo
-
-</figcaption>
-
-</figure>
 
 Son:
 

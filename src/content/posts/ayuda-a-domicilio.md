@@ -6,21 +6,15 @@ categories:
 tags:
   - "asistencia-personal"
   - "ayuda-a-domicilio"
+coverImage: "Narbona.jpg"
 draft: false
-description: ""
+description: "Puerta de un establo cerrada con un candado"
 ---
-
-<figure>
-
-![Narbona.jpg](/images/posts/Narbona.jpg)
-
-<figcaption>
+![Puerta de un establo cerrada con un candado](/images/posts/Narbona.jpg)
 
 _Puerta de un establo cerrada con un candado_
 
-</figcaption>
 
-</figure>
 
 Me llamo Remedios Narbona, tengo 58 años y padezco polio desde que tenía un año. Mi decadencia física empezó hace 33 años. Poco a poco fue a más, hasta que hace unos 18 años obtuve una incapacidad permanente.
 

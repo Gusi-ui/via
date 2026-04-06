@@ -7,21 +7,15 @@ tags:
   - "convencion"
   - "difusion"
   - "preambulo"
+coverImage: "IMG_20201201_100948.jpg"
 draft: false
-description: ""
+description: "Fondo blanco y en verde el escudo de la ONU"
 ---
+![Fondo blanco y en verde el escudo de la ONU](/images/posts/IMG_20201201_100948.jpg)
 
-<figure>
+_Fondo blanco y en verde el escudo de la ONU_
 
-![IMG_20201201_100948.jpg](/images/posts/IMG_20201201_100948.jpg)
 
-<figcaption>
-
-Fondo blanco y en verde el escudo de la ONU
-
-</figcaption>
-
-</figure>
 
 La Convención de la ONU sobre los Derechos de las Personas con Discapacidad supone el primer Tratado de Derechos Humanos del Siglo XXI, aprobado por consenso en la Asamblea General de Naciones Unidas el 13 de diciembre de 2006, y firmado y ratificado por España el 3 de mayo de 2008; desde ese momento forma parte del ordenamiento jurídico español; es decir, es de obligado cumplimiento.
 

@@ -8,21 +8,11 @@ tags:
   - "derechos-humanos"
   - "diversidad-funcional"
   - "institucionalizacion"
+
+coverImage: "frustrated.avif"
 draft: false
-description: ""
+description: "Confinados en nuestra casa o casa ajena asistimos con estupor al olvido, una vez más, de los mandatarios debidos de las personas con diversidad funcional."
 ---
-
-<figure>
-
-![frustrated-2681484_1920-1024x683.jpg](/images/posts/frustrated-2681484_1920-1024x683.jpg)
-
-<figcaption>
-
-Mujer morena aburrida
-
-</figcaption>
-
-</figure>
 
 Confinados en nuestra casa o casa ajena asistimos con estupor al olvido, una vez más, de los mandatarios debidos de las personas con diversidad funcional.
 

@@ -6,21 +6,15 @@ categories:
 tags:
   - "asistencia-personal"
   - "patata"
+coverImage: "potato-1422580_1920-1024x761.jpg"
 draft: false
-description: ""
+description: "Puñado de patatas crudas"
 ---
-
-<figure>
-
-![potato-1422580_1920-1024x761.jpg](/images/posts/potato-1422580_1920-1024x761.jpg)
-
-<figcaption>
+![Puñado de patatas crudas](/images/posts/potato-1422580_1920-1024x761.jpg)
 
 _Puñado de patatas crudas_
 
-</figcaption>
 
-</figure>
 
 Hace poco escuché a un señor que decía que lo más importante en cuanto a asistencia personal (AP) eran las últimas horas, yo se lo compro. Esas últimas horas son las que le permiten a la persona usuaria el desarrollo pleno y la inclusión en la comunidad: ir al supermercado, al cine, a un museo, a una conferencia, a su asociación preferida o a lo que le parezca. Para mí, las primeras horas del día son muy importantes (14 por semana) pero las 30 restantes que tengo asignadas por privilegiado son las que realmente me dan la vida independiente. (Realmente en España me considero un privilegiado en cuanto a horas de AP, si viviera en otro país europeo, por ejemplo Alemania o Suecia, 44 horas a la semana seguirían siendo una birria).
 

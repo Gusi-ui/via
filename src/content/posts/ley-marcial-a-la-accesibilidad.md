@@ -9,6 +9,7 @@ tags:
   - "accesibilidad"
   - "convencion"
   - "vida-independiente"
+coverImage: "Marcial.avif"
 draft: false
 description: "A los cuatro pringaillos que hemos decidido optar por la vida independiente que nos proporcionaría una asistencia personal de verdad, no como la que tenemos aho"
 ---

@@ -5,21 +5,15 @@ categories:
   - "relatos-ap"
 tags:
   - "asistencia-personal"
+coverImage: "grocery-store-2619380_1920-1-1-1024x768.jpg"
 draft: false
-description: ""
+description: "Pasillo de un supermercado con estanterías"
 ---
-
-<figure>
-
-![grocery-store-2619380_1920-1-1-1024x768.jpg](/images/posts/grocery-store-2619380_1920-1-1-1024x768.jpg)
-
-<figcaption>
+![Pasillo de un supermercado con estanterías](/images/posts/grocery-store-2619380_1920-1-1-1024x768.jpg)
 
 _Pasillo de un supermercado con estanterías_
 
-</figcaption>
 
-</figure>
 
 Bien podría apropiarme de la mítica frase que pronuncia _Blanche_ al final de _Un tranvía llamado Deseo._ Pero a diferencia de su malograda protagonista, mis palabras no son extraídas de una obra de Tennessee Williams, sino de una realidad cotidiana.
 

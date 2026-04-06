@@ -6,21 +6,15 @@ categories:
 tags:
   - "asistencia-personal"
   - "edad"
+coverImage: "viejos.jpg"
 draft: false
-description: ""
+description: "Personas mayores en silla de ruedas ante una rampa"
 ---
-
-<figure>
-
-![viejos.jpg](/images/posts/viejos.jpg)
-
-<figcaption>
+![Personas mayores en silla de ruedas ante una rampa](/images/posts/viejos.jpg)
 
 _Personas mayores en silla de ruedas ante una rampa_
 
-</figcaption>
 
-</figure>
 
 Las Personas con Diversidad Funcional (PDF, en adelante) con un proyecto de Vida Independiente se pasan la vida (sobre) esforzándose para tener autonomía y adaptar la vida a una sociedad que insistentemente los discrimina, ningunea y olvida, porque ni existe la inclusión, ni la accesibilidad universal ni el diseño para todos, como para poder optar en equidad a un proyecto vital como el resto de personas.
 

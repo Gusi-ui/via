@@ -3,6 +3,7 @@ title: "Amenazas a la gestión de la Vida Independiente en Andalucía"
 date: 2026-02-13
 categories:
   - "denuncias"
+coverImage: "Amenaza.avif"
 draft: false
 description: "Nuestra compañera y vicepresidenta Rosa Moya Albaladejo ha participado en  la “3ª Edición del Congreso Europeo sobre Vida Independiente y Asistencia Personal.  "
 ---

@@ -10,7 +10,6 @@ coverImage: "disability-4121577_1920.png"
 draft: false
 description: "Todas las personas, sin excepción, necesitamos adaptaciones. TODAS. Por suerte, la tecnología ha ido introduciendo muchas mejoras, de tal manera que pocos espac"
 ---
-
 Todas las personas, sin excepción, necesitamos adaptaciones. TODAS. Por suerte, la tecnología ha ido introduciendo muchas mejoras, de tal manera que pocos espacios y lugares se nos resisten, y cualquier necesidad considerada “normal” está sobradamente cubierta.
 
 El problema (o más bien la injusticia) surge con las adaptaciones que necesita otra parte de la población, la que no es mayoría. Sillas de ruedas, lengua de signos, pictogramas, bucles magnéticos, rampas, textos en braille... es decir, aquellas que propician la accesibilidad del entorno para que sea éste el que se adapte, y no al revés.
@@ -69,14 +68,8 @@ Sevilla, 4 de diciembre de 2019
 
 Entidades firmantes:
 
-<figure>
+![Logos de entidades convocantes y adheridas: VI Andalucía, Eliminando Barreras, Asociación AZAAR, FACUA, AFIBROSE, A.S.P.H.E.B.H, Asamblea Feminista Unitaria](/images/posts/ccccc-1024x303.jpg)
 
-![ccccc-1024x303.jpg](/images/posts/ccccc-1024x303.jpg)
+_Logos de entidades convocantes y adheridas: VI Andalucía, Eliminando Barreras, Asociación AZAAR, FACUA, AFIBROSE, A.S.P.H.E.B.H, Asamblea Feminista Unitaria_
 
-<figcaption>
 
-Logos de entidades convocantes y adheridas: VI Andalucía, Eliminando Barreras, Asociación AZAAR, FACUA, AFIBROSE, A.S.P.H.E.B.H, Asamblea Feminista Unitaria
-
-</figcaption>
-
-</figure>

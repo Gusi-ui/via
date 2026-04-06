@@ -91,7 +91,7 @@ Integra el Mecanismo Nacional de Monitoreo de la aplicación de la Convención
 
 Existen en Portugal en este momento cerca de 900 personas con derecho a Asistencia Personal. Dicha asistencia están integradas en los Centros de Apoyo a la Vida Independiente (CAVI ), un proyecto-piloto que se inició este año.
 
-Esta fue la respuesta del gobierno por la exigencia de los activistas por la Vida Independiente. Pero será esta respuesta ¿acorde con los principios básicos de Vida Independiente?![page3image34210368](/images/pages/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAABCAYAAABOgffqAAAAAXNSR0IArs4c6QAAAHhlWElmTU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAWaGAAAESwABZoYAAARLAAOgAQADAAAAAQABAACgAgAEAAAAAQAAAC+gAwAEAAAAAQAAAAEAAAAAkfnO4QAAAAlwSFlzAAAM2AAADNgBk1NU4QAAAAxJREFUCB1jYBjCAAAAvQABATzeAwAAAABJRU5ErkJggg==)
+Esta fue la respuesta del gobierno por la exigencia de los activistas por la Vida Independiente. Pero será esta respuesta ¿acorde con los principios básicos de Vida Independiente?!
 
 ¿Qué consecuencias tuvo la entrega de gestión de la mayoría de los proyectos-pilotos a las instituciones de solidaridad social que son las responsables de la institucionalización de miles de jóvenes y adultos con diversidad funcional?
 

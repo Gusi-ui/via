@@ -6,21 +6,15 @@ categories:
 tags:
   - "asistencia-personal"
   - "estudios"
+coverImage: "Praga-1024x999.jpg"
 draft: false
-description: ""
+description: "Panorámica de Praga"
 ---
-
-<figure>
-
-![Praga-1024x999.jpg](/images/posts/Praga-1024x999.jpg)
-
-<figcaption>
+![Panorámica de Praga](/images/posts/Praga-1024x999.jpg)
 
 _Panorámica de Praga_
 
-</figcaption>
 
-</figure>
 
 Seguramente alguna vez hayas escuchado la conocida frase de “la experiencia Erasmus es para todo el mundo”; quizá mi historia te ayude ahora a cuestionarlo. Siendo estudiante de Filosofía, Política y Economía en la Universidad Autónoma de Madrid, aceptaron mi plaza en la Charles University de la República Checa en febrero de 2020. Entonces, Praga para mí significaba independencia, emancipación, vida. El anhelo de libertad era el mismo que el de cualquier otra persona de veinte años. Lo único que nos diferenciaba era que en este caso yo, por el hecho de haber sufrido una lesión medular años atrás, debía ganármelo el triple que el resto.
 

@@ -10,6 +10,8 @@ tags:
   - "andalucia"
   - "educacion"
   - "vida-independiente"
+
+coverImage: "Biblioteca.avif"
 draft: false
 description: "Nuestro compañero César Giménez Sánchez ha realizado este informe sobre la falta de accesibilidad de las bibliotecas públicas de Málaga."
 ---

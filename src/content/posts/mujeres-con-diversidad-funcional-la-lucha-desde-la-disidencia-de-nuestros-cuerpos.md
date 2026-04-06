@@ -8,32 +8,20 @@ tags:
   - "cdpd"
   - "discriminacion"
   - "mujer"
+coverImage: "Jornadas-Mujer-y-dicriminaciones_page-0001-724x1024.jpg"
 draft: false
-description: ""
+description: "Cartel anunciador de las jornadas"
 ---
+![Cartel anunciador de las jornadas](/images/posts/Jornadas-Mujer-y-dicriminaciones_page-0001-724x1024.jpg)
 
-<figure>
+_Cartel anunciador de las jornadas_
 
-![Jornadas-Mujer-y-dicriminaciones_page-0001-724x1024.jpg](/images/posts/Jornadas-Mujer-y-dicriminaciones_page-0001-724x1024.jpg)
 
-<figcaption>
 
-Cartel anunciador de las jornadas
+![Cartel anunciador (continuación)](/images/posts/Jornadas-Mujer-y-dicriminaciones_page-0002-724x1024.jpg)
 
-</figcaption>
+_Cartel anunciador (continuación)_
 
-</figure>
 
-<figure>
-
-![Jornadas-Mujer-y-dicriminaciones_page-0002-724x1024.jpg](/images/posts/Jornadas-Mujer-y-dicriminaciones_page-0002-724x1024.jpg)
-
-<figcaption>
-
-Cartel anunciador (continuación)
-
-</figcaption>
-
-</figure>
 
 Vida Independiente Andalucía participa en las Jornadas "Mujer  y discriminaciones: voces contra la exclusión", que se celebran el viernes 9 de octubre 2020, organizadas por el Departamento de Derecho Constitucional de la Facultad de Derecho Universidad de Sevilla.  Nuestra intervención se concreta en la Mesa Mujer y Discriminación por causa de  Diversidad Funcional en la que participara nuestra compañera Gloria Lucena con la  ponencia:

@@ -7,22 +7,15 @@ tags:
   - "convencion"
   - "libertad"
   - "seguridad"
+
+coverImage: "Libertad.avif"
+coverImageAlt: "Niño tumbado en la playa en actitud tranquila. Cortesía de Paula Verde Francisco"
+coverPosition: "center"
+coverSize: "cover"
+coverBlur: "10"
 draft: false
-description: ""
+description: "ARTÍCULO 14 - LIBERTAD Y SEGURIDAD DE LA PERSONA"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-06-10-32-45-1.png](/images/posts/Captura-de-pantalla-2020-12-06-10-32-45-1.png)
-
-<figcaption>
-
-Niño tumbado en la playa en actitud tranquila. Cortesía de Paula Verde Francisco
-
-</figcaption>
-
-</figure>
-
 **ARTÍCULO 14 - LIBERTAD Y SEGURIDAD DE LA PERSONA**
 
 Los Estados Partes asegurarán que las personas con discapacidad, **en igualdad** de condiciones con las demás:

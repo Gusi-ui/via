@@ -11,20 +11,20 @@ type Props = {
 };
 
 const { title, slug, date, description, categories = [], coverImage } = Astro.props;
+const coverSrc = coverImage ? `/images/posts/${coverImage}` : '/images/posts/logovia.png';
 ---
 
 <article class="bg-via-bg-content rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group border border-via-divider/30 hover:border-via-green/20 hover:-translate-y-1">
-  {coverImage && (
-    <a href={`/posts/${slug}/`} class="block overflow-hidden relative" tabindex="-1" aria-hidden="true">
-      <div class="absolute inset-0 bg-linear-to-t from-black/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      <img
-        src={`/images/posts/${coverImage}`}
-        alt=""
-        class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-        loading="lazy"
-      />
-    </a>
-  )}
+  <a href={`/posts/${slug}/`} class="block overflow-hidden relative" tabindex="-1" aria-hidden="true">
+    <div class="absolute inset-0 bg-linear-to-t from-black/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <img
+      src={coverSrc}
+      alt=""
+      onerror="this.onerror=null;this.src='/images/posts/logovia.png';"
+      class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+      loading="lazy"
+    />
+  </a>
 
   <div class="p-6">
     {categories.length > 0 && (

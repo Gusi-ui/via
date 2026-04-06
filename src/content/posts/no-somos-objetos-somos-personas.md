@@ -7,6 +7,8 @@ categories:
 tags:
   - "ddhh"
   - "vida-independiente"
+
+coverImage: "Personasobjetos.avif"
 draft: false
 description: "Desde OVIAndalucia deseamos expresar nuestro malestar con lo que últimamente se está llamando “nuevo modelo de cuidados”."
 ---

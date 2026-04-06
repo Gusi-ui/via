@@ -46,5 +46,27 @@ const { title, description, image, type, publishedDate } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <script is:inline>
+      {
+        const fallback = '/images/posts/logovia.png';
+        document.addEventListener(
+          'error',
+          (event) => {
+            const target = event.target;
+            if (!(target instanceof HTMLImageElement)) return;
+            if (target.dataset.fallbackApplied === '1') return;
+            try {
+              const url = new URL(target.currentSrc || target.src);
+              if (!url.pathname.startsWith('/images/')) return;
+            } catch {
+              return;
+            }
+            target.dataset.fallbackApplied = '1';
+            target.src = fallback;
+          },
+          true
+        );
+      }
+    </script>
   </body>
 </html>

@@ -7,21 +7,15 @@ tags:
   - "accesibilidad"
   - "convencion"
   - "ddhh"
+coverImage: "Captura-de-pantalla-2020-12-03-14-58-30-1.png"
 draft: false
-description: ""
+description: "Joven intentando llamar al telefonillo de un edificio público"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-03-14-58-30-1.png](/images/posts/Captura-de-pantalla-2020-12-03-14-58-30-1.png)
-
-<figcaption>
+![Joven intentando llamar al telefonillo de un edificio público](/images/posts/Captura-de-pantalla-2020-12-03-14-58-30-1.png)
 
 _Joven intentando llamar al telefonillo de un edificio público_
 
-</figcaption>
 
-</figure>
 
 **ARTÍCULO 9 - ACCESIBILIDAD**
 

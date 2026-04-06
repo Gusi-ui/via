@@ -6,21 +6,15 @@ categories:
 tags:
   - "educacion-inclusiva"
   - "lomloe"
+coverImage: "pinocchio-2917652_1920-1024x683.jpg"
 draft: false
-description: ""
+description: "Retrato de Pinocho de perfil"
 ---
+![Retrato de Pinocho de perfil](/images/posts/pinocchio-2917652_1920-1024x683.jpg)
 
-<figure>
+_Retrato de Pinocho de perfil_
 
-![pinocchio-2917652_1920-1024x683.jpg](/images/posts/pinocchio-2917652_1920-1024x683.jpg)
 
-<figcaption>
-
-Retrato de Pinocho de perfil
-
-</figcaption>
-
-</figure>
 
 Ante los bulos y mentiras vertidos en redes sociales y medios de comunicación acerca del debate suscitado entorno a los centros de educación especial y a su presunta desaparición, supuestamente recogida en la nueva ley de educación (LOMLOE), desde VIAndalucía manifestamos:
 
