@@ -3,21 +3,15 @@ title: "LA ASISTENCIA PERSONAL. RESISTENCENCIAS A SU IMPLEMENTACIÓN"
 date: 2020-01-13
 categories:
   - "denuncias"
+coverImage: "board-2470557_1920-1024x484.jpg"
 draft: false
-description: ""
+description: "Pizarra donde se puede leer: nunca abandones"
 ---
+![Pizarra donde se puede leer: nunca abandones](/images/posts/board-2470557_1920-1024x484.jpg)
 
-<figure>
+_Pizarra donde se puede leer: nunca abandones_
 
-![board-2470557_1920-1024x484.jpg](/images/posts/board-2470557_1920-1024x484.jpg)
 
-<figcaption>
-
-Pizarra donde se puede leer: nunca abandones
-
-</figcaption>
-
-</figure>
 
 _“La privación de libertad sobre la base de la discapacidad es una violación de los derechos humanos en una escala global masiva”_ - Catalina Devandas, Relatora Especial de las Naciones Unidas sobre los Derechos de Personas con Discapacidad.
 
@@ -101,33 +95,21 @@ c) Que la persona encargada de la asistencia personal preste sus servicios media
 
 Se establecen tres grados de dependencia y en función de ellos un tope máximo para la prestación:
 
-<figure>
+![Los tres grados de dependencia y las cantidades económicas por cada grado](/images/posts/1.jpg)
 
-![1.jpg](/images/posts/1.jpg)
+_Los tres grados de dependencia y las cantidades económicas por cada grado_
 
-<figcaption>
 
-Los tres grados de dependencia y las cantidades económicas por cada grado
-
-</figcaption>
-
-</figure>
 
 - SEGUNDA CRIBA
 
 Se establecen tres niveles de intensidad horaria, según la dedicación que se estima precisa en cada caso, de tal manera que en la dedicación completa se percibirá la prestación íntegra, en la dedicación parcial el 50% y en la dedicación media será proporcional al número de horas de los cuidados:
 
-<figure>
+![Intensidad en número de horas](/images/posts/2.jpg)
 
-![2.jpg](/images/posts/2.jpg)
+_Intensidad en número de horas_
 
-<figcaption>
 
-Intensidad en número de horas
-
-</figcaption>
-
-</figure>
 
 - TERCERA CRIBA
 
@@ -135,17 +117,11 @@ Por último, deberá descontarse de la cuantía cualquier otra prestación econ�
 
 El importe de la prestación económica a reconocer a cada persona beneficiaria se determinará aplicando a la cuantía  un coeficiente calculado de acuerdo con su capacidad económica personal establecida conforme al artículo 14.7 de la Ley 39/2006, de 14 de diciembre. La cuantía de las prestaciones se percibirá íntegramente o se reducirá de acuerdo con la siguiente tabla:
 
-<figure>
+![Capacidad económica según IPREM](/images/posts/3.jpg)
 
-![3.jpg](/images/posts/3.jpg)
+_Capacidad económica según IPREM_
 
-<figcaption>
 
-Capacidad económica según IPREM
-
-</figcaption>
-
-</figure>
 
 Deducciones por prestaciones de análoga naturaleza y finalidad.
 
@@ -165,17 +141,11 @@ Con todos estos obstáculos, la implementación  de la Asistencia Personal dist
 
 \- Situación a 31 de julio de 2019. IMSERSO
 
-<figure>
+![Prestaciones por asistencia personal, por atención residencial y por cuidados familiares](/images/posts/4.jpg)
 
-![4.jpg](/images/posts/4.jpg)
+_Prestaciones por asistencia personal, por atención residencial y por cuidados familiares_
 
-<figcaption>
 
-Prestaciones por asistencia personal, por atención residencial y por cuidados familiares
-
-</figcaption>
-
-</figure>
 
 Tanto la Convención, como la Observación General número 5 de la ONU, como varias sentencias, establecen que la Asistencia Personal debe garantizarse a todas las personas que la necesiten, independientemente del tipo de diversidad, de la intensidad asistencial requerida y de la edad. Eso incluye a niños, mayores y personas con diversidad intelectual.
 

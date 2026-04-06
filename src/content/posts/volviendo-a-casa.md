@@ -6,21 +6,15 @@ categories:
 tags:
   - "accesibilidad"
   - "asistencia-personal"
+coverImage: "Coral-1024x797.jpg"
 draft: false
-description: ""
+description: "Esquina con adoquines"
 ---
-
-<figure>
-
-![Coral-1024x797.jpg](/images/posts/Coral-1024x797.jpg)
-
-<figcaption>
+![Esquina con adoquines](/images/posts/Coral-1024x797.jpg)
 
 _Esquina con adoquines_
 
-</figcaption>
 
-</figure>
 
 Volvía a casa después de participar en otro encuentro, uno más, para explicar las bondades de la Asistencia Personal. Encuentro, jornadas o seminario, lo mismo da.  Había perdido la cuenta.
 

@@ -6,21 +6,15 @@ categories:
 tags:
   - "asistencia-personal"
   - "libertad"
+coverImage: "Avión.jpg"
 draft: false
-description: ""
+description: "Avión visto desde atrás cogiendo pista"
 ---
+![Avión_ visto desde atrás cogiendo pista](/images/posts/Avión.jpg)
 
-<figure>
+_Avión_ visto desde atrás cogiendo pista_
 
-![Avión.jpg](/images/posts/Avión.jpg)
 
-<figcaption>
-
-_Avión_ visto desde atrás cogiendo pista
-
-</figcaption>
-
-</figure>
 
 He pensado titular así este relato, puesto que en mi provincia la Asistencia Personal como tal no existe, aunque algunas lo llamen así.
 

@@ -6,21 +6,15 @@ categories:
 tags:
   - "apoyo-mutuo"
   - "asistencia-personal"
+coverImage: "uniendo-las-manos.jpg"
 draft: false
-description: ""
+description: "Uniendo las manos"
 ---
-
-<figure>
-
-![uniendo-las-manos.jpg](/images/posts/uniendo-las-manos.jpg)
-
-<figcaption>
+![Uniendo las manos](/images/posts/uniendo-las-manos.jpg)
 
 _Uniendo las manos_
 
-</figcaption>
 
-</figure>
 
   Me han pedido que hable sobre mi experiencia con la Asistencia Personal desde la Asociación Vida Independiente.
 

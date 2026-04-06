@@ -6,21 +6,15 @@ categories:
 tags:
   - "convencion"
   - "educacion"
+
+coverImage: "educacion.avif"
+coverImageAlt: "Escolares dibujando en la pizarra. Imagen de Paula Verde"
+coverPosition: "center"
+coverSize: "cover"
+coverBlur: "10"
 draft: false
-description: ""
+description: "las personas con discapacidad tienen todo el derecho a estudiar, sin discriminación y con igualdad de oportunidades"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-08-15-34-51.png](/images/posts/Captura-de-pantalla-2020-12-08-15-34-51.png)
-
-<figcaption>
-
-_Escolares dibujando en la pizarra. Imagen de Paula Verde_
-
-</figcaption>
-
-</figure>
 
 **ARTÍCULO 24 - EDUCACIÓN**
 

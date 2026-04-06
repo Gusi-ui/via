@@ -8,21 +8,14 @@ tags:
   - "asistencia-personal"
   - "convencion"
   - "ddhh"
+coverImage: "broken.avif"
+coverImageAlt: "Jarrón hecho añicos"
+coverPosition: "center"
+coverSize: "cover"
+coverBlur: "10"
 draft: false
-description: ""
+description: "Este proyecto piloto de asistencia personal para la vida independiente de las personas con diversidad funcional está sujeto a una subvención anual de régimen competitivo, mediante la que una cantidad de dinero es otorgada supuestamente (a voluntad de la administración)"
 ---
-
-<figure>
-
-![broken-1001668_1920-1024x683.jpg](/images/posts/broken-1001668_1920-1024x683.jpg)
-
-<figcaption>
-
-_Jarrón hecho añicos_
-
-</figcaption>
-
-</figure>
 
 El proyecto piloto de asistencia personal que gestiona esta entidad desde 2015 hasta nuestros días, está en constante peligro de desaparición y en situación enquistada. A continuación se describen algunos motivos para que nos encontremos en semejante atolladero.
 

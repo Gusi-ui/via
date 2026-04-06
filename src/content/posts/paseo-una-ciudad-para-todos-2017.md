@@ -8,10 +8,10 @@ tags:
   - "andalucia"
   - "derechos-humanos"
   - "vida-independiente"
+coverImage: "1.jpg"
 draft: false
 description: "Durante la mañana del sábado 30 de Septiembre ha tenido lugar el VI Paseo Una Ciudad Para Todos convocado por la Plataforma del mismo nombre, formada por la aso"
 ---
-
 Durante la mañana del sábado 30 de Septiembre ha tenido lugar el VI Paseo Una Ciudad Para Todos convocado por la Plataforma del mismo nombre, formada por la asociación **Vida Independiente Andalucía, Peatones de Sevilla y Asociación Usuarios de Perros Guía**.
 
 El Paseo, que este año se ha centrado en las innumerables barreras e incumplimientos de la normativa sobre accesibilidad en la ciudad, ha dado comienzo a las 12 de la mañana desde el Arco de La Macarena, y ha transcurrido por distintas calles del barrio en las que de forma evidente se muestran estos incumplimientos, a pesar de las promesas que al respecto se han ido repitiendo desde los distintos gobiernos municipales. Finalmente concluyó en La Alameda de Hércules en donde se procedió a la lectura del Manifiesto.
@@ -37,17 +37,11 @@ rebajes de acera mal diseñados y en cantidad de ocasiones inexistentes, semáfo
 
 Por todo ello, exigimos que se respeten y cumplan las normativas existentes en todo el ámbito ciudadano: organismos públicos, comercios, transportes y espacios públicos.
 
-<figure>
+![Lectura del Manifiesto](/images/posts/1.jpg)
 
-![1.jpg](/images/posts/1.jpg)
+_Lectura del Manifiesto_
 
-<figcaption>
 
-Lectura del Manifiesto
-
-</figcaption>
-
-</figure>
 
 Volvemos a realizar las propuestas de lo que entendemos es la base de una convivencia ciudadana en igualdad, inclusiva y positiva para todos:
 1\. Una Oficina Técnica de la Accesibilidad que no se limite a tramitar a otros departamentos las reclamaciones recibidas.

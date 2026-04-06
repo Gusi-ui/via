@@ -5,21 +5,15 @@ categories:
   - "viandalucia"
 tags:
   - "accesibilidad"
+coverImage: "Marcha-2019.jpg"
 draft: false
-description: ""
+description: "En una calle sevillana los manifestantes portan una pancarta que dice: Es la falta de accesibilidad la que genera discapacidad"
 ---
+![En una calle sevillana los manifestantes portan una pancarta que dice: Es la falta de accesibilidad la que genera discapacidad](/images/posts/Marcha-2019.jpg)
 
-<figure>
+_En una calle sevillana los manifestantes portan una pancarta que dice: Es la falta de accesibilidad la que genera discapacidad_
 
-![Marcha-2019.jpg](/images/posts/Marcha-2019.jpg)
 
-<figcaption>
-
-En una calle sevillana los manifestantes portan una pancarta que dice: Es la falta de accesibilidad la que genera discapacidad
-
-</figcaption>
-
-</figure>
 
 El 29 de noviembre de 2013 se aprobaba el real decreto legislativo 1/2013 a nivel nacional. En él se daba como plazo máximo improrrogable para el cumplimiento de este derecho humano la fecha del 4 de diciembre de 2017. En lo referente a accesibilidad universal, desde hace más de 2 años vivimos en la ilegalidad con la lógica imperante de que nos encontramos ante un derecho humano de segunda categoría o menos. La inacción de las distintas administraciones en este sentido resulta indignante y preocupante.
 

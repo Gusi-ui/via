@@ -5,21 +5,15 @@ categories:
   - "notas-de-prensa-2"
 tags:
   - "asistencia-personal"
+coverImage: "WhatsApp-Image-2020-10-03-at-13.31.25.jpeg"
 draft: false
-description: ""
+description: "Coral Hortal Japón durante su intervención"
 ---
+![Coral Hortal Japón durante su intervención](/images/posts/WhatsApp-Image-2020-10-03-at-13.31.25.jpeg)
 
-<figure>
+_Coral Hortal Japón durante su intervención_
 
-![WhatsApp-Image-2020-10-03-at-13.31.25.jpeg](/images/posts/WhatsApp-Image-2020-10-03-at-13.31.25.jpeg)
 
-<figcaption>
-
-Coral Hortal Japón durante su intervención
-
-</figcaption>
-
-</figure>
 
 El pasado 29 de septiembre nuestra presidenta, Coral Hortal, compareció por tercera vez en sede parlamentaria en la Comisión de Discapacidad; en esta ocasión, a petición del Grupo Socialista. Y como en anteriores ocasiones, su intervención versó sobre la vergonzosa situación de la Asistencia Personal en nuestra Comunidad Autónoma, la importancia de esta herramienta como medio para la consecución de una vida independiente y la toma de control sobre la propia vida por parte de las personas con necesidad de apoyos, así como las dificultades que tenemos que afrontar para darle continuidad al proyecto piloto que, a instancias de la Proposición No de Ley sobre Asistencia Personal aprobada por unanimidad en 2013, gestiona VIAndalucía desde 2015. 
 

@@ -8,21 +8,15 @@ tags:
   - "asistencia-personal"
   - "educacion"
   - "salud"
+coverImage: "cueva.jpg"
 draft: false
-description: ""
+description: "Vista a un lago desde el interior de una cueva"
 ---
-
-<figure>
-
-![cueva.jpg](/images/posts/cueva.jpg)
-
-<figcaption>
+![Vista a un lago desde el interior de una cueva](/images/posts/cueva.jpg)
 
 _Vista a un lago desde el interior de una cueva_
 
-</figcaption>
 
-</figure>
 
 Cuando tenía tres años, allá por la década de los cincuenta, en plena postguerra y en los tiempos más duros de la dictadura, una noche, de repente y sin que nadie lo esperase, se presentó en mi casa el virus o la enfermedad de la poliomielitis.
 

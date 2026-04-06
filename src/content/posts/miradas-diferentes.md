@@ -8,6 +8,7 @@ tags:
   - "asistencia-personal"
   - "diversidad"
   - "expresion"
+coverImage: "Miradas-diferentes-01-min-724x1024.jpg"
 draft: false
 description: "Jornada sobre diversidad funcional. Universidad de Sevilla"
 ---

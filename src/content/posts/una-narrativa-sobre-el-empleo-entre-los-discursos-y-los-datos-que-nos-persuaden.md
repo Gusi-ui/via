@@ -4,21 +4,15 @@ date: 2020-02-02
 categories:
   - "denuncias"
   - "opinion"
+coverImage: "building-1080597_1920-1024x681.jpg"
 draft: false
-description: ""
+description: "Trabajando en la obra"
 ---
+![Trabajando en la obra](/images/posts/building-1080597_1920-1024x681.jpg)
 
-<figure>
+_Trabajando en la obra_
 
-![building-1080597_1920-1024x681.jpg](/images/posts/building-1080597_1920-1024x681.jpg)
 
-<figcaption>
-
-Trabajando en la obra
-
-</figcaption>
-
-</figure>
 
 En el mes de octubre, Gloria Lucena, en el marco de una jornada sobre vida independiente expuso la siguiente conferencia sobre empleo y diversidad funcional. Su charla comenzaba del siguiente modo:
 

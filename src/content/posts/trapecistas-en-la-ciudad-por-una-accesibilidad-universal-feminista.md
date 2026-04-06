@@ -13,34 +13,21 @@ coverImage: "logotipos.jpg"
 draft: false
 description: "Trapecistas en la ciudad y otros colectivos denuncian la dejadez del Ayuntamiento de Sevilla, al no vigilar que las obras que en la ciudad se realizan cumplan "
 ---
-
 **_Trapecistas en la ciudad_****_\*_** **y otros colectivos denuncian la dejadez del Ayuntamiento de Sevilla, al no vigilar que las obras que en la ciudad se realizan cumplan con la legalidad en materia de Accesibilidad Universal**
 
 No pocas veces encontramos en nuestra hermosa ciudad elementos o cajones de obra que dificultan, o directamente impiden, el deambular de los peatones. Para muestra un botón:
 
-<figure>
-
-![trapecista-1.jpg](/images/posts/trapecista-1.jpg)
-
-<figcaption>
+![Obras inaccesibles en diferentes calles de la ciudad](/images/posts/trapecista-1.jpg)
 
 _Obras inaccesibles en diferentes calles de la ciudad_
 
-</figcaption>
 
-</figure>
 
-<figure>
-
-![TRAPECISTA-2.jpg](/images/posts/TRAPECISTA-2.jpg)
-
-<figcaption>
+![Obras inaccesibles en diferentes calles de la ciudad](/images/posts/TRAPECISTA-2.jpg)
 
 _Obras inaccesibles en diferentes calles de la ciudad_
 
-</figcaption>
 
-</figure>
 
 Los anteriores ejemplos tan sólo son una pequeña muestra de una práctica habitual del Ayuntamiento de Sevilla: **no vigilar que las obras que se ejecutan en la vía pública cumplen con la normativa de accesibilidad y no aplicar el régimen sancionador** cuando es necesario.
 
@@ -82,16 +69,10 @@ Normativa:
 
 Apoyan a _Trapecistas_ en su denuncia:
 
-<figure>
-
-![logotipos.jpg](/images/posts/logotipos.jpg)
-
-<figcaption>
+![Logotipos de VI Andalucía, Eliminando Barreras Sevilla, Adelante Sevilla](/images/posts/logotipos.jpg)
 
 _Logotipos de VI Andalucía, Eliminando Barreras Sevilla, Adelante Sevilla_
 
-</figcaption>
 
-</figure>
 
 **_\*Trapecistas en la ciudad: por una accesibilidad universal feminista_**, es un grupo de trabajo independiente, que surge ante la necesidad de reivindicar la accesibilidad desde la perspectiva de los feminismos.

@@ -7,22 +7,15 @@ tags:
   - "convencion"
   - "ddhh"
   - "maltrato"
+
+coverImage: "Pagaran.avif"
+coverImageAlt: "Árbol frondoso y con musgo visto desde abajo. Imagen tomada por Paula Verde"
+coverPosition: "center"
+coverSize: "cover"
+coverBlur: "10"
 draft: false
-description: ""
+description: "ARTÍCULO 15 - PROTECCIÓN CONTRA LA TORTURA Y OTROS TRATOS O PENAS CRUELES, INHUMANOS O DEGRADANTES"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-06-10-42-13-1.png](/images/posts/Captura-de-pantalla-2020-12-06-10-42-13-1.png)
-
-<figcaption>
-
-_Árbol frondoso y con musgo visto desde abajo. Imagen tomada por Paula Verde_
-
-</figcaption>
-
-</figure>
-
 **ARTÍCULO 15 - PROTECCIÓN CONTRA LA TORTURA Y OTROS TRATOS O PENAS CRUELES, INHUMANOS O DEGRADANTES**  
 
 Ninguna persona será sometida a tortura u otros tratos o penas crueles, inhumanos o degradantes. En particular, **nadie será sometido a experimentos médicos o científicos sin su consentimiento libre e informado.**

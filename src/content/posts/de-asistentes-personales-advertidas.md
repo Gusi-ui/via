@@ -5,21 +5,15 @@ categories:
   - "relatos-ap"
 tags:
   - "asistencia-personal"
+coverImage: "120027950_252167856063579_4944420533515375696_n-1024x768.jpg"
 draft: false
-description: ""
+description: "Usuaria y asistente personal con ella a la orilla del mar"
 ---
-
-<figure>
-
-![120027950_252167856063579_4944420533515375696_n-1024x768.jpg](/images/posts/120027950_252167856063579_4944420533515375696_n-1024x768.jpg)
-
-<figcaption>
+![Usuaria y asistente personal con ella a la orilla del mar](/images/posts/120027950_252167856063579_4944420533515375696_n-1024x768.jpg)
 
 _Usuaria y asistente personal con ella a la orilla del mar_
 
-</figcaption>
 
-</figure>
 
 Desde la primera entrevista yo le advertí claramente una cosa: 
 

@@ -1,10 +1,49 @@
 import { getCollection } from 'astro:content';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+const POSTS_IMAGES_DIR = join(process.cwd(), 'public/images/posts');
+
+const extractFirstPostImageFromBody = (body: string): string | null => {
+  const candidates: string[] = [];
+
+  const md = body.match(/!\[[^\]]*]\((\/images\/posts\/[^)\s]+)\)/i);
+  if (md?.[1]) candidates.push(md[1]);
+
+  const html = body.match(/<img[^>]+src=["'](\/images\/posts\/[^"']+)["']/i);
+  if (html?.[1]) candidates.push(html[1]);
+
+  for (const url of candidates) {
+    const clean = url.split('?')[0].split('#')[0];
+    const filename = clean.split('/').pop();
+    if (!filename) continue;
+    const decoded = decodeURIComponent(filename);
+    if (existsSync(join(POSTS_IMAGES_DIR, decoded))) return decoded;
+  }
+
+  return null;
+};
 
 export const getPublishedPosts = async () => {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
-  return posts.sort(
-    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-  );
+  return posts
+    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+    .map((post) => {
+      const current = post.data.coverImage;
+      const currentIsValid = !!current && existsSync(join(POSTS_IMAGES_DIR, current));
+      if (currentIsValid) return post;
+
+      const derived = extractFirstPostImageFromBody(post.body ?? '');
+      if (!derived) return post;
+
+      return {
+        ...post,
+        data: {
+          ...post.data,
+          coverImage: derived,
+        },
+      };
+    });
 };
 
 export const getPublishedPages = async () => {

@@ -6,22 +6,14 @@ categories:
 tags:
   - "convencion"
   - "participacion"
+coverImage: "participar.avif"
+coverImageAlt: "Pancarta con el lema del Movimiento de Vida Independiente: Nada sobre nosotros, sin nosotros."
+coverPosition: "center"
+coverSize: "cover"
+coverBlur: "10"
 draft: false
-description: ""
+description: "ARTÍCULO 29 - PARTICIPACIÓN EN LA VIDA POLÍTICA Y PÚBLICA"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-08-18-52-55.png](/images/posts/Captura-de-pantalla-2020-12-08-18-52-55.png)
-
-<figcaption>
-
-Pancarta con el lema del Movimiento de Vida Independiente: Nada sobre nosotros, sin nosotros.
-
-</figcaption>
-
-</figure>
-
  **ARTÍCULO 29 - PARTICIPACIÓN EN LA VIDA POLÍTICA Y PÚBLICA**
 
 **Asegurar que puedan participar plena y efectivamente en la vida política y pública** en igualdad de condiciones con las demás, directamente o a través de representantes libremente elegidos, incluidos el derecho y la posibilidad de las personas con discapacidad a votar y ser elegidas, mediante:

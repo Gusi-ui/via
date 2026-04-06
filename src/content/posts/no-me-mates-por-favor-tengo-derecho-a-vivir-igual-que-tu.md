@@ -6,22 +6,15 @@ categories:
 tags:
   - "ddhh"
   - "vida"
+coverImage: "Captura-de-pantalla-2020-12-01-16-26-14-1.png"
 draft: false
-description: ""
+description: "Niño lanzando una piedra al agua del lago. Imagen cortesía de Paula Verde"
 ---
+![Niño lanzando una piedra al agua del lago. _Imagen cortesía de Paula Verde](/images/posts/Captura-de-pantalla-2020-12-01-16-26-14-1.png)
 
-<figure>
+_Niño lanzando una piedra al agua del lago. _Imagen cortesía de Paula Verde_
 
-![Captura-de-pantalla-2020-12-01-16-26-14-1.png](/images/posts/Captura-de-pantalla-2020-12-01-16-26-14-1.png)
 
-<figcaption>
-
-Niño lanzando una piedra al agua del lago.
-_Imagen cortesía de Paula Verde_
-
-</figcaption>
-
-</figure>
 
 Artículo 10
 Derecho a la vida

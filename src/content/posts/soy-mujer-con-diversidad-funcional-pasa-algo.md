@@ -7,21 +7,15 @@ tags:
   - "convencion"
   - "diversidad-funcional"
   - "mujer"
+coverImage: "Captura-de-pantalla-2020-12-03-15-18-35.png"
 draft: false
-description: ""
+description: "Grupo diverso de mujeres en actitud reivindicativa"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-03-15-18-35.png](/images/posts/Captura-de-pantalla-2020-12-03-15-18-35.png)
-
-<figcaption>
+![Grupo diverso de mujeres en actitud reivindicativa](/images/posts/Captura-de-pantalla-2020-12-03-15-18-35.png)
 
 _Grupo diverso de mujeres en actitud reivindicativa_
 
-</figcaption>
 
-</figure>
 
 **ARTÍCULO 6 - MUJERES CON DISCAPACIDAD**
 

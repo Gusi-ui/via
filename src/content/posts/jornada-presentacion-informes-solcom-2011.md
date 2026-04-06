@@ -5,6 +5,7 @@ categories:
   - "noticias"
 tags:
   - "jornadas"
+coverImage: "todos_con_solcom.jpg"
 draft: false
 description: "“Vulneraciones en España de la Convención sobre los derechos humanos de las personas con discapacidad diversidad funcional de la ONU”."
 ---

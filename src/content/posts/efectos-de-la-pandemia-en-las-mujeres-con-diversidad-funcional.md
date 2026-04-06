@@ -9,21 +9,11 @@ tags:
   - "ddhh"
   - "diversidad-funcional"
   - "mujer"
+
+coverImage: "pandemia-mujeres.avif"
 draft: false
-description: ""
+description: "En este 8M, además de resaltar las múltiples discriminaciones históricas y habituales que soportamos las mujeres con diversidad funcional, queremos denunciar que la situación se ha recrudecido por los efectos del Covid-19, haciéndolas más visibles y mostrando sus consecuencias más dramáticas:"
 ---
-
-<figure>
-
-![IMG-20210226-WA0002.jpg](/images/posts/IMG-20210226-WA0002.jpg)
-
-<figcaption>
-
-_Imagen en blanco y negro de una mujer en silla de ruedas a contra luz en una habitación vacía_
-
-</figcaption>
-
-</figure>
 
 **Autoría: Coral Hortal Japón, Estela Martín Martín, Eugenia Carrasco López**
 

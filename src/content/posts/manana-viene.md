@@ -7,21 +7,15 @@ tags:
   - "asistencia-personal"
   - "infancia"
   - "ocio"
+coverImage: "Estela.jpg"
 draft: false
-description: ""
+description: "Dos personas paseando por el parque de espaldas a la cámara"
 ---
-
-<figure>
-
-![Estela.jpg](/images/posts/Estela.jpg)
-
-<figcaption>
+![Dos personas paseando por el parque de espaldas a la cámara](/images/posts/Estela.jpg)
 
 _Dos personas paseando por el parque de espaldas a la cámara_
 
-</figcaption>
 
-</figure>
 
 \- ¿Mañana viene?
 

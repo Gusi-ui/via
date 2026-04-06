@@ -6,22 +6,15 @@ categories:
 tags:
   - "convencion"
   - "familia"
+
+coverImage: "Familia.avif"
+coverImageAlt: "Mujer en silla con su hija pequeña en las piernas y charlando con el hijo mayor a la salida del colegio."
+coverPosition: "center"
+coverSize: "cover"
+coverBlur: "10"
 draft: false
-description: ""
+description: "ARTÍCULO 23 - RESPETO DEL HOGAR Y LA FAMILIA"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-08-15-14-51-1.png](/images/posts/Captura-de-pantalla-2020-12-08-15-14-51-1.png)
-
-<figcaption>
-
-_Mujer en silla con su hija pequeña en las piernas y charlando con el hijo mayor a la salida del colegio._
-
-</figcaption>
-
-</figure>
-
 **ARTÍCULO 23 - RESPETO DEL HOGAR Y LA FAMILIA**
 
 Tomarán **medidas efectivas y pertinentes** para poner fin a la discriminación contra las personas con discapacidad en todas las cuestiones **relacionadas con el matrimonio, la familia, la paternidad y las relaciones personales, asegurando que:**

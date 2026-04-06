@@ -6,22 +6,15 @@ categories:
 tags:
   - "convencion"
   - "honor"
+
+coverImage: "honor.avif"
+coverImageAlt: "Dos llaves sobre una roca. Cortesía de Paula Verde"
+coverPosition: "center"
+coverSize: "cover"
+coverBlur: "10"
 draft: false
-description: ""
+description: "ARTÍCULO 22 - RESPETO DE LA PRIVACIDAD"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-08-15-07-28.png](/images/posts/Captura-de-pantalla-2020-12-08-15-07-28.png)
-
-<figcaption>
-
-_Dos llaves sobre una roca. Cortesía de Paula Verde_
-
-</figcaption>
-
-</figure>
-
 **ARTÍCULO 22 - RESPETO DE LA PRIVACIDAD**
 
 Ninguna persona con discapacidad, independientemente de cuál sea su lugar de residencia o su modalidad de convivencia, **será objeto de injerencias arbitrarias o ilegales en su vida privada, familia, hogar, correspondencia o cualquier otro tipo de comunicación, o de agresiones ilícitas contra su honor y su reputación.** Las personas con discapacidad tendrán derecho a ser protegidas por la ley frente a dichas injerencias o agresiones.

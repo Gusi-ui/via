@@ -1,10 +1,34 @@
 ---
-import { getAllCategories } from '@/lib/collections';
+import { getAllCategories, getAllTags, getPublishedPosts } from '@/lib/collections';
 
 const categories = await getAllCategories();
+const tags = await getAllTags();
+const recentPosts = (await getPublishedPosts()).slice(0, 6);
 ---
 
 <div class="space-y-6">
+  <div class="bg-via-bg-content rounded-xl shadow-sm p-5">
+    <h3 class="text-lg font-bold font-serif text-via-green mb-4 pb-2 border-b-2 border-via-divider">
+      Últimas entradas
+    </h3>
+    <ul class="space-y-3" role="list">
+      {recentPosts.map((post) => (
+        <li>
+          <a
+            href={`/posts/${post.id}/`}
+            class="block rounded-lg px-2 py-1.5 hover:bg-via-green/10 transition-colors no-underline"
+            tabindex="0"
+          >
+            <div class="text-sm text-via-text font-medium leading-snug">{post.data.title}</div>
+            <div class="text-xs text-via-text-secondary mt-1">
+              {post.data.categories?.[0]?.replace(/-/g, ' ')}
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
   <div class="bg-via-bg-content rounded-xl shadow-sm p-5">
     <h3 class="text-lg font-bold font-serif text-via-green mb-4 pb-2 border-b-2 border-via-divider">
       Categorías
@@ -25,6 +49,23 @@ const categories = await getAllCategories();
         </li>
       ))}
     </ul>
+  </div>
+
+  <div class="bg-via-bg-content rounded-xl shadow-sm p-5">
+    <h3 class="text-lg font-bold font-serif text-via-green mb-4 pb-2 border-b-2 border-via-divider">
+      Etiquetas
+    </h3>
+    <div class="flex flex-wrap gap-2">
+      {tags.slice(0, 14).map((tag) => (
+        <a
+          href={`/tag/${tag.name}/1/`}
+          class="text-xs bg-via-bg-alt text-via-text-meta px-2.5 py-1 rounded-full hover:bg-via-green/10 hover:text-via-green transition-colors no-underline"
+          tabindex="0"
+        >
+          #{tag.name}
+        </a>
+      ))}
+    </div>
   </div>
 
   <div class="bg-via-bg-content rounded-xl shadow-sm p-5">

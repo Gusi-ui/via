@@ -7,21 +7,15 @@ tags:
   - "convecion"
   - "discriminacion"
   - "igualdad"
+coverImage: "Captura-de-pantalla-2020-12-03-15-08-02.png"
 draft: false
-description: ""
+description: "Manos aferrándose a una roca para no caer. Autora: Paula Verde"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-03-15-08-02.png](/images/posts/Captura-de-pantalla-2020-12-03-15-08-02.png)
-
-<figcaption>
+![Manos aferrándose a una roca para no caer. Autora: Paula Verde](/images/posts/Captura-de-pantalla-2020-12-03-15-08-02.png)
 
 _Manos aferrándose a una roca para no caer. Autora: Paula Verde_
 
-</figcaption>
 
-</figure>
 
 **ARTÍCULO 5 - IGUALDAD Y NO DISCRIMINACIÓN**
 

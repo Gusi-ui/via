@@ -6,21 +6,15 @@ categories:
 tags:
   - "conciencia"
   - "convencion"
+coverImage: "Captura-de-pantalla-2020-12-06-10-24-27.png"
 draft: false
-description: ""
+description: "Mujer sujetando con su mano abierta estrellas de diferentes colores. Autora: Paula Verde"
 ---
+![Mujer sujetando con su mano abierta estrellas de diferentes colores. Autora: Paula Verde](/images/posts/Captura-de-pantalla-2020-12-06-10-24-27.png)
 
-<figure>
+_Mujer sujetando con su mano abierta estrellas de diferentes colores. Autora: Paula Verde_
 
-![Captura-de-pantalla-2020-12-06-10-24-27.png](/images/posts/Captura-de-pantalla-2020-12-06-10-24-27.png)
 
-<figcaption>
-
-Mujer sujetando con su mano abierta estrellas de diferentes colores. Autora: Paula Verde
-
-</figcaption>
-
-</figure>
 
 **ARTÍCULO 8 - TOMA DE CONCIENCIA**
 

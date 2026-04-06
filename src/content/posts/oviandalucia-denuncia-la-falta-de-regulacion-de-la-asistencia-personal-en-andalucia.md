@@ -7,6 +7,7 @@ categories:
 tags:
   - "asistencia-personal"
   - "ddhh"
+coverImage: "Regulacion-de-la-asistencia-personal.avif"
 draft: false
 description: "- ● Sólo 12 personas disfrutan de este derecho por la ley de dependencia en nuestra comunidad."
 ---

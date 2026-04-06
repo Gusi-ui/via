@@ -23,18 +23,16 @@ export const getStaticPaths = async () => {
 const { posts, currentPage, totalPages } = Astro.props;
 ---
 
-<BaseLayout title={`Entradas - Página ${currentPage}`}>
+<BaseLayout title={`Bitácora - Página ${currentPage}`}>
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
     <Breadcrumb
       items={[
         { label: 'Inicio', href: '/' },
-        { label: 'Entradas' },
+        { label: 'Bitácora' },
       ]}
     />
 
-    <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green mt-6 mb-8">
-      Todas las entradas
-    </h1>
+    <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green mt-6 mb-8">Bitácora</h1>
 
     <div class="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
       <div>

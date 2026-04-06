@@ -3,21 +3,15 @@ title: "Iguales ante la ley, incluso para decidir con los apoyos necesarios"
 date: 2020-12-03
 categories:
   - "articulos-convencion"
+coverImage: "Captura-de-pantalla-2020-12-02-15-54-44-1.png"
 draft: false
-description: ""
+description: "Estatua de la justicia ciega, con una espada y una balanza"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-02-15-54-44-1.png](/images/posts/Captura-de-pantalla-2020-12-02-15-54-44-1.png)
-
-<figcaption>
+![Estatua de la justicia ciega, con una espada y una balanza](/images/posts/Captura-de-pantalla-2020-12-02-15-54-44-1.png)
 
 _Estatua de la justicia ciega, con una espada y una balanza_
 
-</figcaption>
 
-</figure>
 
 Los Estados Partes reafirman que l**as personas con discapacidad tienen derecho en todas partes al reconocimiento de su personalidad jurídica.**
 

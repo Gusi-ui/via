@@ -11,7 +11,6 @@ tags:
 draft: false
 description: "Educación, Inclusión, Diversidad, Respeto"
 ---
-
 **Educación, Inclusión, Diversidad, Respeto**
 
 VIAndalucia tiene entre sus principios básicos, el trabajar por la educación, porque la consideramos un pilar fundamental para poder gestionar la vida independiente a la que toda persona aspira y tiene derecho, es decir una educación que nos enseñe a participar de la sociedad, tomando decisiones sobre nuestro cuerpo y nuestro entorno, asumiendo las responsabilidades que de ellas se deriven.
@@ -32,16 +31,10 @@ Tenemos que comprender lo beneficioso que supone ser así, supone riqueza de pen
 
 Estamos comprobando a diario la violencia con la que convivimos, unas veces llega a salir en prensa pero la mayoría de las veces no aparece porque no provoca la muerte inmediata, porque se trata de gestos, miradas, actitudes que provocan la muerte de la autoestima, que va dejando poco a poco anulada la condición de persona para convertirla en “cosa”, y como tal, prescindible.
 
-<figure>
+![Ponentes y presentadora de la Jornada](/images/posts/nacho-e1492691471133.jpg)
 
-![nacho-e1492691471133.jpg](/images/posts/nacho-e1492691471133.jpg)
+_Ponentes y presentadora de la Jornada_
 
-<figcaption>
 
-Ponentes y presentadora de la Jornada
-
-</figcaption>
-
-</figure>
 
 Lo curioso es que no nos planteemos si en estos factores tendrá algo que ver cómo educamos. ¿Miramos qué hacemos mal? ¿Vemos las contradicciones en que caemos como personas y como sistema? ¿Es que no nos consideramos parte del sistema? ¿Somos conscientes que establecemos nuestras relaciones educativas, laborales y afectivas como ejercicios de poder y sumisión?

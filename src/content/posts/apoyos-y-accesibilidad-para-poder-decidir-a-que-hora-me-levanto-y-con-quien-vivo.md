@@ -7,22 +7,15 @@ tags:
   - "asistencia-personal"
   - "convencion"
   - "vida-independiente"
+
+coverImage: "vida-independiente.avif"
+coverImageAlt: "Persona en silla de ruedas con cartel reivindicando la Asistencia Personal."
+coverPosition: "center"
+coverSize: "cover"
+coverBlur: "10"
 draft: false
-description: ""
+description: "ARTÍCULO 19 - DERECHO A VIVIR DE FORMA INDEPENDIENTE Y A SER INCLUIDO EN LA COMUNIDAD"
 ---
-
-<figure>
-
-![Captura-de-pantalla-2020-12-06-10-49-45.png](/images/posts/Captura-de-pantalla-2020-12-06-10-49-45.png)
-
-<figcaption>
-
-_Persona en silla de ruedas con cartel reivindicando la Asistencia Personal._
-
-</figcaption>
-
-</figure>
-
 **ARTÍCULO 19 - DERECHO A VIVIR DE FORMA INDEPENDIENTE Y A SER INCLUIDO EN LA COMUNIDAD**
 
 Los Estados Partes en la presente Convención reconocen el derecho en igualdad de condiciones de todas las personas con discapacidad a vivir en la comunidad, con opciones iguales a las de las demás, y adoptarán medidas efectivas y pertinentes para facilitar el pleno goce de este **derecho por las personas con discapacidad y su plena inclusión y participación en la comunidad**, asegurando en especial que:
