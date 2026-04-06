@@ -15,55 +15,94 @@ for (let i = 1; i <= totalPages; i++) {
     pages.push('...');
   }
 }
+
+const prevHref = currentPage > 1 ? `${baseUrl}${currentPage - 1}/` : undefined;
+const nextHref = currentPage < totalPages ? `${baseUrl}${currentPage + 1}/` : undefined;
 ---
 
 {totalPages > 1 && (
-  <nav aria-label="Paginación" class="flex justify-center items-center gap-1 mt-8">
-    {currentPage > 1 && (
-      <a
-        href={`${baseUrl}${currentPage - 1}/`}
-        class="px-3 py-2 rounded-lg text-sm text-via-text hover:bg-via-green/10 hover:text-via-green transition-colors no-underline"
-        aria-label="Página anterior"
-        tabindex="0"
-      >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-      </a>
-    )}
-
-    {pages.map((page) =>
-      page === '...' ? (
-        <span class="px-2 py-1 text-via-text-secondary text-sm">...</span>
-      ) : (
+  <nav aria-label="Paginación" class="mt-10">
+    <div class="flex items-center justify-between gap-3 sm:justify-center">
+      {prevHref ? (
         <a
-          href={`${baseUrl}${page}/`}
-          class:list={[
-            'px-3 py-1.5 rounded-lg text-sm font-medium transition-colors no-underline',
-            page === currentPage
-              ? 'bg-via-green text-white'
-              : 'text-via-text hover:bg-via-green/10 hover:text-via-green',
-          ]}
-          aria-current={page === currentPage ? 'page' : undefined}
-          aria-label={`Página ${page}`}
-          tabindex="0"
+          href={prevHref}
+          class="inline-flex items-center gap-2 rounded-xl border border-via-divider bg-via-bg-content px-3 py-2 text-sm font-medium text-via-text shadow-sm hover:bg-via-green/10 hover:text-via-green transition-colors no-underline"
+          aria-label="Página anterior"
         >
-          {page}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span class="hidden sm:inline">Anterior</span>
         </a>
-      )
-    )}
+      ) : (
+        <span
+          class="inline-flex items-center gap-2 rounded-xl border border-via-divider bg-via-bg-content px-3 py-2 text-sm font-medium text-via-text-secondary opacity-60"
+          aria-disabled="true"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span class="hidden sm:inline">Anterior</span>
+        </span>
+      )}
 
-    {currentPage < totalPages && (
-      <a
-        href={`${baseUrl}${currentPage + 1}/`}
-        class="px-3 py-2 rounded-lg text-sm text-via-text hover:bg-via-green/10 hover:text-via-green transition-colors no-underline"
-        aria-label="Página siguiente"
-        tabindex="0"
-      >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
-    )}
+      <div class="flex items-center gap-3">
+        <ol class="hidden sm:flex items-center gap-1 rounded-2xl border border-via-divider bg-via-bg-alt p-1 shadow-sm">
+          {pages.map((page) =>
+            page === '...' ? (
+              <li class="px-2 text-via-text-secondary text-sm select-none" aria-hidden="true">…</li>
+            ) : (
+              <li>
+                <a
+                  href={`${baseUrl}${page}/`}
+                  class:list={[
+                    'inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold min-w-10 transition-colors no-underline',
+                    page === currentPage
+                      ? 'bg-via-green text-white shadow-sm'
+                      : 'text-via-text hover:bg-via-green/10 hover:text-via-green',
+                  ]}
+                  aria-current={page === currentPage ? 'page' : undefined}
+                  aria-label={`Página ${page}`}
+                >
+                  {page}
+                </a>
+              </li>
+            )
+          )}
+        </ol>
+
+        <div class="rounded-2xl border border-via-divider bg-via-bg-content px-3 py-2 text-sm text-via-text-meta shadow-sm sm:hidden">
+          {currentPage}/{totalPages}
+        </div>
+      </div>
+
+      {nextHref ? (
+        <a
+          href={nextHref}
+          class="inline-flex items-center gap-2 rounded-xl border border-via-divider bg-via-bg-content px-3 py-2 text-sm font-medium text-via-text shadow-sm hover:bg-via-green/10 hover:text-via-green transition-colors no-underline"
+          aria-label="Página siguiente"
+        >
+          <span class="hidden sm:inline">Siguiente</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      ) : (
+        <span
+          class="inline-flex items-center gap-2 rounded-xl border border-via-divider bg-via-bg-content px-3 py-2 text-sm font-medium text-via-text-secondary opacity-60"
+          aria-disabled="true"
+        >
+          <span class="hidden sm:inline">Siguiente</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+      )}
+    </div>
+
+    <div class="mt-3 text-center text-xs text-via-text-secondary">
+      Página <span class="font-semibold text-via-text">{currentPage}</span> de{' '}
+      <span class="font-semibold text-via-text">{totalPages}</span>
+    </div>
   </nav>
 )}

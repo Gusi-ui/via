@@ -20,11 +20,16 @@ const allPosts = await getPublishedPosts();
 const currentIndex = allPosts.findIndex((p) => p.id === slug);
 const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
 const prevPost = currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
-const relatedPosts = allPosts
+const lc = (arr: string[] = []) => arr.map((x) => x.toLowerCase());
+const baseCats = lc(categories).filter((c) => c !== 'viandalucia');
+const baseTags = lc(tags).filter((t) => t !== 'viandalucia');
+let relatedPosts = allPosts
   .filter((p) => p.id !== slug)
   .map((p) => {
-    const sharedCategories = categories.filter((c) => p.data.categories?.includes(c)).length;
-    const sharedTags = tags.filter((t) => p.data.tags?.includes(t)).length;
+    const pcats = lc(p.data.categories || []).filter((c) => c !== 'viandalucia');
+    const ptags = lc(p.data.tags || []).filter((t) => t !== 'viandalucia');
+    const sharedCategories = baseCats.filter((c) => pcats.includes(c)).length;
+    const sharedTags = baseTags.filter((t) => ptags.includes(t)).length;
     const score = sharedCategories * 3 + sharedTags;
     return { post: p, score };
   })
@@ -33,8 +38,11 @@ const relatedPosts = allPosts
     if (b.score !== a.score) return b.score - a.score;
     return new Date(b.post.data.date).getTime() - new Date(a.post.data.date).getTime();
   })
-  .slice(0, 4)
+  .slice(0, 8)
   .map((x) => x.post);
+if (relatedPosts.length === 0) {
+  relatedPosts = allPosts.filter((p) => p.id !== slug).slice(0, 6);
+}
 ---
 
 <BaseLayout title={title} description={description} type="article" publishedDate={date}>
@@ -47,8 +55,8 @@ const relatedPosts = allPosts
       ]}
     />
 
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 mt-6">
-      <article class="bg-via-bg-content rounded-xl shadow-sm p-6 md:p-8">
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] gap-8 mt-6">
+      <article class="min-w-0 bg-via-bg-content rounded-xl shadow-sm p-6 md:p-8">
         <header class="mb-6">
           <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green leading-tight">
             {title}
@@ -127,29 +135,107 @@ const relatedPosts = allPosts
           )}
 
           {relatedPosts.length > 0 && (
-            <section aria-label="Entradas relacionadas">
+            <section aria-label="Entradas relacionadas" data-rel-section>
               <h2 class="text-lg font-bold font-serif text-via-green mb-3">Entradas relacionadas</h2>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {relatedPosts.map((p) => (
-                  <a
-                    href={`/posts/${p.id}/`}
-                    class="block rounded-lg border border-via-divider px-4 py-3 no-underline hover:bg-via-green/10 transition-colors"
-                  >
-                    <div class="text-sm font-medium text-via-text leading-snug">{p.data.title}</div>
-                    <div class="text-xs text-via-text-secondary mt-1">
-                      {formatDate(p.data.date)}
-                    </div>
-                  </a>
-                ))}
+              <div class="relative">
+                <button
+                  type="button"
+                  class="hidden sm:flex absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-white border border-via-divider shadow-sm rounded-full w-9 h-9 items-center justify-center hover:bg-via-green/10 hover:text-via-green transition-colors disabled:opacity-40 disabled:pointer-events-none"
+                  aria-label="Anterior"
+                  data-rel-prev
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <div
+                  class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 [scrollbar-width:thin]"
+                  data-rel-carousel
+                >
+                  {relatedPosts.map((p) => {
+                    const img = p.data.coverImage ? `/images/posts/${p.data.coverImage}` : '/images/posts/logovia.png';
+                    const descRaw = p.data.description || '';
+                    const desc = descRaw.length > 120 ? descRaw.slice(0, 117) + '…' : descRaw;
+                    return (
+                      <a
+                        href={`/posts/${p.id}/`}
+                        class="shrink-0 snap-start w-60 sm:w-64 md:w-72 rounded-xl border border-via-divider bg-via-bg-content overflow-hidden no-underline hover:shadow-sm transition-shadow"
+                      >
+                        <img
+                          src={img}
+                          alt={p.data.title}
+                          onerror="this.onerror=null;this.src='/images/posts/logovia.png';"
+                          class="w-full h-36 object-cover"
+                          loading="lazy"
+                        />
+                        <div class="p-3">
+                          <div class="text-sm font-medium text-via-text leading-snug line-clamp-2">{p.data.title}</div>
+                          {desc && <div class="text-xs text-via-text-secondary mt-1 line-clamp-2">{desc}</div>}
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+                <button
+                  type="button"
+                  class="hidden sm:flex absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-white border border-via-divider shadow-sm rounded-full w-9 h-9 items-center justify-center hover:bg-via-green/10 hover:text-via-green transition-colors disabled:opacity-40 disabled:pointer-events-none"
+                  aria-label="Siguiente"
+                  data-rel-next
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               </div>
             </section>
           )}
         </footer>
       </article>
 
-      <aside>
+      <aside class="min-w-0">
         <Sidebar />
       </aside>
     </div>
   </div>
 </BaseLayout>
+
+<script>
+  function initRelatedCarousels() {
+    const sections = document.querySelectorAll<HTMLElement>('[data-rel-section]');
+    sections.forEach((section) => {
+      const track = section.querySelector<HTMLElement>('[data-rel-carousel]');
+      const prev = section.querySelector<HTMLButtonElement>('[data-rel-prev]');
+      const next = section.querySelector<HTMLButtonElement>('[data-rel-next]');
+      if (!track || !prev || !next) return;
+
+      const stepSize = () => {
+        const card = track.querySelector<HTMLElement>('a');
+        if (!card) return track.clientWidth;
+        const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '16') || 16;
+        return card.getBoundingClientRect().width + gap;
+      };
+
+      const updateButtons = () => {
+        const max = track.scrollWidth - track.clientWidth - 1;
+        prev.disabled = track.scrollLeft <= 0;
+        next.disabled = track.scrollLeft >= max;
+      };
+
+      prev.addEventListener('click', () => {
+        track.scrollBy({ left: -stepSize(), behavior: 'smooth' });
+      });
+      next.addEventListener('click', () => {
+        track.scrollBy({ left: stepSize(), behavior: 'smooth' });
+      });
+      track.addEventListener('scroll', updateButtons, { passive: true });
+      window.addEventListener('resize', updateButtons);
+      updateButtons();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRelatedCarousels);
+  } else {
+    initRelatedCarousels();
+  }
+</script>

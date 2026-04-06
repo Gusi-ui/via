@@ -6,7 +6,135 @@ const tags = await getAllTags();
 const recentPosts = (await getPublishedPosts()).slice(0, 6);
 ---
 
-<div class="space-y-6">
+<div class="space-y-6 lg:sticky lg:top-24">
+  <div class="bg-via-bg-content rounded-xl shadow-sm p-5">
+    <h3 class="text-lg font-bold font-serif text-via-green mb-4 pb-2 border-b-2 border-via-divider">
+      Páginas Amigas
+    </h3>
+    <div class="grid grid-cols-2 gap-3">
+      <a
+        href="https://www.asociacionsolcom.org/"
+        class="group rounded-xl border border-via-divider bg-white p-3 flex items-center justify-center hover:bg-via-bg-alt transition-colors"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="https://viandalucia.org/wp-content/uploads/2019/05/logo_solcom.png"
+          alt="Solcom"
+          class="h-10 w-auto opacity-85 group-hover:opacity-100 transition-opacity"
+          loading="lazy"
+        />
+      </a>
+      <a
+        href="https://www.derechoshumanosya.org/"
+        class="group rounded-xl border border-via-divider bg-white p-3 flex items-center justify-center hover:bg-via-bg-alt transition-colors"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="https://viandalucia.org/wp-content/uploads/2019/05/logo_dhy.png"
+          alt="Derechos Humanos Ya"
+          class="h-10 w-auto opacity-85 group-hover:opacity-100 transition-opacity"
+          loading="lazy"
+        />
+      </a>
+      <a
+        href="https://www.federacionvi.org/"
+        class="group rounded-xl border border-via-divider bg-white p-3 flex items-center justify-center hover:bg-via-bg-alt transition-colors"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="https://viandalucia.org/wp-content/uploads/2019/05/logo_fevi.png"
+          alt="Federación de Vida Independiente"
+          class="h-10 w-auto opacity-85 group-hover:opacity-100 transition-opacity"
+          loading="lazy"
+        />
+      </a>
+      <a
+        href="https://enil.eu/"
+        class="group rounded-xl border border-via-divider bg-white p-3 flex items-center justify-center hover:bg-via-bg-alt transition-colors"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="https://viandalucia.org/wp-content/uploads/2019/07/logoenil.png"
+          alt="ENIL"
+          class="h-10 w-auto opacity-85 group-hover:opacity-100 transition-opacity"
+          loading="lazy"
+        />
+      </a>
+    </div>
+  </div>
+
+  <div class="bg-via-bg-content rounded-xl shadow-sm p-5">
+    <h3 class="text-lg font-bold font-serif text-via-green mb-4 pb-2 border-b-2 border-via-divider">
+      Documental «A Volar»
+    </h3>
+    <div class="rounded-xl overflow-hidden border border-via-divider bg-black">
+      <div class="relative w-full pb-[56.25%]">
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/_2BH6zJtyPc?si=3iDIXZnK1VfB35ZV"
+          title="Documental A Volar"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        />
+      </div>
+    </div>
+    <p class="text-sm text-via-text-meta mt-3">
+      Un documental que narra, a través de confesiones íntimas, la historia de discriminación y esperanza de
+      personas con diversidad funcional en Andalucía.
+    </p>
+  </div>
+
+  <div class="bg-via-bg-content rounded-xl shadow-sm p-5">
+    <h3 class="text-lg font-bold font-serif text-via-green mb-4 pb-2 border-b-2 border-via-divider">
+      Programa OVIA
+    </h3>
+    <a
+      href="/posts/estudio-universitario-muestra-el-exito-de-la-asistencia-personal/"
+      class="block rounded-xl overflow-hidden border border-via-divider hover:bg-via-bg-alt transition-colors no-underline"
+    >
+      <img
+        src="https://viandalucia.org/wp-content/uploads/2019/06/proyectovi.jpg"
+        alt="Programa Vida Independiente"
+        class="w-full h-44 object-cover"
+        loading="lazy"
+      />
+      <div class="p-3">
+        <div class="text-sm font-medium text-via-text">Evaluación externa (UPO)</div>
+        <div class="text-xs text-via-text-secondary mt-1">
+          Lee el artículo sobre la evaluación externa del programa.
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="bg-via-bg-content rounded-xl shadow-sm p-5">
+    <h3 class="text-lg font-bold font-serif text-via-green mb-4 pb-2 border-b-2 border-via-divider">
+      Imprescindibles
+    </h3>
+    <a
+      href="/bibliografia-de-fondo/"
+      class="block rounded-xl overflow-hidden border border-via-divider hover:bg-via-bg-alt transition-colors no-underline"
+    >
+      <img
+        src="https://viandalucia.org/wp-content/uploads/2019/06/portadas-libros.jpg"
+        alt="Bibliografía imprescindible"
+        class="w-full h-44 object-cover"
+        loading="lazy"
+      />
+      <div class="p-3">
+        <div class="text-sm font-medium text-via-text">Bibliografía de fondo</div>
+        <div class="text-xs text-via-text-secondary mt-1">
+          Libros con breve descripción y descarga en PDF.
+        </div>
+      </div>
+    </a>
+  </div>
+
   <div class="bg-via-bg-content rounded-xl shadow-sm p-5">
     <h3 class="text-lg font-bold font-serif text-via-green mb-4 pb-2 border-b-2 border-via-divider">
       Últimas entradas
