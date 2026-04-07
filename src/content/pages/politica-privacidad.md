@@ -1,72 +1,71 @@
 ---
 title: "Política de privacidad"
-date: 2019-05-24
-draft: true
-description: "Quiénes somos"
+date: 2025-01-01
+draft: false
+description: "Política de privacidad de OVIAndalucía: cómo tratamos los datos personales de los usuarios del sitio web, de conformidad con el RGPD y la LOPDGDD."
 ---
 
-## Quiénes somos
+## Responsable del tratamiento
 
-La dirección de nuestra web es: https://viandalucia.org.
+- **Entidad:** Asociación de Vida Independiente Andalucía (OVIAndalucía)
+- **CIF:** G91963124
+- **Domicilio:** Calle Faustino Álvarez, 41, 1.º — 41002 Sevilla
+- **Correo electrónico:** viandalucia@viandalucia.org
 
-## Qué datos personales recogemos y por qué los recogemos
+## Marco legal
 
-### Comentarios
+Esta política se elabora conforme al **Reglamento (UE) 2016/679** del Parlamento Europeo y del Consejo, de 27 de abril de 2016 (RGPD), y a la **Ley Orgánica 3/2018, de 5 de diciembre**, de Protección de Datos Personales y Garantía de los Derechos Digitales (LOPDGDD).
 
-Cuando los visitantes dejan comentarios en la web, recopilamos los datos que se muestran en el formulario de comentarios, así como la dirección IP del visitante y la cadena de agentes de usuario del navegador para ayudar a la detección de spam.
+## Datos que recopilamos y finalidades
 
-Una cadena anónima creada a partir de tu dirección de correo electrónico (también llamada hash) puede ser proporcionada al servicio de Gravatar para ver si la estás usando. La política de privacidad del servicio Gravatar está disponible aquí: https://automattic.com/privacy/. Después de la aprobación de tu comentario, la imagen de tu perfil es visible para el público en el contexto de su comentario.
+### Formulario de contacto
 
-### Medios
+Cuando utilizas el formulario de contacto recogemos los datos que voluntariamente facilitas (nombre, dirección de correo electrónico y mensaje). Estos datos se utilizan exclusivamente para atender tu consulta o solicitud y no se emplean con fines comerciales ni se ceden a terceros.
 
-Si subes imágenes a la web deberías evitar subir imágenes con datos de ubicación (GPS EXIF) incluidos. Los visitantes de la web pueden descargar y extraer cualquier dato de localización de las imágenes de la web.
+- **Base legal:** Consentimiento del interesado (art. 6.1.a RGPD).
+- **Conservación:** Los datos se conservan durante el tiempo necesario para gestionar la comunicación y, como máximo, tres años desde la última interacción, salvo que exista una obligación legal de conservación superior.
 
-### Formularios de contacto
+### Navegación y datos técnicos
 
-### Cookies
+Este sitio web es de carácter estático y no utiliza sistemas de analítica de terceros ni rastrea tu comportamiento de navegación. No se instalan cookies propias de seguimiento ni publicitarias.
 
-Si dejas un comentario en nuestro sitio puedes elegir guardar tu nombre, dirección de correo electrónico y web en cookies. Esto es para tu comodidad, para que no tengas que volver a rellenar tus datos cuando dejes otro comentario. Estas cookies tendrán una duración de un año.
+### Contenido incrustado de YouTube
 
-Si tienes una cuenta y te conectas a este sitio, instalaremos una cookie temporal para determinar si tu navegador acepta cookies. Esta cookie no contiene datos personales y se elimina al cerrar el navegador.
+Algunas páginas incluyen vídeos alojados en **YouTube (Google LLC)**. Cuando se carga un vídeo incrustado, YouTube puede recopilar datos sobre tu visita —incluyendo dirección IP, cookies y datos de interacción— de acuerdo con su propia política de privacidad. Te recomendamos consultarla en [policies.google.com/privacy](https://policies.google.com/privacy).
 
-Cuando inicias sesión, también instalaremos varias cookies para guardar tu información de inicio de sesión y tus opciones de visualización de pantalla. Las cookies de inicio de sesión duran dos días, y las cookies de opciones de pantalla duran un año. Si seleccionas "Recordarme", tu inicio de sesión perdurará durante dos semanas. Si sales de tu cuenta, las cookies de inicio de sesión se eliminarán.
+La Asociación no tiene control sobre los datos que YouTube recoge mediante estos reproductores.
 
-Si editas o publicas un artículo se guardará una cookie adicional en tu navegador. Esta cookie no incluye datos personales y simplemente indica el ID del artículo que acabas de editar. Caduca después de 1 día.
+## Cesión de datos a terceros
 
-### Contenido incrustado de otros sitios web
+Los datos personales no se cederán a terceros salvo en los casos siguientes:
 
-Los artículos de este sitio pueden incluir contenido incrustado (por ejemplo, vídeos, imágenes, artículos, etc.). El contenido incrustado de otras web se comporta exactamente de la misma manera que si el visitante hubiera visitado la otra web.
+- Cuando exista una obligación legal que así lo exija.
+- A proveedores de servicios estrictamente necesarios para el funcionamiento del sitio web, que actúan como encargados del tratamiento y están sujetos a acuerdos de confidencialidad conformes al RGPD.
 
-Estas web pueden recopilar datos sobre ti, utilizar cookies, incrustar un seguimiento adicional de terceros, y supervisar tu interacción con ese contenido incrustado, incluido el seguimiento de tu interacción con el contenido incrustado si tienes una cuenta y estás conectado a esa web.
+## Tus derechos
 
-### Analítica
+En virtud del RGPD puedes ejercer en cualquier momento los siguientes derechos:
 
-## Con quién compartimos tus datos
+- **Acceso:** conocer qué datos personales tratamos sobre ti.
+- **Rectificación:** corregir datos inexactos o incompletos.
+- **Supresión:** solicitar la eliminación de tus datos cuando ya no sean necesarios.
+- **Limitación del tratamiento:** solicitar que suspendamos el uso de tus datos en determinadas circunstancias.
+- **Portabilidad:** recibir tus datos en un formato estructurado y de uso común.
+- **Oposición:** oponerte al tratamiento de tus datos cuando la base legal sea el interés legítimo.
+- **Retirada del consentimiento:** en cualquier momento, sin que ello afecte a la licitud del tratamiento anterior.
 
-## Cuánto tiempo conservamos tus datos
+Para ejercer cualquiera de estos derechos, dirígete por escrito a **viandalucia@viandalucia.org** o a la dirección postal indicada, adjuntando copia de tu DNI u otro documento identificativo.
 
-Si dejas un comentario, el comentario y sus metadatos se conservan indefinidamente. Esto es para que podamos reconocer y aprobar comentarios sucesivos automáticamente en lugar de mantenerlos en una cola de moderación.
+Si consideras que el tratamiento de tus datos no se ajusta a la normativa vigente, tienes derecho a presentar una reclamación ante la **Agencia Española de Protección de Datos** (AEPD): [aepd.es](https://www.aepd.es).
 
-De los usuarios que se registran en nuestra web (si los hay), también almacenamos la información personal que proporcionan en su perfil de usuario. Todos los usuarios pueden ver, editar o eliminar su información personal en cualquier momento (excepto que no pueden cambiar su nombre de usuario). Los administradores de la web también pueden ver y editar esa información.
+## Seguridad
 
-## Qué derechos tienes sobre tus datos
+La Asociación aplica medidas técnicas y organizativas adecuadas para proteger los datos personales frente a accesos no autorizados, pérdida o destrucción accidental, en cumplimiento del artículo 32 del RGPD.
 
-Si tienes una cuenta o has dejado comentarios en esta web, puedes solicitar recibir un archivo de exportación de los datos personales que tenemos sobre ti, incluyendo cualquier dato que nos hayas proporcionado. También puedes solicitar que eliminemos cualquier dato personal que tengamos sobre ti. Esto no incluye ningún dato que estemos obligados a conservar con fines administrativos, legales o de seguridad.
+## Cambios en esta política
 
-## Dónde enviamos tus datos
+Nos reservamos el derecho a actualizar esta política de privacidad para adaptarla a cambios legislativos o en el funcionamiento del sitio web. La versión vigente estará siempre disponible en esta página con la fecha de última actualización.
 
-Los comentarios de los visitantes puede que los revise un servicio de detección automática de spam.
+---
 
-## Tu información de contacto
-
-## Información adicional
-
-### Cómo protegemos tus datos
-
-### Qué procedimientos utilizamos contra las brechas de datos
-
-### De qué terceros recibimos datos
-
-### Qué tipo de toma de decisiones automatizada y/o perfilado hacemos con los datos del usuario
-
-### Requerimientos regulatorios de revelación de información del sector
+*Última actualización: enero de 2025*

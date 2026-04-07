@@ -2,25 +2,41 @@
 title: "Aviso legal"
 date: 2017-05-24
 draft: false
-description: "AVISO LEGAL: Recogida de datos en página web LSSICE + LOPD"
+description: "Aviso legal e información sobre el responsable del sitio web de la Asociación de Vida Independiente Andalucía (OVIAndalucía)."
 ---
 
-## AVISO LEGAL: Recogida de datos en página web (LSSICE + LOPD)
+## Datos identificativos del responsable
 
-* * *
+En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSICE), se facilitan los datos identificativos del titular de este sitio web:
 
-- **Denominación Social**: VIDA INDEPENDIENTE ANDALUCÍA
-- **Domicilio Social**: CALLE FAUSTINO ALVAREZ, 41,1º
-- **CIF**: G91963124
-- **E-mail**: viandalucia@viandalucia.org
-- **Nombre de dominio**: viandalucia.org/
+- **Denominación social:** Asociación de Vida Independiente Andalucía (OVIAndalucía)
+- **CIF:** G91963124
+- **Domicilio social:** Calle Faustino Álvarez, 41, 1.º — 41002 Sevilla
+- **Correo electrónico:** viandalucia@viandalucia.org
+- **Dominio web:** viandalucia.org
 
-«En cumplimiento del Reglamento General de Protección de Datos (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 y la ley orgánica 3/2018 de 5 de diciembre de Protección de Datos Personales y de Garantía de los Derechos Digitales le informamos que los datos por Vd. proporcionados serán objeto de tratamiento por parte de ASOCIACION VIDA INDEPENDIENTE ANDALUCÍA con CIF G91963124, con domicilio en SEVILLA (SEVILLA), C.P. 41002, CALLE FAUSTINO ÁLVAREZ No 41 , con la finalidad de prestarle el servicio solicitado y/o contratado, realizar la facturación del mismo.
+## Condiciones de uso
 
-La base legal para el tratamiento de sus datos es la ejecución del servicio por usted contratado y/o solicitado.
+El acceso y uso de este sitio web es libre y gratuito. El usuario se compromete a hacer un uso adecuado de los contenidos publicados, con sujeción a la legislación vigente y a los presentes términos de uso.
 
-La oferta prospectiva de productos y servicios está basada en el consentimiento que se le solicita, sin que en ningún caso la retirada de este consentimiento condicione la ejecución del contrato.
+Queda prohibido el uso del sitio web con fines ilícitos o lesivos para la Asociación o terceros, así como cualquier acción que dificulte o impida el normal funcionamiento del mismo.
 
-Los datos proporcionados se conservarán mientras se mantenga la relación comercial o durante los años necesarios para cumplir con las obligaciones legales. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal.
+## Propiedad intelectual e industrial
 
-Usted tiene derecho a obtener confirmación sobre si en ASOCIACION VIDA INDEPENDIENTE ANDALUCÍA estamos tratando sus datos personales y por tanto tiene derecho a ejercer sus derechos de acceso, rectificación, limitación del tratamiento, portabilidad, oposición al tratamiento y supresión de sus datos mediante escrito dirigido a la dirección postal arriba mencionada o electrónica viandalucia@viandalucia.org, adjuntando copia del DNI en ambos casos, así como el derecho a presentar una reclamación ante la Autoridad de Control ([aepd.es](https://www.aepd.es/es))”
+Los contenidos de este sitio web —textos, imágenes, logotipos y demás elementos— son titularidad de la Asociación de Vida Independiente Andalucía o de terceros que han autorizado su uso. Queda prohibida su reproducción, distribución o modificación sin autorización expresa, salvo para uso personal y no comercial.
+
+## Protección de datos
+
+El tratamiento de los datos personales que el usuario facilite a través de este sitio web se rige por la [Política de Privacidad](/politica-privacidad/) de la Asociación, elaborada conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y Garantía de los Derechos Digitales (LOPDGDD).
+
+## Exclusión de responsabilidad
+
+La Asociación no se responsabiliza del contenido de los sitios web de terceros enlazados desde este portal. Los enlaces externos se facilitan únicamente como información y no implican respaldo ni relación con dichos sitios.
+
+## Legislación aplicable
+
+El presente aviso legal se rige por la legislación española. Para la resolución de cualquier controversia derivada del uso de este sitio web, ambas partes se someten a los juzgados y tribunales de Sevilla, con renuncia a cualquier otro fuero que pudiera corresponderles.
+
+---
+
+*Última actualización: enero de 2025*
