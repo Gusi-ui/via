@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import PageLayout from '@layouts/PageLayout.astro';
 
 export const getStaticPaths = async () => {
-  const staticPages = ['contacto'];
+  const staticPages = ['contacto', 'oficinas-vi'];
   const conventionPrefixes = ['articulo-', 'preambulo', 'convencion-naciones-unidas'];
 
   const pages = await getCollection('pages', ({ data }) => !data.draft);
