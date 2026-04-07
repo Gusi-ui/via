@@ -46,158 +46,188 @@ if (relatedPosts.length === 0) {
 ---
 
 <BaseLayout title={title} description={description} type="article" publishedDate={date}>
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
-    <Breadcrumb
-      items={[
-        { label: 'Inicio', href: '/' },
-        { label: 'Bitácora', href: '/posts/1/' },
-        { label: title },
-      ]}
-    />
+  <!-- Outer wrapper: no horizontal padding on mobile so article can go edge-to-edge -->
+  <div class="max-w-6xl mx-auto sm:px-4 md:px-6 py-4 sm:py-10 md:py-12">
+    <!-- Breadcrumb gets its own padding on mobile -->
+    <div class="px-4 sm:px-0">
+      <Breadcrumb
+        items={[
+          { label: 'Inicio', href: '/' },
+          { label: 'Bitácora', href: '/posts/1/' },
+          { label: title },
+        ]}
+      />
+    </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] gap-8 mt-6">
-      <article class="min-w-0 bg-via-bg-content rounded-xl shadow-sm p-6 md:p-8">
-        <header class="mb-6">
-          <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green leading-tight">
-            {title}
-          </h1>
-          <div class="flex flex-wrap items-center gap-3 mt-3 text-sm text-via-text-meta">
-            <time datetime={date.toISOString()}>
-              {formatDate(date)}
-            </time>
-            {categories.length > 0 && (
-              <span class="flex flex-wrap gap-1.5">
-                {categories.map((cat) => (
-                  <a
-                    href={`/category/${cat}/1/`}
-                    class="inline-block bg-via-green/10 text-via-green px-2 py-0.5 rounded-full text-xs font-medium hover:bg-via-green hover:text-white transition-colors no-underline"
-                  >
-                    {cat}
-                  </a>
-                ))}
-              </span>
-            )}
-          </div>
-        </header>
-
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] gap-0 sm:gap-8 mt-3 sm:mt-6">
+      <!-- Article: full-bleed on mobile (no rounded corners), card on sm+ -->
+      <article class="min-w-0 bg-via-bg-content rounded-none sm:rounded-xl shadow-sm overflow-hidden">
+        <!-- Featured image: full-width at article top, no padding around it -->
         <img
           src={coverSrc}
           alt={title}
           onerror="this.onerror=null;this.src='/images/posts/logovia.png';"
-          class="w-full rounded-lg mb-6 object-cover max-h-96"
+          class="w-full h-52 sm:h-64 md:h-72 object-cover"
           loading="lazy"
         />
 
-        <div class="prose max-w-none">
-          <slot />
-        </div>
-
-        <footer class="mt-8 pt-6 border-t border-via-divider space-y-6">
-          {tags.length > 0 && (
-            <div class="flex flex-wrap gap-2">
-              <span class="text-sm text-via-text-meta font-medium">Etiquetas:</span>
-              {tags.map((tag) => (
-                <a
-                  href={`/tag/${tag}/1/`}
-                  class="text-xs bg-via-bg-alt text-via-text-meta px-2.5 py-1 rounded-full hover:bg-via-green/10 hover:text-via-green transition-colors no-underline"
-                >
-                  #{tag}
-                </a>
-              ))}
+        <!-- Content with padding -->
+        <div class="p-4 sm:p-6 md:p-8">
+          <header class="mb-6">
+            <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green leading-tight">
+              {title}
+            </h1>
+            <div class="flex flex-wrap items-center gap-3 mt-3 text-sm text-via-text-meta">
+              <time datetime={date.toISOString()}>
+                {formatDate(date)}
+              </time>
+              {categories.length > 0 && (
+                <span class="flex flex-wrap gap-1.5">
+                  {categories.map((cat) => (
+                    <a
+                      href={`/category/${cat}/1/`}
+                      class="inline-block bg-via-green/10 text-via-green px-2 py-0.5 rounded-full text-xs font-medium hover:bg-via-green hover:text-white transition-colors no-underline"
+                    >
+                      {cat}
+                    </a>
+                  ))}
+                </span>
+              )}
             </div>
-          )}
+          </header>
 
-          {(prevPost || nextPost) && (
-            <nav class="grid grid-cols-1 sm:grid-cols-2 gap-3" aria-label="Navegación entre entradas">
-              <a
-                href={prevPost ? `/posts/${prevPost.id}/` : undefined}
-                class={`rounded-lg border border-via-divider px-4 py-3 no-underline transition-colors ${
-                  prevPost ? 'hover:bg-via-green/10' : 'opacity-50 pointer-events-none'
-                }`}
-              >
-                <div class="text-xs text-via-text-secondary">Anterior</div>
-                <div class="text-sm font-medium text-via-text leading-snug mt-1">
-                  {prevPost ? prevPost.data.title : '—'}
-                </div>
-              </a>
-              <a
-                href={nextPost ? `/posts/${nextPost.id}/` : undefined}
-                class={`rounded-lg border border-via-divider px-4 py-3 no-underline transition-colors ${
-                  nextPost ? 'hover:bg-via-green/10' : 'opacity-50 pointer-events-none'
-                }`}
-              >
-                <div class="text-xs text-via-text-secondary">Siguiente</div>
-                <div class="text-sm font-medium text-via-text leading-snug mt-1">
-                  {nextPost ? nextPost.data.title : '—'}
-                </div>
-              </a>
-            </nav>
-          )}
+          <div class="prose post-prose max-w-none">
+            <slot />
+          </div>
 
-          {relatedPosts.length > 0 && (
-            <section aria-label="Entradas relacionadas" data-rel-section>
-              <h2 class="text-lg font-bold font-serif text-via-green mb-3">Entradas relacionadas</h2>
-              <div class="relative">
-                <button
-                  type="button"
-                  class="hidden sm:flex absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-white border border-via-divider shadow-sm rounded-full w-9 h-9 items-center justify-center hover:bg-via-green/10 hover:text-via-green transition-colors disabled:opacity-40 disabled:pointer-events-none"
-                  aria-label="Anterior"
-                  data-rel-prev
-                >
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                <div
-                  class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 [scrollbar-width:thin]"
-                  data-rel-carousel
-                >
-                  {relatedPosts.map((p) => {
-                    const img = p.data.coverImage ? `/images/posts/${p.data.coverImage}` : '/images/posts/logovia.png';
-                    const descRaw = p.data.description || '';
-                    const desc = descRaw.length > 120 ? descRaw.slice(0, 117) + '…' : descRaw;
-                    return (
-                      <a
-                        href={`/posts/${p.id}/`}
-                        class="shrink-0 snap-start w-60 sm:w-64 md:w-72 rounded-xl border border-via-divider bg-via-bg-content overflow-hidden no-underline hover:shadow-sm transition-shadow"
-                      >
-                        <img
-                          src={img}
-                          alt={p.data.title}
-                          onerror="this.onerror=null;this.src='/images/posts/logovia.png';"
-                          class="w-full h-36 object-cover"
-                          loading="lazy"
-                        />
-                        <div class="p-3">
-                          <div class="text-sm font-medium text-via-text leading-snug line-clamp-2">{p.data.title}</div>
-                          {desc && <div class="text-xs text-via-text-secondary mt-1 line-clamp-2">{desc}</div>}
-                        </div>
-                      </a>
-                    );
-                  })}
-                </div>
-                <button
-                  type="button"
-                  class="hidden sm:flex absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-white border border-via-divider shadow-sm rounded-full w-9 h-9 items-center justify-center hover:bg-via-green/10 hover:text-via-green transition-colors disabled:opacity-40 disabled:pointer-events-none"
-                  aria-label="Siguiente"
-                  data-rel-next
-                >
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
+          <footer class="mt-8 pt-6 border-t border-via-divider space-y-6">
+            {tags.length > 0 && (
+              <div class="flex flex-wrap gap-2">
+                <span class="text-sm text-via-text-meta font-medium">Etiquetas:</span>
+                {tags.map((tag) => (
+                  <a
+                    href={`/tag/${tag}/1/`}
+                    class="text-xs bg-via-bg-alt text-via-text-meta px-2.5 py-1 rounded-full hover:bg-via-green/10 hover:text-via-green transition-colors no-underline"
+                  >
+                    #{tag}
+                  </a>
+                ))}
               </div>
-            </section>
-          )}
-        </footer>
+            )}
+
+            {(prevPost || nextPost) && (
+              <nav class="grid grid-cols-2 gap-3" aria-label="Navegación entre entradas">
+                <a
+                  href={prevPost ? `/posts/${prevPost.id}/` : undefined}
+                  class={`rounded-lg border border-via-divider px-3 py-2.5 no-underline transition-colors ${
+                    prevPost ? 'hover:bg-via-green/10' : 'opacity-40 pointer-events-none'
+                  }`}
+                >
+                  <div class="flex items-center gap-1 text-xs text-via-text-secondary mb-1">
+                    <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Anterior
+                  </div>
+                  <div class="text-sm font-medium text-via-text leading-snug line-clamp-2">
+                    {prevPost ? prevPost.data.title : '—'}
+                  </div>
+                </a>
+                <a
+                  href={nextPost ? `/posts/${nextPost.id}/` : undefined}
+                  class={`rounded-lg border border-via-divider px-3 py-2.5 no-underline transition-colors text-right ${
+                    nextPost ? 'hover:bg-via-green/10' : 'opacity-40 pointer-events-none'
+                  }`}
+                >
+                  <div class="flex items-center justify-end gap-1 text-xs text-via-text-secondary mb-1">
+                    Siguiente
+                    <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                  <div class="text-sm font-medium text-via-text leading-snug line-clamp-2">
+                    {nextPost ? nextPost.data.title : '—'}
+                  </div>
+                </a>
+              </nav>
+            )}
+
+            {relatedPosts.length > 0 && (
+              <section aria-label="Entradas relacionadas" data-rel-section>
+                <h2 class="text-lg font-bold font-serif text-via-green mb-3">Entradas relacionadas</h2>
+                <div class="relative">
+                  <button
+                    type="button"
+                    class="hidden sm:flex absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-white border border-via-divider shadow-sm rounded-full w-9 h-9 items-center justify-center hover:bg-via-green/10 hover:text-via-green transition-colors disabled:opacity-40 disabled:pointer-events-none"
+                    aria-label="Anterior"
+                    data-rel-prev
+                  >
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <div
+                    class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 [scrollbar-width:thin]"
+                    data-rel-carousel
+                  >
+                    {relatedPosts.map((p) => {
+                      const img = p.data.coverImage ? `/images/posts/${p.data.coverImage}` : '/images/posts/logovia.png';
+                      const descRaw = p.data.description || '';
+                      const desc = descRaw.length > 120 ? descRaw.slice(0, 117) + '…' : descRaw;
+                      return (
+                        <a
+                          href={`/posts/${p.id}/`}
+                          class="shrink-0 snap-start w-60 sm:w-64 md:w-72 rounded-xl border border-via-divider bg-via-bg-content overflow-hidden no-underline hover:shadow-sm transition-shadow"
+                        >
+                          <img
+                            src={img}
+                            alt={p.data.title}
+                            onerror="this.onerror=null;this.src='/images/posts/logovia.png';"
+                            class="w-full h-36 object-cover"
+                            loading="lazy"
+                          />
+                          <div class="p-3">
+                            <div class="text-sm font-medium text-via-text leading-snug line-clamp-2">{p.data.title}</div>
+                            {desc && <div class="text-xs text-via-text-secondary mt-1 line-clamp-2">{desc}</div>}
+                          </div>
+                        </a>
+                      );
+                    })}
+                  </div>
+                  <button
+                    type="button"
+                    class="hidden sm:flex absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-white border border-via-divider shadow-sm rounded-full w-9 h-9 items-center justify-center hover:bg-via-green/10 hover:text-via-green transition-colors disabled:opacity-40 disabled:pointer-events-none"
+                    aria-label="Siguiente"
+                    data-rel-next
+                  >
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </section>
+            )}
+          </footer>
+        </div>
       </article>
 
-      <aside class="min-w-0">
+      <!-- Sidebar: needs padding on mobile since grid has no outer padding there -->
+      <aside class="min-w-0 px-4 sm:px-0 mt-6 sm:mt-0">
         <Sidebar />
       </aside>
     </div>
   </div>
 </BaseLayout>
+
+<style is:global>
+  /* Slightly larger prose text on mobile for readability */
+  @media (max-width: 639px) {
+    .post-prose {
+      font-size: 1.0625rem;
+      line-height: 1.8;
+    }
+  }
+</style>
 
 <script>
   function initRelatedCarousels() {
