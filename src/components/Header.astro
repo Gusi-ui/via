@@ -54,20 +54,13 @@ const isActive = (href: string) => {
 
 <header class="sticky top-0 z-50 bg-via-green text-white border-b border-via-green/70">
   <nav class="max-w-6xl mx-auto px-4 relative" aria-label="Navegación principal">
-    <div class="flex items-center justify-end md:justify-center h-22 relative">
-      <button
-        id="mobile-menu-toggle"
-        class="md:hidden absolute right-0 p-2 text-white hover:bg-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/70"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        aria-label="Abrir menú de navegación"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+    <div class="flex items-center justify-between md:justify-center h-14 md:h-22 relative">
+      <!-- Brand: solo visible en móvil -->
+      <a href="/" class="md:hidden text-white no-underline font-ui font-bold text-2xl leading-none tracking-tight">
+        OVIAndalucia
+      </a>
 
+      <!-- Menú escritorio: centrado -->
       <ul class="hidden md:flex items-center gap-4" role="menubar" aria-label="Secciones">
         {navItems.map((item) => (
           <li class="relative group" role="none">
@@ -114,67 +107,184 @@ const isActive = (href: string) => {
           </li>
         ))}
       </ul>
+
+      <!-- Botón hamburguesa -->
+      <button
+        id="mobile-menu-toggle"
+        class="md:hidden p-2 text-white hover:bg-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/70"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Abrir menú de navegación"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
 
-      <div
-        id="mobile-menu"
-        class="hidden absolute left-2 right-2 top-full mt-3 z-50 pb-4 md:hidden bg-via-green border border-white/20 rounded-2xl shadow-xl"
-        role="menu"
-        aria-label="Menú móvil"
-      >
-      {navItems.map((item) => (
-        <>
-          <a
-            href={item.href}
-            role="menuitem"
-            class:list={[
-              'block px-3 py-2.5 rounded-xl text-[17px] font-ui font-semibold transition-colors no-underline',
-              isActive(item.href)
-                ? 'bg-white text-via-green!'
-                : 'bg-transparent text-white! hover:bg-white hover:text-via-green!',
-            ]}
-            tabindex="0"
+    <!-- Menú móvil desplegable -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu-panel md:hidden absolute left-2 right-2 top-full mt-2 z-50 bg-via-green border border-white/20 rounded-2xl shadow-xl overflow-hidden"
+      role="menu"
+      aria-label="Menú móvil"
+    >
+      <div class="py-2 px-2">
+        {navItems.map((item) => (
+          item.children ? (
+            <!-- Ítem con submenú: acordeón -->
+            <div class="mobile-accordion-item">
+              <div class="flex items-center gap-1">
+                <a
+                  href={item.href}
+                  role="menuitem"
+                  class:list={[
+                    'flex-1 block px-3 py-3 rounded-xl text-xl font-ui font-bold transition-colors no-underline',
+                    isActive(item.href)
+                      ? 'bg-white/15 text-white!'
+                      : 'text-white! hover:bg-white/10',
+                  ]}
+                  tabindex="0"
+                  aria-label={item.label}
+                >
+                  {item.label}
+                </a>
+                <button
+                  class="mobile-accordion-toggle shrink-0 p-2.5 rounded-xl text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 transition-colors"
+                  aria-expanded="false"
+                  aria-label={`Expandir ${item.label}`}
+                >
+                  <svg class="accordion-chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+              <!-- Submenú colapsado por defecto -->
+              <div class="mobile-submenu" aria-hidden="true">
+                <div class="submenu-inner px-2 pb-1.5 space-y-0.5">
+                  {item.children.map((child) => (
+                    <a
+                      href={child.href}
+                      role="menuitem"
+                      class="flex items-center gap-2 pl-4 pr-2 py-2.5 text-[15px] font-semibold text-white/90 hover:text-white! hover:bg-white/10 transition-colors no-underline rounded-lg"
+                      tabindex="-1"
+                      aria-label={child.label}
+                    >
+                      <span class="w-1 h-1 rounded-full bg-white/50 shrink-0"></span>
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <!-- Ítem sin submenú: enlace simple -->
+            <a
+              href={item.href}
+              role="menuitem"
+              class:list={[
+                'block px-3 py-3 rounded-xl text-xl font-ui font-bold transition-colors no-underline',
+                isActive(item.href)
+                  ? 'bg-white/15 text-white!'
+                  : 'text-white! hover:bg-white/10',
+              ]}
+              tabindex="0"
               aria-label={item.label}
-          >
-            {item.label}
-          </a>
-          {item.children?.map((child) => (
-          <a
-            href={child.href}
-            role="menuitem"
-              class="block pl-6 pr-3 py-1.5 text-sm font-medium text-white! hover:bg-white hover:text-via-green! transition-colors no-underline rounded-xl"
-            tabindex="0"
-            aria-label={child.label}
-          >
-              {child.label}
+            >
+              {item.label}
             </a>
-          ))}
-        </>
-      ))}
+          )
+        ))}
+      </div>
     </div>
   </nav>
 </header>
 
+<style>
+  /* Menú móvil: aparece con slide-down + fade */
+  .mobile-menu-panel {
+    display: none;
+    transform-origin: top center;
+  }
+  .mobile-menu-panel.menu-open {
+    display: block;
+    animation: menuSlideIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .mobile-menu-panel.menu-closing {
+    display: block;
+    animation: menuSlideOut 0.18s cubic-bezier(0.4, 0, 1, 1) forwards;
+  }
+  @keyframes menuSlideIn {
+    from { opacity: 0; transform: scaleY(0.85) translateY(-8px); }
+    to   { opacity: 1; transform: scaleY(1) translateY(0); }
+  }
+  @keyframes menuSlideOut {
+    from { opacity: 1; transform: scaleY(1) translateY(0); }
+    to   { opacity: 0; transform: scaleY(0.85) translateY(-8px); }
+  }
+
+  /* Submenú acordeón: colapsa/expande con animación de altura */
+  .mobile-submenu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-submenu.submenu-open {
+    grid-template-rows: 1fr;
+  }
+  .submenu-inner {
+    overflow: hidden;
+  }
+
+  /* Chevron: gira 180° al abrir */
+  .accordion-chevron {
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-accordion-toggle[aria-expanded="true"] .accordion-chevron {
+    transform: rotate(180deg);
+  }
+</style>
+
 <script>
   const toggle = document.getElementById('mobile-menu-toggle');
-  const menu = document.getElementById('mobile-menu');
+  const menu = document.getElementById('mobile-menu') as HTMLElement | null;
   const menuIcon = document.getElementById('menu-icon');
   const closeIcon = document.getElementById('close-icon');
+
+  const resetSubmenus = () => {
+    if (!menu) return;
+    menu.querySelectorAll<HTMLElement>('.mobile-submenu').forEach((sub) => {
+      sub.classList.remove('submenu-open');
+      sub.setAttribute('aria-hidden', 'true');
+    });
+    menu.querySelectorAll<HTMLButtonElement>('.mobile-accordion-toggle').forEach((btn) => {
+      btn.setAttribute('aria-expanded', 'false');
+      btn.querySelectorAll('a').forEach((a) => a.setAttribute('tabindex', '-1'));
+    });
+  };
 
   const closeMenu = () => {
     if (!toggle || !menu) return;
     toggle.setAttribute('aria-expanded', 'false');
-    menu.classList.add('hidden');
     menuIcon?.classList.remove('hidden');
     closeIcon?.classList.add('hidden');
+
+    menu.classList.remove('menu-open');
+    menu.classList.add('menu-closing');
+    menu.addEventListener('animationend', () => {
+      menu.classList.remove('menu-closing');
+      resetSubmenus();
+    }, { once: true });
   };
 
   const openMenu = () => {
     if (!toggle || !menu) return;
     toggle.setAttribute('aria-expanded', 'true');
-    menu.classList.remove('hidden');
     menuIcon?.classList.add('hidden');
     closeIcon?.classList.remove('hidden');
+    menu.classList.remove('menu-closing');
+    menu.classList.add('menu-open');
   };
 
   toggle?.addEventListener('click', () => {
@@ -183,7 +293,31 @@ const isActive = (href: string) => {
     else openMenu();
   });
 
-  // Cierra el menú cuando se selecciona una opción (mejora consistencia y UX).
+  // Acordeón: toggle de submenús
+  menu?.querySelectorAll<HTMLButtonElement>('.mobile-accordion-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest<HTMLElement>('.mobile-accordion-item');
+      if (!item) return;
+      const submenu = item.querySelector<HTMLElement>('.mobile-submenu');
+      if (!submenu) return;
+
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      if (isOpen) {
+        btn.setAttribute('aria-expanded', 'false');
+        submenu.classList.remove('submenu-open');
+        submenu.setAttribute('aria-hidden', 'true');
+        submenu.querySelectorAll('a').forEach((a) => a.setAttribute('tabindex', '-1'));
+      } else {
+        btn.setAttribute('aria-expanded', 'true');
+        submenu.classList.add('submenu-open');
+        submenu.setAttribute('aria-hidden', 'false');
+        submenu.querySelectorAll('a').forEach((a) => a.setAttribute('tabindex', '0'));
+      }
+    });
+  });
+
+  // Cierra el menú al navegar
   menu?.querySelectorAll('a[href]').forEach((link) => {
     link.addEventListener('click', () => closeMenu());
   });
