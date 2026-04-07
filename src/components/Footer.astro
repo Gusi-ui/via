@@ -21,100 +21,119 @@ const socialLinks = [
     icon: 'M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 1 1-2.882 0 1.441 1.441 0 0 1 2.882 0z',
   },
 ];
+
+const arrowIcon = `<svg class="w-3.5 h-3.5 shrink-0 opacity-40 group-hover:opacity-80 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
 ---
 
 <footer class="bg-via-green text-white mt-12">
   <div class="max-w-6xl mx-auto px-4 py-8 sm:py-10 md:py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <h3 class="text-lg font-bold text-white mb-3 font-display">OVIAndalucía</h3>
-        <p class="text-white/85 text-sm leading-relaxed">
-          Oficina de Vida Independiente Andalucía.<br />
-          Promoviendo la vida independiente y los derechos de las personas con diversidad funcional desde 2011.
-        </p>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
-      <div>
-        <h3 class="text-lg font-bold text-white mb-3 font-display">Contacto</h3>
-        <div class="text-white/85 text-sm leading-relaxed">
-          <p class="mt-2">
-            <a
-              href="mailto:viandalucia@viandalucia.org"
-              class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline"
-            >
-              viandalucia@viandalucia.org
-            </a>
-          </p>
-          <div class="mt-4">
-            <p class="text-white/90 text-xs font-semibold tracking-[0.2px]">Enlaces rápidos</p>
-            <div class="mt-2 flex flex-wrap gap-2">
-              <a
-                href="/nosotros/"
-                class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline text-xs font-semibold"
-              >
-                Nosotros
-              </a>
-              <a
-                href="/recorrido-historico/"
-                class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline text-xs font-semibold"
-              >
-                Recorrido
-              </a>
-              <a
-                href="/convencion/"
-                class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline text-xs font-semibold"
-              >
-                Convención ONU
-              </a>
-              <a
-                href="/contacto/"
-                class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline text-xs font-semibold"
-              >
-                Contacto
-              </a>
-            </div>
-          </div>
+      <!-- Col 1: identidad -->
+      <div class="flex flex-col">
+        <h3 class="text-lg font-bold text-white mb-3 font-display">OVIAndalucía</h3>
+        <p class="text-white/80 text-sm leading-relaxed">
+          Oficina de Vida Independiente Andalucía. Trabajamos por los derechos
+          y la autonomía de las personas con diversidad funcional desde 2011.
+        </p>
+        <!-- Links de identidad -->
+        <div class="mt-4 border-t border-white/15 pt-3 flex flex-col gap-1.5">
+          <p class="text-white/55 text-xs font-semibold tracking-wide uppercase mb-1">Conócenos</p>
+          <a href="/nosotros/" class="group flex items-center justify-between text-white/85 hover:text-white no-underline text-sm py-1 transition-colors">
+            <span>Quiénes somos</span>
+            <Fragment set:html={arrowIcon} />
+          </a>
+          <a href="/recorrido-historico/" class="group flex items-center justify-between text-white/85 hover:text-white no-underline text-sm py-1 transition-colors">
+            <span>Nuestra historia</span>
+            <Fragment set:html={arrowIcon} />
+          </a>
         </div>
       </div>
 
-      <div>
-        <h3 class="text-lg font-bold text-white mb-3 font-display">Síguenos</h3>
-        <div class="flex gap-3">
+      <!-- Col 2: contacto -->
+      <div class="flex flex-col">
+        <h3 class="text-lg font-bold text-white mb-3 font-display">Contacto</h3>
+        <div class="flex flex-col gap-2">
+          <!-- Email -->
+          <a
+            href="mailto:viandalucia@viandalucia.org"
+            class="group flex items-center gap-2.5 rounded-xl px-3 py-3 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline"
+          >
+            <svg class="w-4 h-4 shrink-0 opacity-70 group-hover:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <span class="text-sm font-medium">viandalucia@viandalucia.org</span>
+          </a>
+          <!-- Formulario -->
+          <a
+            href="/contacto/"
+            class="group flex items-center justify-between gap-2 rounded-xl px-3 py-3 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline"
+          >
+            <span class="text-sm font-semibold">Formulario de contacto</span>
+            <svg class="w-4 h-4 shrink-0 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        <!-- Recursos -->
+        <div class="mt-4 border-t border-white/15 pt-3 flex flex-col gap-1.5">
+          <p class="text-white/55 text-xs font-semibold tracking-wide uppercase mb-1">Recursos</p>
+          <a href="/convencion/" class="group flex items-center justify-between text-white/85 hover:text-white no-underline text-sm py-1 transition-colors">
+            <span>Convención ONU sobre discapacidad</span>
+            <Fragment set:html={arrowIcon} />
+          </a>
+          <a href="/posts/1/" class="group flex items-center justify-between text-white/85 hover:text-white no-underline text-sm py-1 transition-colors">
+            <span>Bitácora</span>
+            <Fragment set:html={arrowIcon} />
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 3: redes sociales -->
+      <div class="flex flex-col">
+        <h3 class="text-lg font-bold text-white mb-3 font-display">Síguenos en la red</h3>
+        <div class="grid grid-cols-2 gap-2">
           {socialLinks.map((link) => (
             <a
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              class="group w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white transition-colors no-underline"
+              class="group flex items-center gap-2 rounded-xl px-3 py-3 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline"
               aria-label={`Visitar ${link.name}`}
-              tabindex="0"
             >
-              <svg class="w-5 h-5 fill-current text-white group-hover:text-via-green" viewBox="0 0 24 24" aria-hidden="true">
+              <svg class="w-4 h-4 fill-current shrink-0 opacity-80 group-hover:opacity-100" viewBox="0 0 24 24" aria-hidden="true">
                 <path d={link.icon} />
               </svg>
+              <span class="text-sm font-semibold">{link.name}</span>
             </a>
           ))}
         </div>
+        <!-- Plataforma -->
+        <div class="mt-4 border-t border-white/15 pt-3 flex flex-col gap-1.5">
+          <p class="text-white/55 text-xs font-semibold tracking-wide uppercase mb-1">También en</p>
+          <a
+            href="https://www.youtube.com/@plataformaporunaasistencia6509"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center justify-between text-white/85 hover:text-white no-underline text-sm py-1 transition-colors"
+          >
+            <span>Plataforma Asistencia Personal</span>
+            <svg class="w-3.5 h-3.5 shrink-0 opacity-40 group-hover:opacity-80 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
       </div>
+
     </div>
 
+    <!-- Copyright -->
     <div class="border-t border-white/20 mt-6 pt-4 sm:mt-8 sm:pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-      <p class="text-white/80 text-xs">
-        &copy; {new Date().getFullYear()} Asociación de Vida Independiente Andalucía. CIF: G91963124
+      <p class="text-white/70 text-xs text-center md:text-left">
+        &copy; {new Date().getFullYear()} Asociación de Vida Independiente<br class="md:hidden" /> Andalucía. CIF: G91963124
       </p>
-      <div class="flex gap-4 text-xs">
-        <a
-          href="/aviso-legal/"
-          class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline"
-        >
-          Aviso Legal
-        </a>
-        <a
-          href="/politica-privacidad/"
-          class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline"
-        >
-          Política de Privacidad
-        </a>
+      <div class="flex gap-3 text-xs">
+        <a href="/aviso-legal/" class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline">Aviso Legal</a>
+        <a href="/politica-privacidad/" class="inline-flex rounded-xl px-3 py-2 bg-white/10 text-white hover:bg-white hover:text-via-green transition-colors no-underline">Política de Privacidad</a>
       </div>
     </div>
   </div>
