@@ -26,5 +26,3 @@ El desarrollo de la LEPA durante los años 2007-2009 no aporta mucha luz a la ig
 **_(13)_** Libro Blanco sobre la "atención a las personas en situación de dependencia en España. Capítulo VIII, p. 15. “presupuesto para atención residencial representa el 68,6 % del total de los presupuestos. Es especialmente significativa la cantidad destinada a mayores, por encima del 73%,”.
 **_(15)_** SAAD (Sistema para la Autonomía y la Atención a la Dependencia). Prestaciones reconocidas a 1 de abril de 2009. Disponible en la web del Portal de la Dependencia (IMSERSO)
 
-| [7.- Inversión en derechos para todos](/inversion-en-derechos-para-todos/) | **[\|Indice\|](/asistencia-personal-una-inversion-en-derechos-una-inversion-eficiente-en-empleo/)** |  [9.- Cuestión de prevalencia social   Los créditos ampliables](/cuestion-de-prevalencia-social-los-creditos-ampliables/) |
-| --- | --- | --- |

@@ -54,5 +54,3 @@ La Convención también obligará a modificar otros artículos de la LEPA como e
 **_(2)_** [Convención de la ONU](http://www.boe.es/boe/dias/2008/04/21/pdfs/A20648-20659.pdf)
 **_(3)_** Tal como se estipula en el [artículo 27 de la Convención de Viena de 1969](https://boe.es/buscar/doc.php?id=BOE-A-1980-11884).
 
-| [3.- La figura del asistente personal](/la-figura-del-asistente-personal/) | **[\|Indice\|](/asistencia-personal-una-inversion-en-derechos-una-inversion-eficiente-en-empleo/)** |  [5.- Implantación de la asistencia personal](/implantacion-de-la-asistencia-personal/) |
-| --- | --- | --- |

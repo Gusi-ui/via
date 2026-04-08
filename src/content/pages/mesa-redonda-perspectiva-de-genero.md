@@ -2,7 +2,10 @@
 title: "Mesa Redonda. Perspectiva de Género."
 date: 2019-10-06
 draft: false
-description: ""
+description: "Resumen de la mesa redonda sobre la perspectiva de género en las Jornadas de Vida Independiente."
+coverImage: "/images/pages/mesa-genero-portada.jpg"
+coverEyebrow: "Mesa redonda"
+coverTitle: "Perspectiva de género"
 ---
 
 <figure>

@@ -23,6 +23,7 @@ const { Content } = await render(article);
 <ConventionLayout
   title={article.data.title}
   description={article.data.description}
+  articleSlug={article.id}
   prevArticle={prevArticle}
   nextArticle={nextArticle}
 >

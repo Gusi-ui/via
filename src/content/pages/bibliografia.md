@@ -2,6 +2,8 @@
 title: "Bibliografía"
 date: 2011-11-14
 draft: false
+coverImage: "/images/pages/bibliografia-portada.jpg"
+coverEyebrow: "Fuentes y referencias"
 description: "- NAVARRO, V. “El Cuarto Pilar del Estado De Bienestar”. Catedrático de Políticas Públicas de la Universitat Pompeu Fabra. Publicado en EL PAÍS - OECD. “Economi"
 ---
 
@@ -12,5 +14,3 @@ description: "- NAVARRO, V. “El Cuarto Pilar del Estado De Bienestar”. Cate
 - **RUIZ-HUERTA CARBONELL, J** “El déficit de servicios sociales : ¿qué pasó con el gasto social en España?”.
 - **SAAD**. Sistema para la Autonomía y Atención a la Dependencia. Prestaciones reconocidas. Situación a 1 de abril de 2009.
 
-| [11.- Conclusiones](/conclusiones/) |  **[\|Indice\|](/asistencia-personal-una-inversion-en-derechos-una-inversion-eficiente-en-empleo/)** |   |
-| --- | --- | --- |

@@ -4,6 +4,9 @@ date: 2019-05-25
 draft: false
 description: "Convención de Naciones Unidas sobre los derechos de las personas con diversidad funcional discapacidad"
 section: "convencion"
+coverImage: "/images/pages/convencion-onu-portada.jpg"
+coverEyebrow: "Marco internacional"
+coverTitle: "Convención ONU"
 ---
 
 ## Convención de Naciones Unidas sobre los derechos de las personas con diversidad funcional (discapacidad)

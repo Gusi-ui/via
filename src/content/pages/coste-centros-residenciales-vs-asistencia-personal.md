@@ -47,5 +47,3 @@ Notas:
 4. Nótese que los gastos contabilizados como corrientes en bienes y servicios son absorbidos en su totalidad en el caso de la asistencia personal por el propio usuario al vivir en su hogar.
 5. Este dato supone el 3,38% del presupuesto medio mensual por persona en asistencia personal (2483,94). El porcentaje se refiere al gasto de gestión según la tabla utilizada.
 
-| [1.- La asistencia personal. Un recurso   económicamente eficiente social y   humanamente deseable y excelente   en el empleo](/la-asistencia-personal-un-recurso-economicamente-eficiente-social-y-humanamente-deseable-y-excelente-en-el-empleo-2/) | **[\|Indice\|](/documentacion/la-asistencia-personal-un-recurso-economicamente-eficiente-social-y-humanamente-deseable-excelente-empleo-resumen/)** | [3-. La asistencia personal   una oportunidad real](/la-asistencia-personal-una-oportunidad-real/) |
-| --- | --- | --- |

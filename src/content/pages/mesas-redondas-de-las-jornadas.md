@@ -2,7 +2,10 @@
 title: "Mesas redondas de las Jornadas"
 date: 2019-09-14
 draft: false
-description: "Estos son los resúmenes de las diferentes mesas redondas de las Jornadas de Vida Independiente organizadas por VIAndalucia:"
+description: "Resúmenes de las mesas redondas de las Jornadas de Vida Independiente organizadas por VIAndalucía."
+coverImage: "/images/pages/jornadas-portada.jpg"
+coverEyebrow: "Jornadas de Vida Independiente"
+coverTitle: "Mesas redondas"
 ---
 
 Estos son los resúmenes de las diferentes mesas redondas de las Jornadas de Vida Independiente organizadas por VIAndalucia:

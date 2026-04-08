@@ -20,5 +20,3 @@ En España, a pesar de ser una figura reconocida en el artículo 19 de la ley 39
 **_(4)_** SAAD (Sistema para la Autonomía y la Atención a la Dependencia).
 Prestaciones reconocidas a 1 de abril de 2009.
 
-| [4.- La asistencia personal en   la legislación española](/la-asistencia-personal-en-la-legislacion-espanola/) | **[\|Indice\|](/asistencia-personal-una-inversion-en-derechos-una-inversion-eficiente-en-empleo/)** | [6.- Inversión en empleo](/inversion-en-empleo/) |
-| --- | --- | --- |

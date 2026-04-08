@@ -2,7 +2,10 @@
 title: "Inscripción en las Jornadas"
 date: 2019-08-19
 draft: false
-description: "Formulario de inscripción"
+description: "Formulario de inscripción a las Jornadas de Vida Independiente."
+coverImage: "/images/pages/jornadas-portada.jpg"
+coverEyebrow: "Jornadas de Vida Independiente"
+coverTitle: "Inscripción Jornadas"
 ---
 
 ## Formulario de inscripción

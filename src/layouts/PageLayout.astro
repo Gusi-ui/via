@@ -6,6 +6,23 @@ type Props = {
   title: string;
   description?: string;
   breadcrumbs?: Array<{ label: string; href?: string }>;
+  /**
+   * Imagen de portada (full-bleed).
+   * Coloca el archivo en `public/images/pages/` y usa la ruta absoluta:
+   * `/images/pages/mi-portada.jpg`
+   * Si no se proporciona, se renderiza el header tradicional dentro del artículo.
+   */
+  coverImage?: string;
+  /**
+   * Texto pequeño en mayúsculas que aparece encima del título en la portada.
+   * Ejemplo: "Quiénes somos", "Marco internacional".
+   */
+  coverEyebrow?: string;
+  /**
+   * Título mostrado en la portada (SVG autoajustable).
+   * Si se omite, se usa `title`.
+   */
+  coverTitle?: string;
 };
 
 const {
@@ -15,10 +32,67 @@ const {
     { label: 'Inicio', href: '/' },
     { label: title },
   ],
+  coverImage,
+  coverEyebrow,
+  coverTitle,
 } = Astro.props;
+
+const hasCover = !!coverImage;
+const displayCoverTitle = coverTitle ?? title;
+// Calculamos un viewBox proporcional al largo del título: el SVG completo escala
+// al ancho del contenedor, así el texto rellena la portada sin distorsionarse.
+// Pattaya italic tiene ~5 unidades de ancho promedio por carácter al font-size 10.
+const charWidth = 5;
+const horizontalPadding = 6;
+const estimatedTextWidth = Math.max(60, displayCoverTitle.length * charWidth + horizontalPadding);
+const coverViewBox = `0 0 ${estimatedTextWidth} 13`;
+const textX = estimatedTextWidth / 2;
 ---
 
 <BaseLayout title={title} description={description}>
+  {hasCover && (
+    <div class="relative w-full h-72 sm:h-96 md:h-[28rem] overflow-hidden">
+      <img
+        src={coverImage}
+        alt={`Portada: ${title}`}
+        class="w-full h-full object-cover object-center"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="absolute bottom-0 left-0 right-0 bg-black/55 backdrop-blur-sm px-4 sm:px-6 py-4 sm:py-6 md:py-8 overflow-hidden">
+        <div class="max-w-5xl mx-auto">
+          {coverEyebrow && (
+            <p class="text-white/85 text-xs sm:text-sm font-ui tracking-widest uppercase mb-1 font-semibold">
+              {coverEyebrow}
+            </p>
+          )}
+          <h1 class="m-0">
+            <svg
+              viewBox={coverViewBox}
+              class="block w-full h-auto"
+              preserveAspectRatio="xMidYMid meet"
+              role="img"
+              aria-label={displayCoverTitle}
+            >
+              <text
+                x={textX}
+                y="10"
+                text-anchor="middle"
+                font-family="Pattaya, system-ui, sans-serif"
+                font-size="10"
+                font-weight="700"
+                font-style="italic"
+                fill="#2B843C"
+              >
+                {displayCoverTitle}
+              </text>
+            </svg>
+          </h1>
+        </div>
+      </div>
+    </div>
+  )}
+
   <div class="max-w-4xl mx-auto sm:px-4 md:px-6 py-4 sm:py-10 md:py-12">
     <div class="px-4 sm:px-0">
       <Breadcrumb items={breadcrumbs} />
@@ -26,11 +100,13 @@ const {
 
     <article class="bg-via-bg-content rounded-none sm:rounded-xl shadow-sm overflow-hidden mt-3 sm:mt-6">
       <div class="p-4 sm:p-6 md:p-10">
-        <header class="mb-6 md:mb-8">
-          <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green">
-            {title}
-          </h1>
-        </header>
+        {!hasCover && (
+          <header class="mb-6 md:mb-8">
+            <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green">
+              {title}
+            </h1>
+          </header>
+        )}
 
         <div class="prose max-w-none">
           <slot />

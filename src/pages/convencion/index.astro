@@ -1,6 +1,5 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import Breadcrumb from '@components/Breadcrumb.astro';
+import PageLayout from '@layouts/PageLayout.astro';
 import { getConventionPages } from '@/lib/collections';
 
 const articles = await getConventionPages();
@@ -10,84 +9,86 @@ const numbered = articles.filter(
 );
 ---
 
-<BaseLayout title="Convención de Naciones Unidas">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
-    <Breadcrumb
-      items={[
-        { label: 'Inicio', href: '/' },
-        { label: 'Convención ONU' },
-      ]}
-    />
+<PageLayout
+  title="Convención de Naciones Unidas"
+  description="Texto íntegro de la Convención de Naciones Unidas sobre los derechos de las personas con diversidad funcional, artículo por artículo."
+  coverImage="/images/pages/convencion-portada.jpg"
+  coverEyebrow="Marco internacional"
+  coverTitle="Convención ONU"
+  breadcrumbs={[
+    { label: 'Inicio', href: '/' },
+    { label: 'Convención ONU' },
+  ]}
+>
+  <p class="text-via-text-secondary text-base sm:text-lg leading-relaxed mb-2">
+    Convención sobre los derechos de las personas con diversidad funcional (discapacidad).
+  </p>
+  <p class="text-via-text leading-relaxed mb-6">
+    Accede a la lectura del documento vía web, o descarga las versiones en formato de fácil lectura y sistema pictográfico de comunicación.
+  </p>
 
-    <article class="bg-via-bg-content rounded-xl shadow-sm p-6 md:p-10 mt-6">
-      <header class="mb-8">
-        <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green">
-          Convención de Naciones Unidas
-        </h1>
-        <p class="text-via-text-meta mt-2">
-          Sobre los derechos de las personas con diversidad funcional (discapacidad)
-        </p>
-      </header>
-
-      <p class="text-via-text mb-6 leading-relaxed">
-        Accede a la lectura del documento vía web o descarga en formato de fácil lectura o sistema pictográfico de comunicación.
-      </p>
-
-      <div class="flex flex-wrap gap-3 mb-8">
-        <a
-          href="https://viandalucia.org/wp-content/uploads/2019/05/Convencion-Lectura-Facil.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-4 py-2 bg-via-green text-white text-sm font-semibold rounded-xl border border-via-green hover:bg-white hover:text-via-green transition-colors no-underline focus:outline-none focus:ring-2 focus:ring-via-green/40"
-          tabindex="0"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          Fácil Lectura (PDF)
-        </a>
-        <a
-          href="https://viandalucia.org/wp-content/uploads/2019/05/Convencion-pictogramas.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-4 py-2 bg-via-accent text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity no-underline"
-          tabindex="0"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          Sistema Pictográfico (PDF)
-        </a>
-      </div>
-
-      <div class="space-y-1">
-        {preambulo && (
-          <a
-            href={`/convencion/${preambulo.id}/`}
-            class="block px-4 py-3 rounded-lg hover:bg-via-green/5 transition-colors no-underline group"
-            tabindex="0"
-          >
-            <span class="text-via-link group-hover:text-via-link-hover font-medium">
-              {preambulo.data.title}
-            </span>
-          </a>
-        )}
-
-        {numbered.map((article, i) => (
-          <a
-            href={`/convencion/${article.id}/`}
-            class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-via-green/5 transition-colors no-underline group"
-            tabindex="0"
-          >
-            <span class="text-xs font-bold text-via-green bg-via-green/10 w-8 h-8 rounded-full flex items-center justify-center shrink-0">
-              {i + 1}
-            </span>
-            <span class="text-via-link group-hover:text-via-link-hover">
-              {article.data.title}
-            </span>
-          </a>
-        ))}
-      </div>
-    </article>
+  <!-- Botones de descarga -->
+  <div class="flex flex-wrap gap-3 mb-10">
+    <a
+      href="https://viandalucia.org/wp-content/uploads/2019/05/Convencion-Lectura-Facil.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 px-4 py-2.5 bg-via-green text-white text-sm font-semibold rounded-xl border border-via-green hover:bg-white hover:text-via-green transition-colors no-underline focus:outline-none focus:ring-2 focus:ring-via-green/40"
+      tabindex="0"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      Fácil Lectura (PDF)
+    </a>
+    <a
+      href="https://viandalucia.org/wp-content/uploads/2019/05/Convencion-pictogramas.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 px-4 py-2.5 bg-white text-via-green text-sm font-semibold rounded-xl border border-via-green hover:bg-via-green hover:text-white transition-colors no-underline focus:outline-none focus:ring-2 focus:ring-via-green/40"
+      tabindex="0"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      Sistema Pictográfico (PDF)
+    </a>
   </div>
-</BaseLayout>
+
+  <!-- Listado de artículos -->
+  <h2 class="text-xl md:text-2xl font-bold font-serif text-via-green mb-4 mt-2 not-prose">
+    Texto íntegro
+  </h2>
+
+  <div class="not-prose flex flex-col gap-1">
+    {preambulo && (
+      <a
+        href={`/convencion/${preambulo.id}/`}
+        class="group flex items-center gap-3 px-4 py-3 rounded-lg border border-via-divider bg-via-bg-content hover:border-via-green/30 hover:bg-via-green/5 transition-all no-underline"
+        tabindex="0"
+      >
+        <span class="shrink-0 inline-flex items-center justify-center text-xs font-bold text-via-green bg-via-green/10 w-9 h-9 rounded-full">
+          §
+        </span>
+        <span class="font-semibold text-via-text group-hover:text-via-green transition-colors">
+          {preambulo.data.title}
+        </span>
+      </a>
+    )}
+
+    {numbered.map((article, i) => (
+      <a
+        href={`/convencion/${article.id}/`}
+        class="group flex items-center gap-3 px-4 py-3 rounded-lg border border-via-divider bg-via-bg-content hover:border-via-green/30 hover:bg-via-green/5 transition-all no-underline"
+        tabindex="0"
+      >
+        <span class="shrink-0 inline-flex items-center justify-center text-xs font-bold text-via-green bg-via-green/10 w-9 h-9 rounded-full">
+          {i + 1}
+        </span>
+        <span class="text-sm sm:text-base font-medium text-via-text group-hover:text-via-green transition-colors">
+          {article.data.title}
+        </span>
+      </a>
+    ))}
+  </div>
+</PageLayout>

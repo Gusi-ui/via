@@ -26,5 +26,3 @@ Sin duda, una referencia clave para vislumbrar cómo estructurar respuestas basa
 **_(7)_** Sistema para la Autonomía y Atención a la Dependencia. Prestaciones reconocidas. El término “sin especificar” correspondiente al informe: “Situación a 1 de marzo de 2009”, ha sido sustituido en el informe de abril de 2009 por “Pendientes de identificar en PIA”, lo que no cambia la realidad: no se sabe qué tipo de prestaciones son.
 **_(8)_** RATZKA, A. Conferencia impartida en Barcelona el 22 de octubre de 2007.
 
-| [6.- Inversión en empleo](/inversion-en-empleo/)  | **[\|Indice\|](/asistencia-personal-una-inversion-en-derechos-una-inversion-eficiente-en-empleo/)** | [8.- La inversión social en igualdad   de oportunidades para   la diversidad funcional en España](/la-inversion-social-en-igualdad-de-oportunidades-para-la-diversidad-funcional-en-espana/) |
-| --- | --- | --- |

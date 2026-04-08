@@ -2,7 +2,10 @@
 title: "Mesa redonda de Educación Inclusiva"
 date: 2019-09-13
 draft: false
-description: ""
+description: "Resumen de la mesa redonda sobre Educación Inclusiva en las Jornadas de Vida Independiente."
+coverImage: "/images/pages/mesa-educacion-portada.jpg"
+coverEyebrow: "Mesa redonda"
+coverTitle: "Educación Inclusiva"
 ---
 
 <figure>

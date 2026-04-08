@@ -7,59 +7,123 @@ type Props = {
   description?: string;
   prevArticle?: { title: string; slug: string } | null;
   nextArticle?: { title: string; slug: string } | null;
+  articleSlug?: string;
 };
 
-const { title, description, prevArticle, nextArticle } = Astro.props;
+const { title, description, prevArticle, nextArticle, articleSlug } = Astro.props;
+
+// Detecta si es el preámbulo o un artículo numerado, y extrae el número.
+const isPreambulo = articleSlug?.includes('preambulo') ?? false;
+const articleNumberMatch = articleSlug?.match(/^articulo-(\d+)/);
+const articleNumber = articleNumberMatch ? articleNumberMatch[1] : null;
+const eyebrowLabel = isPreambulo
+  ? 'Preámbulo'
+  : articleNumber
+    ? `Artículo ${articleNumber}`
+    : 'Convención ONU';
+
+// Helper para extraer info del slug de prev/next.
+const parseSlug = (slug: string | undefined) => {
+  if (!slug) return { label: 'Artículo' };
+  if (slug.includes('preambulo')) return { label: 'Preámbulo' };
+  const m = slug.match(/^articulo-(\d+)/);
+  if (m) return { label: `Artículo ${m[1]}` };
+  return { label: 'Artículo' };
+};
+
+const prevInfo = prevArticle ? parseSlug(prevArticle.slug) : null;
+const nextInfo = nextArticle ? parseSlug(nextArticle.slug) : null;
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
-    <Breadcrumb
-      items={[
-        { label: 'Inicio', href: '/' },
-        { label: 'Convención ONU', href: '/convencion/' },
-        { label: title },
-      ]}
-    />
+  <div class="max-w-4xl mx-auto sm:px-4 md:px-6 py-4 sm:py-10 md:py-12">
+    <div class="px-4 sm:px-0">
+      <Breadcrumb
+        items={[
+          { label: 'Inicio', href: '/' },
+          { label: 'Convención ONU', href: '/convencion/' },
+          { label: title },
+        ]}
+      />
+    </div>
 
-    <article class="bg-via-bg-content rounded-xl shadow-sm p-6 md:p-10 mt-6">
-      <header class="mb-8">
-        <h1 class="text-2xl md:text-3xl font-bold font-serif text-via-green">
-          {title}
-        </h1>
-      </header>
+    <article class="bg-via-bg-content rounded-none sm:rounded-xl shadow-sm overflow-hidden mt-3 sm:mt-6">
+      <div class="p-4 sm:p-6 md:p-10">
+        <header class="mb-6 md:mb-8 pb-5 md:pb-6 border-b border-via-divider">
+          <p class="text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-via-green mb-2">
+            Convención ONU · {eyebrowLabel}
+          </p>
+          <h1 class="text-2xl md:text-4xl font-bold font-serif text-via-green leading-tight m-0">
+            {title}
+          </h1>
+        </header>
 
-      <div class="prose max-w-none">
-        <slot />
+        <div class="prose max-w-none">
+          <slot />
+        </div>
+
+        <!-- Navegación entre artículos -->
+        <nav class="mt-10 md:mt-12" aria-label="Navegación entre artículos">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            {prevArticle && prevInfo ? (
+              <a
+                href={`/convencion/${prevArticle.slug}/`}
+                class="group flex items-start gap-3 p-4 rounded-xl border border-via-divider bg-via-bg-content hover:border-via-green/30 hover:shadow-md transition-all no-underline"
+                aria-label={`Artículo anterior: ${prevArticle.title}`}
+              >
+                <span class="mt-1 shrink-0 flex items-center justify-center w-9 h-9 rounded-full bg-via-green/10 group-hover:bg-via-green/20 transition-colors">
+                  <svg class="w-4 h-4 text-via-green group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15 19l-7-7 7-7" />
+                  </svg>
+                </span>
+                <div class="min-w-0 flex-1">
+                  <p class="text-[11px] font-semibold tracking-wide uppercase text-via-text-secondary mb-0.5">
+                    ← Anterior · {prevInfo.label}
+                  </p>
+                  <p class="text-sm sm:text-base font-semibold text-via-text group-hover:text-via-green transition-colors leading-snug">
+                    {prevArticle.title}
+                  </p>
+                </div>
+              </a>
+            ) : <div class="hidden sm:block" />}
+
+            {nextArticle && nextInfo ? (
+              <a
+                href={`/convencion/${nextArticle.slug}/`}
+                class="group flex items-start gap-3 p-4 rounded-xl border border-via-divider bg-via-bg-content hover:border-via-green/30 hover:shadow-md transition-all no-underline sm:text-right"
+                aria-label={`Siguiente artículo: ${nextArticle.title}`}
+              >
+                <div class="min-w-0 flex-1 order-2 sm:order-1">
+                  <p class="text-[11px] font-semibold tracking-wide uppercase text-via-text-secondary mb-0.5">
+                    {nextInfo.label} · Siguiente →
+                  </p>
+                  <p class="text-sm sm:text-base font-semibold text-via-text group-hover:text-via-green transition-colors leading-snug">
+                    {nextArticle.title}
+                  </p>
+                </div>
+                <span class="mt-1 shrink-0 flex items-center justify-center w-9 h-9 rounded-full bg-via-green/10 group-hover:bg-via-green/20 transition-colors order-1 sm:order-2">
+                  <svg class="w-4 h-4 text-via-green group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </a>
+            ) : <div class="hidden sm:block" />}
+          </div>
+
+          <!-- Volver al índice -->
+          <div class="mt-4 flex justify-center">
+            <a
+              href="/convencion/"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-via-divider bg-via-bg-alt text-sm font-semibold text-via-text hover:border-via-green/30 hover:text-via-green hover:bg-via-green/5 transition-all no-underline"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 12h18M3 6h18M3 18h18" />
+              </svg>
+              Ver todos los artículos
+            </a>
+          </div>
+        </nav>
       </div>
-
-      <nav class="mt-10 pt-6 border-t border-via-divider flex flex-col sm:flex-row justify-between gap-4" aria-label="Navegación entre artículos">
-        {prevArticle ? (
-          <a
-            href={`/convencion/${prevArticle.slug}/`}
-            class="flex items-center gap-2 text-sm text-via-link hover:text-via-link-hover transition-colors no-underline group"
-            aria-label={`Artículo anterior: ${prevArticle.title}`}
-          >
-            <svg class="w-4 h-4 shrink-0 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-            <span class="line-clamp-1">{prevArticle.title}</span>
-          </a>
-        ) : <div />}
-
-        {nextArticle ? (
-          <a
-            href={`/convencion/${nextArticle.slug}/`}
-            class="flex items-center gap-2 text-sm text-via-link hover:text-via-link-hover transition-colors no-underline group text-right sm:ml-auto"
-            aria-label={`Siguiente artículo: ${nextArticle.title}`}
-          >
-            <span class="line-clamp-1">{nextArticle.title}</span>
-            <svg class="w-4 h-4 shrink-0 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        ) : <div />}
-      </nav>
     </article>
   </div>
 </BaseLayout>

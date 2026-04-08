@@ -2,7 +2,10 @@
 title: "Mesa Redonda de Empleo"
 date: 2019-10-05
 draft: false
-description: ""
+description: "Resumen de la mesa redonda sobre Empleo Inclusivo en las Jornadas de Vida Independiente."
+coverImage: "/images/pages/mesa-empleo-portada.jpg"
+coverEyebrow: "Mesa redonda"
+coverTitle: "Empleo Inclusivo"
 ---
 
 <figure>

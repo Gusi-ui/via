@@ -16,5 +16,3 @@ Además de la eficiencia económica a la que apuntan los datos cuantitavos expue
 - La flexibilidad del servicio permite atender las necesidades de entornos rurales y urbanos con mayor rapidez y adaptabilidad que otros (residencias, SAD)
 - Los puestos de trabajo creados no son deslocalizables.
 
-| [5.- Implantación de la asistencia personal](/implantacion-de-la-asistencia-personal/)  | **[\|Indice\|](/asistencia-personal-una-inversion-en-derechos-una-inversion-eficiente-en-empleo/)** | [7.- Inversión en derechos para todos](/inversion-en-derechos-para-todos/) |
-| --- | --- | --- |

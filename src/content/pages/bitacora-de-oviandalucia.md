@@ -1,5 +1,5 @@
 ---
-title: "<h1 style=\"color:#2b843c\">Bitacora de OVIAndalucía</h1>"
+title: "Bitácora de OVIAndalucía"
 date: 2019-05-30
-draft: false
+draft: true
 ---

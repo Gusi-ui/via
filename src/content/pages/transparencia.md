@@ -3,6 +3,8 @@ title: "Transparencia"
 date: 2022-06-12
 draft: false
 description: "Nuestros estatutos están a disposición para quien los quiera leer o descargar."
+coverImage: "/images/pages/transparencia-portada.jpg"
+coverEyebrow: "Rendición de cuentas"
 ---
 
 Nuestros estatutos están a disposición para quien los quiera leer o descargar.

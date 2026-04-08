@@ -32,5 +32,3 @@ De todo lo anteriormente expuesto, podemos concluir que el desarrollo de la figu
 
 Por otro lado, y dado que España está en la cola de la OCDE a la hora de atender a las personas con diversidad funcional y que actualmente la LEPA sólo dedica el 10% de sus recursos a la igualdad de oportunidades (un 0,08% a Asistencia Personal), el camino que queda por recorrer es amplio y hay margen de maniobra para dar la vuelta a la situación en muy pocos años si existe voluntad política para hacerlo.
 
-| [10.- Retorno de la inversión](/retorno-de-la-inversion/)  | **[\|Indice\|](/asistencia-personal-una-inversion-en-derechos-una-inversion-eficiente-en-empleo/)** | [12.- Bibliografía](/bibliografia/) |
-| --- | --- | --- |

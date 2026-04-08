@@ -1,0 +1,269 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+
+// =============================================================================
+// IMAGEN DE PORTADA
+// -----------------------------------------------------------------------------
+// Coloca tu imagen en: public/images/pages/recorrido-historico-portada.jpg
+// =============================================================================
+const coverImage = '/images/pages/recorrido-historico-portada.jpg';
+
+// =============================================================================
+// HITOS DEL RECORRIDO HISTÓRICO
+// -----------------------------------------------------------------------------
+// Cada hito puede llevar opcionalmente una imagen ilustrativa.
+// Coloca las imágenes en: public/images/pages/historia/<archivo>.jpg
+// y referencia con la ruta absoluta /images/pages/historia/<archivo>.jpg
+// =============================================================================
+
+type Milestone = {
+  year: string;
+  title: string;
+  description: string;
+  highlight?: string;
+  image?: string;
+  imageAlt?: string;
+};
+
+const milestones: Milestone[] = [
+  {
+    year: '2009',
+    title: 'Los primeros pasos',
+    description:
+      'Un grupo de personas con y sin diversidad funcional comienza a reunirse en Sevilla con una idea común: que las personas con diversidad funcional puedan dirigir sus propias vidas. Nace la inquietud de crear una asociación inspirada en la filosofía de Vida Independiente.',
+    highlight: 'Origen del proyecto',
+  },
+  {
+    year: '2010',
+    title: 'Constitución de VIAndalucía',
+    description:
+      'Se constituye formalmente la Asociación de Vida Independiente Andalucía (VIAndalucía), con el objetivo de promover la autonomía, el empoderamiento y la asistencia personal autogestionada en la comunidad andaluza.',
+    highlight: 'Acta fundacional',
+  },
+  {
+    year: '2011',
+    title: 'Primer programa de Asistencia Personal',
+    description:
+      'VIAndalucía pone en marcha su primer programa piloto de asistencia personal, basado en el modelo de gestión directa por parte de las propias personas usuarias. Los participantes eligen, forman y dirigen a sus asistentes personales.',
+    highlight: 'Pioneros en Andalucía',
+  },
+  {
+    year: '2013',
+    title: 'Difusión y formación',
+    description:
+      'La asociación intensifica su labor de difusión de la filosofía de Vida Independiente mediante jornadas, talleres y participación en encuentros estatales. Se establecen alianzas con otras OVIs en España.',
+  },
+  {
+    year: '2015',
+    title: 'Convención de Naciones Unidas',
+    description:
+      'VIAndalucía asume como referencia central la Convención de la ONU sobre los Derechos de las Personas con Discapacidad, especialmente su artículo 19 sobre el derecho a vivir de forma independiente y a ser incluido en la comunidad.',
+    highlight: 'Marco internacional',
+  },
+  {
+    year: '2017',
+    title: 'Federación VI',
+    description:
+      'VIAndalucía se integra activamente en la Federación de Vida Independiente, sumándose a la red estatal de Oficinas de Vida Independiente que promueven la asistencia personal autogestionada en sus respectivos territorios.',
+  },
+  {
+    year: '2019',
+    title: 'Jornadas de Vida Independiente',
+    description:
+      'La asociación organiza unas jornadas de gran calado sobre Vida Independiente, asistencia personal, accesibilidad universal, educación y empleo inclusivos, con la participación de personas referentes del movimiento a nivel estatal e internacional.',
+    highlight: 'Encuentro estatal',
+  },
+  {
+    year: '2020',
+    title: 'Difusión de la Convención',
+    description:
+      'En el marco del 14º aniversario de la firma de España, VIAndalucía emprende una campaña de difusión de la Convención ONU artículo por artículo, para acercar el tratado a la población general.',
+  },
+  {
+    year: '2022',
+    title: 'Transparencia y consolidación',
+    description:
+      'La asociación publica sus estatutos, memorias económicas y actividades, reforzando su compromiso con la transparencia y la rendición de cuentas. Se consolidan los servicios de asesoramiento y apoyo entre iguales.',
+  },
+  {
+    year: 'Hoy',
+    title: 'Construyendo Vida Independiente',
+    description:
+      'VIAndalucía continúa trabajando por el reconocimiento real del derecho a la Vida Independiente en Andalucía, con la asistencia personal autogestionada como herramienta central, y promoviendo el empoderamiento de las personas con diversidad funcional.',
+    highlight: 'Presente y futuro',
+  },
+];
+---
+
+<BaseLayout
+  title="Recorrido histórico"
+  description="Más de una década de trabajo de la Asociación VIAndalucía por el derecho a la Vida Independiente y la asistencia personal autogestionada en Andalucía."
+>
+  <!-- Portada con imagen y overlay -->
+  <div class="relative w-full h-72 sm:h-96 md:h-[28rem] overflow-hidden">
+    <img
+      src={coverImage}
+      alt="Recorrido histórico de VIAndalucía"
+      class="w-full h-full object-cover object-center"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="absolute bottom-0 left-0 right-0 bg-black/55 backdrop-blur-sm px-4 sm:px-6 py-4 sm:py-6 md:py-8 overflow-hidden">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-white/85 text-xs sm:text-sm font-ui tracking-widest uppercase mb-1 font-semibold">
+          Más de una década de Vida Independiente
+        </p>
+        <h1 class="m-0">
+          <svg
+            viewBox="0 0 100 13"
+            class="block w-full h-auto"
+            preserveAspectRatio="xMidYMid meet"
+            role="img"
+            aria-label="Recorrido histórico"
+          >
+            <text
+              x="50"
+              y="10"
+              text-anchor="middle"
+              font-family="Pattaya, system-ui, sans-serif"
+              font-size="10"
+              font-weight="700"
+              font-style="italic"
+              fill="#2B843C"
+              textLength="99"
+              lengthAdjust="spacingAndGlyphs"
+            >
+              Recorrido histórico
+            </text>
+          </svg>
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido -->
+  <div class="max-w-4xl mx-auto sm:px-4 md:px-6 py-4 sm:py-8 md:py-10">
+    <div class="px-4 sm:px-0">
+      <Breadcrumb
+        items={[
+          { label: 'Inicio', href: '/' },
+          { label: 'Recorrido histórico' },
+        ]}
+      />
+    </div>
+
+    <article class="bg-via-bg-content rounded-none sm:rounded-xl shadow-sm overflow-hidden mt-3 sm:mt-6">
+      <div class="p-4 sm:p-6 md:p-10">
+
+        <!-- Introducción -->
+        <section class="prose max-w-none mb-10 md:mb-14">
+          <p class="text-base sm:text-lg md:text-xl text-via-text leading-relaxed">
+            Desde sus inicios, la <strong>Asociación VIAndalucía</strong> ha trabajado incansablemente por hacer realidad el derecho a la <strong>Vida Independiente</strong> de las personas con diversidad funcional en Andalucía. Este es el recorrido de un proyecto colectivo construido desde la <em>autodeterminación</em> y el <em>apoyo entre iguales</em>.
+          </p>
+        </section>
+
+        <!-- Línea de tiempo -->
+        <section class="relative">
+          <!-- Línea vertical decorativa -->
+          <div
+            class="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-via-green/40 via-via-green/20 to-via-green/10 sm:-translate-x-1/2"
+            aria-hidden="true"
+          ></div>
+
+          <ol class="relative space-y-10 sm:space-y-14">
+            {milestones.map((milestone, index) => {
+              const isEven = index % 2 === 0;
+              return (
+                <li class="relative">
+                  <!-- Punto en la línea -->
+                  <div
+                    class="absolute left-4 sm:left-1/2 top-2 -translate-x-1/2 z-10 flex items-center justify-center"
+                    aria-hidden="true"
+                  >
+                    <div class="w-4 h-4 rounded-full bg-via-green ring-4 ring-via-bg shadow-sm"></div>
+                  </div>
+
+                  <!-- Tarjeta del hito -->
+                  <div class:list={[
+                    'pl-12 sm:pl-0 sm:w-1/2',
+                    isEven ? 'sm:pr-10 sm:text-right' : 'sm:ml-auto sm:pl-10 sm:text-left',
+                  ]}>
+                    <div class="group relative inline-block w-full p-5 sm:p-6 rounded-2xl border border-via-divider bg-via-bg-content hover:border-via-green/30 hover:shadow-md transition-all">
+                      <!-- Año -->
+                      <div class:list={[
+                        'inline-flex items-center gap-2 mb-3',
+                        isEven ? 'sm:flex-row-reverse' : '',
+                      ]}>
+                        <span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-via-green/10 text-via-green font-bold font-serif text-base sm:text-lg tracking-wide">
+                          {milestone.year}
+                        </span>
+                        {milestone.highlight && (
+                          <span class="text-[10px] sm:text-[11px] font-semibold tracking-widest uppercase text-via-text-secondary">
+                            {milestone.highlight}
+                          </span>
+                        )}
+                      </div>
+
+                      <!-- Título -->
+                      <h2 class="text-xl sm:text-2xl font-bold font-serif text-via-green mb-2 leading-tight">
+                        {milestone.title}
+                      </h2>
+
+                      <!-- Descripción -->
+                      <p class="text-via-text text-sm sm:text-base leading-relaxed">
+                        {milestone.description}
+                      </p>
+
+                      {milestone.image && (
+                        <img
+                          src={milestone.image}
+                          alt={milestone.imageAlt ?? milestone.title}
+                          class="mt-4 w-full rounded-lg object-cover"
+                          loading="lazy"
+                        />
+                      )}
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </section>
+
+        <!-- Cierre -->
+        <section class="mt-12 md:mt-16">
+          <div class="relative overflow-hidden rounded-2xl border-2 border-via-green/25 bg-gradient-to-br from-via-green/5 via-via-green/8 to-via-green/15 p-6 sm:p-8 md:p-10 text-center">
+            <p class="text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-via-green mb-2">
+              Sigue construyéndose
+            </p>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-via-text mb-3 leading-tight">
+              Esta historia continúa cada día
+            </h2>
+            <p class="text-via-text-secondary text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-6">
+              Si quieres conocer más sobre nuestro trabajo, sumarte al proyecto o solicitar información sobre la asistencia personal, ponte en contacto con nosotros.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="/contacto/"
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-via-green text-white text-sm sm:text-base font-semibold border border-via-green hover:bg-white hover:text-via-green transition-colors no-underline"
+              >
+                Contactar
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a
+                href="/nosotros/"
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-via-green text-sm sm:text-base font-semibold border border-via-green hover:bg-via-green hover:text-white transition-colors no-underline"
+              >
+                Conoce a la asociación
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </article>
+  </div>
+</BaseLayout>

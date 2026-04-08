@@ -25,5 +25,3 @@ A diferencia de otras prestaciones y servicios (cuidador no profesional, Servici
 
 **_(1)_** RODRÍGUEZ-PICAVEA,A y ROMAÑACH, J. “Consideraciones sobre la figura del Asistente Personal en el Proyecto de Ley de Promoción de la Autonomía Personal y Atención a las Personas en Situación de Dependencia”. Foro de Vida Independiente. Mayo 2006.
 
-| [2.- Introducción](/introduccion/) | **[\|Indice\|](/asistencia-personal-una-inversion-en-derechos-una-inversion-eficiente-en-empleo/)** | [4.- La asistencia personal en   la legislación española](/la-asistencia-personal-en-la-legislacion-espanola/) |
-| --- | --- | --- |

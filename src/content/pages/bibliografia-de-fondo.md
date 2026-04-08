@@ -1,8 +1,11 @@
 ---
-title: "Bibliografia de fondo"
+title: "Bibliografía de fondo"
 date: 2019-05-31
 draft: false
-description: "Bibliografía Imprescindible"
+description: "Selección de libros imprescindibles sobre Vida Independiente, asistencia personal y diversidad funcional."
+coverImage: "/images/pages/bibliografia-fondo-portada.jpg"
+coverEyebrow: "Lecturas imprescindibles"
+coverTitle: "Bibliografía de fondo"
 ---
 
 ## Bibliografía Imprescindible

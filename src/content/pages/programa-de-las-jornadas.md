@@ -1,8 +1,10 @@
 ---
 title: "Información de las Jornadas"
 date: 2019-08-16
-coverImage: "redi-min.jpg"
 draft: false
+coverImage: "/images/pages/jornadas-portada.jpg"
+coverEyebrow: "Encuentros y formación"
+coverTitle: "Jornadas de Vida Independiente"
 description: "La Asociación y Oficina de Vida Independiente VIAndalucía, en su empeño por conseguir  el disfrute del derecho a la Vida Independiente de las personas con diver"
 ---
 

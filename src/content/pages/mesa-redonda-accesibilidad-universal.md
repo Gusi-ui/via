@@ -2,7 +2,10 @@
 title: "Mesa Redonda. Accesibilidad Universal."
 date: 2019-09-30
 draft: false
-description: ""
+description: "Resumen de la mesa redonda sobre Accesibilidad Universal en las Jornadas de Vida Independiente."
+coverImage: "/images/pages/mesa-accesibilidad-portada.jpg"
+coverEyebrow: "Mesa redonda"
+coverTitle: "Accesibilidad Universal"
 ---
 
 <figure>

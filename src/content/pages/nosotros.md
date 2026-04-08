@@ -3,6 +3,9 @@ title: "Nosotros"
 date: 2011-11-10
 draft: false
 description: "La Asociación está constituida por un grupo de personas con y sin diversidad funcional, que imbuidos de la Filosofía de Vida Independiente, pretendemos cambiar "
+coverImage: "/images/pages/nosotros-portada.jpg"
+coverEyebrow: "Quiénes somos"
+coverTitle: "Asociación VIAndalucía"
 ---
 
 La Asociación está constituida por un grupo de personas con y sin **diversidad funcional**, que imbuidos de la **Filosofía de Vida Independiente,** pretendemos cambiar el punto de vista que la sociedad, particularmente la andaluza, tiene sobre las personas tradicionalmente llamaban _discapacitadas_, especialmente de aquellas que dependen de otros para el desarrollo de sus vidas.

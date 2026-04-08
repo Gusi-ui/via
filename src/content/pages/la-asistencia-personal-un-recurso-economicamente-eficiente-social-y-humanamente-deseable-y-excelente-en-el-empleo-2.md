@@ -69,5 +69,3 @@ Notas:
 3. Documento: [Asistencia personal: Una inversión en derechos; una inversión eficiente en empleo](/asistencia-personal-una-inversion-en-derechos-una-inversion-eficiente-en-empleo/)
 4. Datos ofrecidos por el Sistema para la Autonomía y Atención a la Dependencia (SAAD)
 
-|  | **[\|Indice\|](/documentacion/la-asistencia-personal-un-recurso-economicamente-eficiente-social-y-humanamente-deseable-excelente-empleo-resumen/)** | [2.- Coste centros residenciales   vs asistencia personal](/coste-centros-residenciales-vs-asistencia-personal/) |
-| --- | --- | --- |

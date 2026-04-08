@@ -2,7 +2,10 @@
 title: "Mesa Redonda. Cambio de Paradigma y su reflejo en la Legislación"
 date: 2019-09-27
 draft: false
-description: ""
+description: "Resumen de la mesa redonda sobre el cambio de paradigma legislativo en torno a la diversidad funcional."
+coverImage: "/images/pages/mesa-legislacion-portada.jpg"
+coverEyebrow: "Mesa redonda"
+coverTitle: "Cambio de paradigma"
 ---
 
 <figure>

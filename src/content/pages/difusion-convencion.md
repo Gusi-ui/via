@@ -2,7 +2,10 @@
 title: "Difusión Convención"
 date: 2020-09-17
 draft: false
-description: "!images/ONU-300x300.jpeg"
+description: "Campaña de difusión de la Convención de Naciones Unidas sobre los derechos de las personas con diversidad funcional."
+coverImage: "/images/pages/difusion-convencion-portada.jpg"
+coverEyebrow: "Campaña divulgativa"
+coverTitle: "Difusión de la Convención"
 ---
 
 ![](/images/pages/ONU-300x300.jpeg)

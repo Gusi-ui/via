@@ -13,5 +13,3 @@ Este tipo de apoyo es un derecho humano contemplado en la Convención internacio
 
 España está a la cola de la OCDE en inversión social a la diversidad funcional y por lo tanto deberá aumentar su inversión en políticas sociales dedicadas a la garantía de derechos fundamentales, entre las que la Asistencia Personal es la que proporciona una mejor eficiencia y un excelente retorno de la inversión, tanto en términos económicos como en términos de derecho.
 
-| [1.- Resumen ejecutivo](/resumen-ejecutivo/)  | **[\|Indice\|](/asistencia-personal-una-inversion-en-derechos-una-inversion-eficiente-en-empleo/)** | [3.-La figura del asistente personal](/la-figura-del-asistente-personal/) |
-| --- | --- | --- |

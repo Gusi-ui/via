@@ -23,6 +23,9 @@ const pages = defineCollection({
     draft: z.boolean().optional().default(false),
     description: z.string().optional().default(''),
     section: z.string().optional(),
+    coverImage: z.string().optional(),
+    coverEyebrow: z.string().optional(),
+    coverTitle: z.string().optional(),
   }),
 });
 
